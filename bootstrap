@@ -1,3 +1,11 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+def link(path, link_name)
+  puts "linking #{link_name}..."
+  system "ln -s #{path} #{link_name}"
+end
+
+puts "Bootstrapping Jeremy's Dotfiles..."
+link "vim/.vimrc", "~/.vimrc"
+
+puts "done"
