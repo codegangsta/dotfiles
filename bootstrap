@@ -4,12 +4,14 @@ require 'FileUtils'
 def link(path, link_name)
   path = File.expand_path path
   link_name = File.expand_path link_name
-
+  FileUtils.rm(link_name) if File.exists?(link_name)
+  
   puts "linking #{link_name}..."
   FileUtils.ln_s(path, link_name)
 end
 
 puts "Bootstrapping Jeremy's Dotfiles..."
 link "~/.dotfiles/vim/.vimrc", "~/.vimrc"
+link "~/.dotfiles/git/.gitconfig", "~/.gitconfig"
 
 puts "done"

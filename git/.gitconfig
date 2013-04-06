@@ -1,0 +1,11 @@
+[color]
+	ui = true
+[core]
+	editor = vim -c 'startinsert'
+[user]
+	email = jeremy.saenz@gmail.com
+	name = Jeremy Saenz
+[github]
+	user = jeremysaenz
+[alias]
+  co = checkout
