@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
+require 'FileUtils'
 
 def link(path, link_name)
+  path = File.expand_path path
+  link_name = File.expand_path link_name
+
   puts "linking #{link_name}..."
-  system "ln -nfs #{path} #{link_name}"
+  FileUtils.ln_s(path, link_name)
 end
 
 puts "Bootstrapping Jeremy's Dotfiles..."
-link "vim/.vimrc", "~/.vimrc"
+link "~/.dotfiles/vim/.vimrc", "~/.vimrc"
 
 puts "done"
