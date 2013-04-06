@@ -2,7 +2,7 @@
 
 def link(path, link_name)
   puts "linking #{link_name}..."
-  system "ln -s #{path} #{link_name}"
+  system "ln -nfs #{path} #{link_name}"
 end
 
 puts "Bootstrapping Jeremy's Dotfiles..."
