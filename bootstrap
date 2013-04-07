@@ -14,5 +14,6 @@ puts "Bootstrapping Jeremy's Dotfiles..."
 link "~/.dotfiles/vim/.vimrc", "~/.vimrc"
 link "~/.dotfiles/git/.gitconfig", "~/.gitconfig"
 link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
+link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
 
 puts "done"

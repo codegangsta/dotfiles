@@ -2,6 +2,7 @@
 	ui = true
 [core]
 	editor = vim -c 'startinsert'
+	excludesfile = ~/.gitignore_global
 [user]
 	email = jeremy.saenz@gmail.com
 	name = Jeremy Saenz
