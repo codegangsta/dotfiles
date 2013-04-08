@@ -50,9 +50,8 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-set background=light
-let g:solarized_termtrans = 1
-colorscheme solarized
+" colorscheme
+colorscheme topfunky-light
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
