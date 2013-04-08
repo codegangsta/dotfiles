@@ -53,6 +53,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " colorscheme
 colorscheme topfunky-light
 
+" syntax for loomscript
+au BufNewFile,BufRead *.ls set filetype=javascript
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit

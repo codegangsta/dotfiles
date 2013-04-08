@@ -15,8 +15,10 @@ export ANDROID_NDK="$HOME/sdks/android-ndk-r8b"
 export IOS_SDK=6.1
 
 # Global aliases
+alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g deploysdk='noglob rake build:ios["iPhone Developer: Jeremy Saenz (3SSR85QQK9)"] deploy:sdk'
+alias -g tag='ctags -R -f ./.git/tags .'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
