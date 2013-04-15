@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'FileUtils'
+require 'fileutils'
 
 def link(path, link_name)
   path = File.expand_path path
