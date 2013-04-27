@@ -46,4 +46,5 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/jeremysaenz/sdks/apache-maven-3.0.4/bin:/usr/local/heroku/bin:/Users/jeremysaenz/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jeremysaenz/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jeremysaenz/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jeremysaenz/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/jeremysaenz/sdks/android-ndk-r8b:/Users/jeremysaenz/sdks/android-sdk-macosx/tools:/Users/jeremysaenz/sdks/android-sdk-macosx/platform-tools:/Users/jeremysaenz/sdks/NaturalDocs-1.52
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
