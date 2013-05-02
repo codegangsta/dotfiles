@@ -37,6 +37,9 @@ set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
 
+" Setting shell for vim
+set shell=sh
+
 " AutoComplete menu popup
 hi Pmenu ctermbg=230 gui=bold
 
