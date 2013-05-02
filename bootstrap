@@ -24,5 +24,6 @@ link "~/.dotfiles/git/.gitconfig", "~/.gitconfig"
 link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
 link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
 link "~/.dotfiles/vim/vim", "~/.vim"
+link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
 
 puts "done"
