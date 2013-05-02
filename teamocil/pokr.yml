@@ -1,0 +1,12 @@
+session:
+  name: "pokr"
+  windows:
+    - name: "poker development"
+      clear: true
+      root: "~/code/pokr"
+      panes:
+        - cmd: "vim"
+          width: 70
+          focus: true
+        - cmd: "rails s"
+          width: 30
