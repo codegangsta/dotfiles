@@ -4,9 +4,8 @@ session:
     - name: "poker development"
       clear: true
       root: "~/code/pokr"
+      layout: 2082,364x83,0,0{253x83,0,0,1,110x83,254,0[110x41,254,0,2,110x41,254,42,3]}
       panes:
         - cmd: "vim"
-          width: 70
-          focus: true
         - cmd: "rails s"
-          width: 30
+        - cmd: "guard"
