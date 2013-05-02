@@ -37,6 +37,16 @@ set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
 
+" AutoComplete menu popup
+hi Pmenu ctermbg=230 gui=bold
+
+" Syntax Completion
+filetype plugin on
+set ofu=syntaxcomplete#Complete
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
@@ -49,9 +59,6 @@ set expandtab                    " Use spaces instead of tabs
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
-" colorscheme
-colorscheme topfunky-light
 
 " syntax for loomscript
 au BufNewFile,BufRead *.ls set filetype=javascript
