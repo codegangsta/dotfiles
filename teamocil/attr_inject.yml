@@ -1,0 +1,10 @@
+session:
+  name: "attr_inject"
+  windows:
+    - name: "attr_inject"
+      root: "~/code/attr_inject"
+      layout: even-horizontal
+      panes:
+        - cmd: "vim"
+          focus: true
+        - cmd: "guard"
