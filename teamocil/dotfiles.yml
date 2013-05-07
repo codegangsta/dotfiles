@@ -1,0 +1,10 @@
+session:
+  name: "dotfiles"
+  windows:
+    - name: "dotfiles"
+      root: "~/.dotfiles"
+      layout: even-horizontal
+      panes:
+        - cmd: "vim"
+          focus: true
+        - cmd: "gits"
