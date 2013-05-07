@@ -13,9 +13,10 @@ ZSH_THEME="robbyrussell"
 [[ $TERM = "screen" ]] && rvm use default
 
 # Global aliases
-#alias ctags="`brew --prefix`/bin/ctags"
+alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g tag='ctags -R .'
+alias -g tks='tmux kill-session'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -28,3 +29,6 @@ source $ZSH/oh-my-zsh.sh
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
