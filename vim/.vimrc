@@ -66,6 +66,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " syntax for loomscript
 au BufNewFile,BufRead *.ls set filetype=javascript
 
+" NERDTree
+let NERDTreeShowHidden=1
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -78,6 +81,12 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 map <leader>n :NERDTreeToggle<cr>
 map <leader>r :!ruby %<cr>
+
+" disable arrow keys
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
