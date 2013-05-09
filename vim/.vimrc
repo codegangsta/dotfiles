@@ -69,6 +69,9 @@ au BufNewFile,BufRead *.ls set filetype=javascript
 " NERDTree
 let NERDTreeShowHidden=1
 
+" CtrlP
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
