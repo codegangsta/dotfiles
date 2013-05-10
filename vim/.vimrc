@@ -72,6 +72,11 @@ let NERDTreeShowHidden=1
 " CtrlP
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 
+
+" Color Scheme
+color base16-default
+set background=dark
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
