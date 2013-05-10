@@ -5,3 +5,7 @@ Session.vim
 *~
 .DS_Store
 /tags
+
+Guardfile.local
+Gemfile.local
+Gemfile.local.lock
