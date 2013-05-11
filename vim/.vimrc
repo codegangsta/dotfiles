@@ -40,9 +40,6 @@ set visualbell                    " No beeping.
 " Setting shell for vim
 set shell=sh
 
-" AutoComplete menu popup
-hi Pmenu ctermbg=230 gui=bold
-
 " Syntax Completion
 filetype plugin on
 set ofu=syntaxcomplete#Complete
@@ -74,8 +71,8 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -
 
 
 " Color Scheme
-color base16-default
-set background=dark
+set t_Co=256
+color Tomorrow-Night
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
