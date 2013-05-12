@@ -71,9 +71,6 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -
 set t_Co=256
 color Tomorrow-Night
 
-" Map ESC for removing search highlighting
-nnoremap <silent> <esc> :noh<cr><esc>
-
 " Map cursor for insert mode
 if &term =~ '^xterm'
   let &t_SI .= "\<Esc>[5 q"
