@@ -81,28 +81,6 @@ let &t_EI .= "\<Esc>[2 q"
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
-" Brace completions
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-" Square Brace completions
-inoremap [      []<Left>
-inoremap [[     [
-inoremap []     []
-" Parens completions
-inoremap (      ()<Left>
-inoremap ((     (
-inoremap ()     ()
-" Quote completions
-inoremap "      ""<Left>
-inoremap ""     "
-inoremap ""     ""
-"Single quote completion
-inoremap '      ''<Left>
-inoremap ''     '
-inoremap ''     ''
-
 " Vim Rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
