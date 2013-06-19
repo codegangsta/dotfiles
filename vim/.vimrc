@@ -90,6 +90,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 map <leader>n :NERDTreeToggle<cr>
 map <leader>r :!ruby %<cr>
 
+map <leader>g :Git<Space>
+
 " disable arrow keys
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
