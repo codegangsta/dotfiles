@@ -92,6 +92,10 @@ map <leader>r :!ruby %<cr>
 
 map <leader>g :Git<Space>
 
+" Zencoding
+let g:user_zen_expandabbr_key='<C-e>'
+let g:user_zen_settings = { 'erb': { 'extends': 'html' } }
+
 " disable arrow keys
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
