@@ -87,6 +87,10 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" Splitting
+map <Leader>h :split<CR>
+map <Leader>v :vsplit<CR>
+
 map <leader>n :NERDTreeToggle<cr>
 map <leader>r :!ruby %<cr>
 
