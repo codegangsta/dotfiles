@@ -62,7 +62,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " NERDTree
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 
 " CtrlP
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
