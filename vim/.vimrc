@@ -95,6 +95,7 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>r :!ruby %<cr>
 
 map <leader>g :Git<Space>
+map <leader>b :!bundle<cr>
 
 " Zencoding
 let g:user_zen_expandabbr_key='<C-e>'
