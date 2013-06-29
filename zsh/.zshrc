@@ -28,6 +28,9 @@ source $ZSH/oh-my-zsh.sh
 # Teamocil auto completion
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
+export GOPATH=$HOME/code/gocode
+export PATH=$PATH:$GOPATH/bin
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
