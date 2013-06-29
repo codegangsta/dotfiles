@@ -81,21 +81,14 @@ let &t_EI .= "\<Esc>[2 q"
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
-" Vim Rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " Splitting
 map <Leader>h :split<CR>
 map <Leader>v :vsplit<CR>
 
 map <leader>n :NERDTreeToggle<cr>
-map <leader>r :!ruby %<cr>
 
 map <leader>g :Git<Space>
-map <leader>b :!bundle<cr>
 
 " Zencoding
 let g:user_zen_expandabbr_key='<C-e>'
