@@ -31,6 +31,7 @@ unsetopt correct
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 export GOPATH=$HOME/code/gocode
+export GOCODE=$GOPATH/src/github.com/codegangsta
 export PATH=$PATH:$GOPATH/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
