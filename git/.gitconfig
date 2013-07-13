@@ -11,3 +11,4 @@
 [alias]
   co = checkout
   po = push origin
+  c = commit -v
