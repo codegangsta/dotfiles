@@ -24,6 +24,8 @@ alias -g tks='tmux kill-session'
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+# Disable auto correct
+unsetopt correct
 
 # Teamocil auto completion
 compctl -g '~/.teamocil/*(:t:r)' teamocil
