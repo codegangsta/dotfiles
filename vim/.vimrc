@@ -81,7 +81,6 @@ let &t_EI .= "\<Esc>[2 q"
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
-
 " Splitting
 map <Leader>h :split<CR>
 map <Leader>v :vsplit<CR>
@@ -89,6 +88,12 @@ map <Leader>v :vsplit<CR>
 map <leader>n :NERDTreeToggle<cr>
 
 map <leader>g :Git<Space>
+
+" split naviagation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Zencoding
 let g:user_zen_expandabbr_key='<C-e>'
