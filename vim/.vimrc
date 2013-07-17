@@ -70,6 +70,7 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -
 " Color Scheme
 set t_Co=256
 color Tomorrow-Night
+hi Search term=reverse cterm=reverse gui=reverse ctermfg=237
 
 " Map cursor for insert mode
 let &t_SI .= "\<Esc>[5 q"
