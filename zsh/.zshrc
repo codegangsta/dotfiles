@@ -12,6 +12,9 @@ ZSH_THEME="robbyrussell"
 
 [[ $TERM = "screen" ]] && rvm use default
 
+# Z
+source "$HOME/.dotfiles/z/z.sh"
+
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
