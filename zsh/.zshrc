@@ -16,6 +16,7 @@ ZSH_THEME="robbyrussell"
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g tag='ctags -R .'
+alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -33,6 +34,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 export GOPATH=$HOME/code/gocode
 export GOCODE=$GOPATH/src/github.com/codegangsta
 export PATH=$PATH:$GOPATH/bin
+
+export EDITOR='vim'
+export DISABLE_AUTO_TITLE=true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
