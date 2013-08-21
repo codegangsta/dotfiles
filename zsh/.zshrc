@@ -29,7 +29,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 # Disable auto correct
-unsetopt correct
+unsetopt correct_all
 
 # Teamocil auto completion
 compctl -g '~/.teamocil/*(:t:r)' teamocil
