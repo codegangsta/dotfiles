@@ -90,6 +90,9 @@ map <leader>n :NERDTreeToggle<cr>
 
 map <leader>g :Git<Space>
 
+" Removing search highlighting
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
 " split naviagation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
