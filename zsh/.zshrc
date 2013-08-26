@@ -35,9 +35,6 @@ source $ZSH/oh-my-zsh.sh
 # Disable auto correct
 unsetopt correct_all
 
-# Teamocil auto completion
-compctl -g '~/.teamocil/*(:t:r)' teamocil
-
 export GOPATH=$HOME/code/gocode
 export GOCODE=$GOPATH/src/github.com/codegangsta
 export PATH=$PATH:$GOPATH/bin
