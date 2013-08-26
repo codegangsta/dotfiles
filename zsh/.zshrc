@@ -18,9 +18,13 @@ source "$HOME/.dotfiles/z/z.sh"
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
+alias -g github='git hub'
 alias -g tag='ctags -R .'
 alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
+
+# Rails aliases
+alias -g migrate='rake db:migrate db:test:prepare'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
