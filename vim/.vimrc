@@ -83,8 +83,8 @@ let &t_EI .= "\<Esc>[2 q"
 " 6 -> solid vertical bar
 
 " Splitting
-map <Leader> - :split<CR>
-map <Leader> \| :vsplit<CR>
+map <Leader>- :split<CR>
+map <Leader><bar> :vsplit<CR>
 
 map <leader>n :NERDTreeToggle<cr>
 
