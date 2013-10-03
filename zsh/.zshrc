@@ -22,6 +22,7 @@ alias -g github='git hub'
 alias -g tag='ctags -R .'
 alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
+alias -g rmswp='find . -name ".*.swp" | xargs rm -f'
 
 # Rails aliases
 alias -g migrate='rake db:migrate db:test:prepare'
@@ -50,3 +51,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
 
+# Postgres
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
