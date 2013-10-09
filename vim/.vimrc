@@ -85,8 +85,8 @@ map <Leader>- :split<CR>
 map <Leader><bar> :vsplit<CR>
 
 map <leader>n :NERDTreeToggle<cr>
-
 map <leader>g :Git<Space>
+map <leader>c :CtrlPClearAllCaches<cr>
 
 " Removing search highlighting
 nnoremap <ESC><ESC> :nohlsearch<CR>
