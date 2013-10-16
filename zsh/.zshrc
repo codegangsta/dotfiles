@@ -53,3 +53,6 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+# SlimerJS
+export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
