@@ -49,8 +49,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
-set backupdir=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set directory=.,$TEMP  " Keep swap files in one location
+set backupdir=.,$TEMP  " Keep swap files in one location
 
 " UNCOMMENT TO USE
 set expandtab                    " Use spaces instead of tabs
