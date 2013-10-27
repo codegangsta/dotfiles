@@ -8,7 +8,7 @@ root: ~/code/gocode/src/github.com/codegangsta/confab/
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre_window: source env.sh
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -18,5 +18,5 @@ windows:
       layout: aef9,318x83,0,0{232x83,0,0,0,85x83,233,0,3}
       panes:
         - vim
-        - cd test
+        - gits
   - mongo: mongod -f /usr/local/mongodb/mongod.conf
