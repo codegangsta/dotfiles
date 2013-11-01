@@ -19,5 +19,6 @@ windows:
   - editor:
       layout: aef9,318x83,0,0{232x83,0,0,0,85x83,233,0,3}
       panes:
-        - vim
+        - vim cli.go
         - gits
+        - vim ~/todos/cli.todo
