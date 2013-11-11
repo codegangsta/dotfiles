@@ -1,3 +1,6 @@
+setlocal omnifunc=gocomplete#Complete
+set completeopt-=preview
+
 nmap <leader>r :!tmux send-keys -t 1 C-c <cr> :call Send_to_Tmux("clear; go run ".expand("%")."\n") <cr>
 nmap <Leader>t :call Send_to_Tmux("clear; go test --tags test ./...\n") <cr>
 nmap <Leader>i :call Send_to_Tmux("clear; go install\n") <cr>
