@@ -1,7 +1,7 @@
 # ~/.tmuxinator/home.yml
 
 name: home
-root: ~/
+root: ~/Dropbox/TaskPaper/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,4 +19,4 @@ windows:
   - editor:
       layout: aef9,318x83,0,0{232x83,0,0,0,85x83,233,0,3}
       panes:
-        - gits
+        - vim .
