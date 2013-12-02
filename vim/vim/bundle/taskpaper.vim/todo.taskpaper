@@ -1,0 +1,6 @@
+Release:
+	Tasks to be completed before next release
+	- Note compatibility with ToDoPaper
+	- stylesheets for tags (e.g. "fail" produces red bg) @done(2012-03-13)
+	- include patch for notes. @done
+
