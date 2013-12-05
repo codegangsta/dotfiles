@@ -21,3 +21,4 @@ windows:
       panes:
         - vim .
         - gits
+        - vim ~/Dropbox/TaskPaper/martini-contrib.taskpaper
