@@ -7,10 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
 
-[[ $TERM = "screen" ]] && rvm use default
+# default ruby
+chruby 2.0
 
 # Z
 source "$HOME/.dotfiles/z/z.sh"
