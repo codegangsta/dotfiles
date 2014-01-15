@@ -44,6 +44,9 @@ set shell=sh
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
+" syntastic
+let g:syntastic_go_checkers = []
+
 " Supertab
 let g:SuperTabDefaultCompletionType = "context"
 
