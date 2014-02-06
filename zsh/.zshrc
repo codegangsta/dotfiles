@@ -20,6 +20,7 @@ source "$HOME/.dotfiles/z/z.sh"
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g github='git hub'
+alias -g migrate='rake db:migrate db:test:prepare'
 alias -g tag='ctags -R .'
 alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
