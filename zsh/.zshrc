@@ -19,6 +19,8 @@ source "$HOME/.dotfiles/z/z.sh"
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
+alias -g migrate='rake db:migrate db:test:prepare'
+alias -g be='bundle exec'
 alias -g github='git hub'
 alias -g migrate='rake db:migrate db:test:prepare'
 alias -g tag='ctags -R .'
