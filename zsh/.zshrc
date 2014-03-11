@@ -56,3 +56,6 @@ export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # SlimerJS
 export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
+
+# Pomodoro baby
+pom() { pompom -e "$*" && pompom -d 5 "Break Time" }
