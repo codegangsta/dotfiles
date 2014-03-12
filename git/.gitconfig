@@ -15,6 +15,6 @@
   pb = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
   db = "!git push origin :\"$(git rev-parse --abbrev-ref HEAD)\""
   pbf = "!git push -f origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  up = "!git pull origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  up = "!git pull --rebase origin \"$(git rev-parse --abbrev-ref HEAD)\""
   pr = "!open \"$(git remote -v | grep origin | grep push | cut -f 2 | cut -d \" \" -f 1 | sed -e \"s|git@\\(.*\\):\\(.*\\).git|https://\\1/\\2|\")/pull/new/$(git rev-parse --abbrev-ref HEAD)\""
   hub = "!open \"$(git remote -v | grep origin | grep push | cut -f 2 | cut -d \" \" -f 1 | sed -e \"s|git@\\(.*\\):\\(.*\\).git|https://\\1/\\2|\")/tree/$(git rev-parse --abbrev-ref HEAD)\""
