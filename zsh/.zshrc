@@ -16,6 +16,9 @@ chruby 2.0
 # Z
 source "$HOME/.dotfiles/z/z.sh"
 
+# gh
+eval "$(gh alias -s)"
+
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
