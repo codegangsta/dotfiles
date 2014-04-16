@@ -1,7 +1,7 @@
 # ~/.tmuxinator/martini.yml
 
 name: martini
-root: ~/code/gocode/src/github.com/codegangsta/martini/
+root: ~/code/gocode/src/github.com/go-martini/martini/
 
 # Optional tmux socket
 # socket_name: foo
