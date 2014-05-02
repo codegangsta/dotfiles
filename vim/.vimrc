@@ -102,6 +102,7 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>g :Git<Space>
 map <leader>c :CtrlPClearAllCaches<cr>
 map <leader>/ :Ack<Space>
+map <leader>p :YRShow<cr>
 
 " Removing search highlighting
 nnoremap <ESC><ESC> :nohlsearch<CR>
