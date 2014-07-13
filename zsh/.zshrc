@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 # Disable auto correct
 unsetopt correct_all
 
+export DOCKER_HOST=tcp://docker.dev:2375
+
 export GOPATH=$HOME/code/gocode
 export GOCODE=$GOPATH/src/github.com/codegangsta
 export PATH=$PATH:$GOPATH/bin
@@ -63,3 +65,13 @@ export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
 
 # Pomodoro baby
 pom() { pompom -e "$*" && pompom -d 5 "Break Time" }
+
+# Status
+status() {
+        $*;
+        if (( $? == 0 )); 
+                then; tmux set-option -q status-bg green; 
+                else; tmux set-option -q status-bg red; 
+        fi
+        tmux set-option -q status-right "$* ";
+}
