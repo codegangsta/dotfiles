@@ -6,43 +6,61 @@
 "
 " This filetype plugin adds three new commands for go buffers:
 "
-"   :Import {path}
+"   :GoImport {path}
 "
 "       Import ensures that the provided package {path} is imported
 "       in the current Go buffer, using proper style and ordering.
 "       If {path} is already being imported, an error will be
 "       displayed and the buffer will be untouched.
 "
-"   :ImportAs {localname} {path}
+"   :GoImportAs {localname} {path}
 "
 "       Same as Import, but uses a custom local name for the package.
 "
-"   :Drop {path}
+"   :GoDrop {path}
 "
 "       Remove the import line for the provided package {path}, if
 "       present in the current Go buffer.  If {path} is not being
 "       imported, an error will be displayed and the buffer will be
 "       untouched.
 "
-" In addition to these commands, there are also two shortcuts mapped:
+" If you would like to add shortcuts, you can do so by doing the following:
 "
-"   \f  -  Runs :Import fmt
-"   \F  -  Runs :Drop fmt
+"   Import fmt
+"   au Filetype go nnoremap <buffer> <LocalLeader>f :Import fmt<CR>
 "
-" The backslash is the default maplocalleader, so it is possible that
+"   Drop fmt
+"   au Filetype go nnoremap <buffer> <LocalLeader>F :Drop fmt<CR>
+"
+"   Import the word under your cursor
+"   au Filetype go nnoremap <buffer> <LocalLeader>k
+"       \ :exe 'Import ' . expand('<cword>')<CR>
+"
+" The backslash '\' is the default maplocalleader, so it is possible that
 " your vim is set to use a different character (:help maplocalleader).
+"
+" Options:
+"
+"   g:go_import_commands [default=1]
+"
+"       Flag to indicate whether to enable the commands listed above.
 "
 if exists("b:did_ftplugin_go_import")
     finish
 endif
 
-command! -buffer -nargs=? -complete=customlist,go#complete#Package Drop call s:SwitchImport(0, '', <f-args>)
-command! -buffer -nargs=1 -complete=customlist,go#complete#Package Import call s:SwitchImport(1, '', <f-args>)
-command! -buffer -nargs=* -complete=customlist,go#complete#Package ImportAs call s:SwitchImport(1, <f-args>)
-map <buffer> <LocalLeader>f :Import fmt<CR>
-map <buffer> <LocalLeader>F :Drop fmt<CR>
+if !exists("g:go_import_commands")
+    let g:go_import_commands = 1
+endif
 
-function! s:SwitchImport(enabled, localname, path)
+if g:go_import_commands
+    command! -buffer -nargs=? -complete=customlist,go#package#Complete GoDrop call GoSwitchImport(0, '', <f-args>)
+    command! -buffer -nargs=1 -complete=customlist,go#package#Complete GoImport call GoSwitchImport(1, '', <f-args>)
+    command! -buffer -nargs=* -complete=customlist,go#package#Complete GoImportAs call GoSwitchImport(1, <f-args>)
+endif
+
+
+function! GoSwitchImport(enabled, localname, path)
     let view = winsaveview()
     let path = a:path
 
@@ -223,6 +241,7 @@ function! s:SwitchImport(enabled, localname, path)
     call winrestview(view)
 
 endfunction
+
 
 function! s:Error(s)
     echohl Error | echo a:s | echohl None
