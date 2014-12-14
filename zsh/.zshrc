@@ -17,7 +17,7 @@ chruby 2.0
 source "$HOME/.dotfiles/z/z.sh"
 
 # gh
-eval "$(gh alias -s)"
+eval "$(hub alias -s)"
 
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
@@ -25,7 +25,6 @@ alias -g gits='git status'
 alias -g migrate='rake db:migrate db:test:prepare'
 alias -g be='bundle exec'
 alias -g github='git hub'
-alias -g tag='ctags -R .'
 alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
 alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
@@ -40,7 +39,9 @@ source $ZSH/oh-my-zsh.sh
 # Disable auto correct
 unsetopt correct_all
 
-export DOCKER_HOST=tcp://docker.dev:2375
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 export GOPATH=$HOME/code/gocode
 export GOCODE=$GOPATH/src/github.com/codegangsta
@@ -59,6 +60,9 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+# Calibre
+export PATH="/Applications/calibre.app/Contents/MacOS/:$PATH"
 
 # SlimerJS
 export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
