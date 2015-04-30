@@ -10,3 +10,4 @@ Guardfile.local
 Gemfile.local
 Gemfile.local.lock
 .agignore
+gin-bin

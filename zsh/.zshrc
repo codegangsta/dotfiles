@@ -22,7 +22,6 @@ eval "$(hub alias -s)"
 # Global aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
-alias -g migrate='rake db:migrate db:test:prepare'
 alias -g be='bundle exec'
 alias -g github='git hub'
 alias -g mux='tmuxinator'
@@ -44,8 +43,9 @@ export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 export GOPATH=$HOME/code/gocode
-export GOCODE=$GOPATH/src/github.com/codegangsta
 export PATH=$PATH:$GOPATH/bin
+
+export GOCODE=$GOPATH/src/github.com/codegangsta
 
 export EDITOR='vim'
 export DISABLE_AUTO_TITLE=true
