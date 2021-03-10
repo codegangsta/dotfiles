@@ -1,7 +1,0 @@
-windows:
-  - name: "home"
-    root: "~"
-    layout: even-horizontal
-    panes:
-      - cmd: "vim ~/Dropbox/TaskPaper/home.taskpaper"
-      - cmd: "vim ~/.dotfiles"

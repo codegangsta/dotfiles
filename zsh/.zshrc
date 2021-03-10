@@ -7,6 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+ZSH_DISABLE_COMPFIX=true
+
 # gh
 eval "$(hub alias -s)"
 

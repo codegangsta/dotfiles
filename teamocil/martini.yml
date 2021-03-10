@@ -1,8 +1,0 @@
-windows:
-  - name: "martini"
-    root: ~/code/gocode/src/github.com/codegangsta/martini/
-    layout: aef9,318x83,0,0{232x83,0,0,0,85x83,233,0,3}
-    panes:
-        - cmd: vim martini.go
-        - cmd: gits
-        - cmd: vim ~/Dropbox/TaskPaper/martini.taskpaper
