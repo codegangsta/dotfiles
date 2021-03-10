@@ -7,15 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-
-# default ruby
-chruby 2.0
-
-# Z
-source "$HOME/.dotfiles/z/z.sh"
-
 # gh
 eval "$(hub alias -s)"
 
@@ -24,7 +15,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g be='bundle exec'
 alias -g github='git hub'
-alias -g mux='tmuxinator'
 alias -g tks='tmux kill-session'
 alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
 alias -g s3='s3cmd'
