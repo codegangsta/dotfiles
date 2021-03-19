@@ -66,18 +66,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " NERDTree
 let NERDTreeShowHidden=0
 
-" CtrlP
-if executable('ag')
-        " Use ag over grep
-        set grepprg=ag\ --nogroup\ --nocolor
-
-        " Use ag in CtrlP for listing files. Lightning fast and
-        " respects .gitignore
-        let g:ctrlp_user_command = 'ag -i %s -l --nocolor -g ""'
-
-        " ag is fast enough that CtrlP doesn't need to cache
-        let g:ctrlp_use_caching = 0
-endif
+" FZF
+set rtp+=/usr/local/opt/fzf
+nmap <C-P> :FZF<CR>
 
 " Color Scheme
 set t_Co=256
@@ -99,8 +90,8 @@ map <Leader>- :split<CR>
 map <Leader><bar> :vsplit<CR>
 
 map <leader>n :NERDTreeToggle<cr>
+map <leader>f :NERDTreeFind<cr>
 map <leader>g :Git<Space>
-map <leader>c :CtrlPClearAllCaches<cr>
 map <leader>/ :Ack<Space>
 map <leader>p :YRShow<cr>
 

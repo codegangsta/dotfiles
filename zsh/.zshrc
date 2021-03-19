@@ -9,6 +9,9 @@ ZSH_THEME="robbyrussell"
 
 ZSH_DISABLE_COMPFIX=true
 
+#rbenv
+eval "$(rbenv init -)"
+
 # gh
 eval "$(hub alias -s)"
 
@@ -71,3 +74,7 @@ status() {
         fi
         tmux set-option -q status-right "$* ";
 }
+eval "$(rbenv init - --no-rehash)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
