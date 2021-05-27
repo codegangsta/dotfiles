@@ -21,3 +21,5 @@
   i = "issue"
   ic = "issue create"
   cis = "ci-status"
+[init]
+	defaultBranch = main
