@@ -133,3 +133,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+autocmd BufNewFile,BufRead *.thor set syntax=ruby
+autocmd BufNewFile,BufRead *.thor set filetype=ruby
