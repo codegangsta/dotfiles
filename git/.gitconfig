@@ -1,13 +1,13 @@
 [color]
-	ui = true
+  ui = true
 [core]
-	editor = vim -c 'startinsert'
-	excludesfile = ~/.gitignore_global
+  editor = vim -c 'startinsert'
+  excludesfile = ~/.gitignore_global
 [user]
-	email = jeremy.saenz@gmail.com
-	name = Jeremy Saenz
+  email = jeremy.saenz@gmail.com
+  name = Jeremy Saenz
 [github]
-	user = codegangsta
+  user = codegangsta
 [alias]
   co = checkout
   c = commit -v
@@ -22,4 +22,4 @@
   ic = "issue create"
   cis = "ci-status"
 [init]
-	defaultBranch = main
+  defaultBranch = main
