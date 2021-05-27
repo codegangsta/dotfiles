@@ -26,8 +26,6 @@ link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
 link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
 link "~/.dotfiles/vim/vim", "~/.vim"
 link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
-link "~/.dotfiles/tmuxinator/", "~/.tmuxinator/"
-link "~/.dotfiles/teamocil/", "~/.teamocil/"
 link "~/.dotfiles/nvim/", "~/.config/nvim/"
 
 puts "done"
