@@ -23,6 +23,8 @@ alias -g github='git hub'
 alias -g tks='tmux kill-session'
 alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
 alias -g s3='s3cmd'
+alias vim="nvim"
+alias vi="nvim"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -61,6 +63,9 @@ export PATH="/Applications/calibre.app/Contents/MacOS/:$PATH"
 
 # SlimerJS
 export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
+
+# Dependencies
+export DEPENDENCIES_NEXT=1
 
 # Pomodoro baby
 pom() { pompom -e "$*" && pompom -d 5 "Break Time" }

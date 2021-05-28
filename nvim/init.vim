@@ -1,7 +1,20 @@
 " My vim plugins
 "
-" call plug#begin(stdpath('data') . '/plugged')
-" call plug#end()
+call plug#begin(stdpath('data') . '/plugged')
+  Plug 'scrooloose/nerdtree'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'tpope/vim-endwise'
+  Plug 'pangloss/vim-javascript'
+  Plug 'tpope/vim-ragtag'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-sensible'
+  Plug 'preservim/vimux'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
 " Basic Configuration
 "
@@ -10,12 +23,8 @@ set nocompatible                  " Must come first because it changes other opt
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
-runtime macros/matchit.vim        " Load the matchit plugin.
-
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
-
-set backspace=indent,eol,start    " Intuitive backspacing.
 
 set hidden                        " Handle multiple buffers better.
 
@@ -123,3 +132,8 @@ nnoremap <C-n> :call NumberToggle()<cr>
 
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
