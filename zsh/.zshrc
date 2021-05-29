@@ -44,7 +44,8 @@ export PATH=$PATH:$GOPATH/bin
 
 export GOCODE=$GOPATH/src/github.com/codegangsta
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
