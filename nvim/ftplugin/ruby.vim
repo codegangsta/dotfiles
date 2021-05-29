@@ -3,6 +3,3 @@ map <Leader>t :call VimuxRunCommand("clear; be rspec --tty ".expand("%")."\n") <
 map <Leader>l :call VimuxRunCommand("clear; be rspec --tty ".expand("%").":".line(".")."\n") <cr>
 map <leader>r :!ruby %<cr>
 map <leader>b :!bundle<cr>
-
-setlocal shiftwidth=2
-setlocal tabstop=2

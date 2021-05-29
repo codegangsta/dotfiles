@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-ragtag'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-fugitive'
