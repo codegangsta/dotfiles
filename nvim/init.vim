@@ -24,6 +24,8 @@ call plug#end()
 "
 set nocompatible                  " Must come first because it changes other options.
 
+set noswapfile
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
