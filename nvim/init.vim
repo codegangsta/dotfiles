@@ -14,6 +14,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'preservim/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Basic Configuration
