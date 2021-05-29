@@ -17,6 +17,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
+  Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Basic Configuration
@@ -140,3 +141,8 @@ autocmd BufNewFile,BufRead *.thor set filetype=ruby
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" use ag to power the ack plugin
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
