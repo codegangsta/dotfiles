@@ -1,7 +1,7 @@
 [color]
   ui = true
 [core]
-  editor = vim -c 'startinsert'
+  editor = nvim -c 'startinsert'
   excludesfile = ~/.gitignore_global
 [user]
   email = jeremy.saenz@gmail.com
@@ -23,3 +23,4 @@
   cis = "ci-status"
 [init]
   defaultBranch = main
+  templatedir = ~/.git_template
