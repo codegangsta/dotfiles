@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-fugitive'
   Plug 'preservim/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
