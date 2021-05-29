@@ -7,6 +7,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-endwise'
   Plug 'pangloss/vim-javascript'
   Plug 'tpope/vim-ragtag'
+  Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-sleuth'
@@ -18,6 +19,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
   Plug 'mileszs/ack.vim'
+  Plug 'danchoi/ri.vim'
 call plug#end()
 
 " Basic Configuration
