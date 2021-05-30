@@ -17,7 +17,6 @@ font:
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
 
-
 colors:
   primary:
     foreground: '0xc5c8c6'
