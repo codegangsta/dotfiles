@@ -19,15 +19,14 @@ def link(path, link_name)
 end
 
 puts "Bootstrapping Jeremy's Dotfiles..."
-link "~/.dotfiles/vim/.vimrc", "~/.vimrc"
 link "~/.dotfiles/.jshintrc", "~/.jshintrc"
 link "~/.dotfiles/git/.gitconfig", "~/.gitconfig"
 link "~/.dotfiles/git/.git_template", "~/.git_template"
 link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
 link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
-link "~/.dotfiles/vim/vim", "~/.vim"
 link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
 link "~/.dotfiles/nvim/", "~/.config/nvim/"
+link "~/.dotfiles/alacritty/", "~/.config/alacritty/"
 
 puts "Running 'brew bundle'"
 system "brew bundle"
