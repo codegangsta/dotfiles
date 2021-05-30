@@ -29,4 +29,7 @@ link "~/.dotfiles/vim/vim", "~/.vim"
 link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
 link "~/.dotfiles/nvim/", "~/.config/nvim/"
 
+puts "Running 'brew bundle'"
+system "brew bundle"
+
 puts "done"
