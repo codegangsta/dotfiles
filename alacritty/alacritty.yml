@@ -1,2 +1,5 @@
+window:
+  title: Terminal
+
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
