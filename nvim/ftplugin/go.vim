@@ -1,6 +1,9 @@
-nmap <Leader>t :call VimuxRunCommand("clear; traffic go test ./...") <cr>
-nmap <Leader>i :call VimuxRunCommand("clear; traffic go install") <cr>
-nmap <Leader>r :call VimuxRunCommand("clear; go build -o gin-bin && ./gin-bin") <cr>
+nmap <Leader>t :call VimuxRunCommand("clear; go test ./...") <cr>
+nmap <Leader>i :call VimuxRunCommand("clear; go install") <cr>
+nmap <Leader>r :call VimuxRunCommand("clear; go run main.go") <cr>
+
+setlocal shiftwidth=2
+setlocal tabstop=2
 
 set completeopt-=preview
 nmap <leader>d <Plug>(go-doc)
