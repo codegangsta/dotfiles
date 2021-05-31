@@ -20,6 +20,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'mileszs/ack.vim'
   Plug 'danchoi/ri.vim'
+  Plug 'fatih/vim-go'
 call plug#end()
 
 " Basic Configuration

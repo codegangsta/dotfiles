@@ -8,6 +8,7 @@ brew "things.sh"
 brew "the_silver_searcher"
 brew "ctags"
 brew "heroku"
+brew "go"
 
 # Mac apps
 cask "alacritty"
