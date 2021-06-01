@@ -18,7 +18,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
-  Plug 'mileszs/ack.vim'
   Plug 'danchoi/ri.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
@@ -110,7 +109,7 @@ map <Leader><bar> :vsplit<CR>
 map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 map <leader>g :Git<Space>
-map <leader>/ :Ack<Space>
+map <leader>/ :Ag<Space>
 map <leader>p :YRShow<cr>
 
 " Removing search highlighting
@@ -146,8 +145,3 @@ autocmd BufNewFile,BufRead *.thor set filetype=ruby
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" use ag to power the ack plugin
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif

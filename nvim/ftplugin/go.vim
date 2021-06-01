@@ -1,4 +1,4 @@
-nmap <Leader>t :call VimuxRunCommand("clear; go test ./...") <cr>
+nmap <Leader>t :call VimuxRunCommand("clear; go test -v ./...") <cr>
 nmap <Leader>i :call VimuxRunCommand("clear; go install") <cr>
 nmap <Leader>r :call VimuxRunCommand("clear; go run main.go") <cr>
 
