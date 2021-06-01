@@ -96,6 +96,7 @@ let NERDTreeShowHidden=0
 " FZF
 set rtp+=/usr/local/opt/fzf
 nmap <C-P> :FZF<CR>
+nmap <C-F> :Ag<cr>
 
 " Map cursor for insert mode
 let &t_SI .= "\<Esc>[5 q"
@@ -109,8 +110,9 @@ map <Leader><bar> :vsplit<CR>
 map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 map <leader>g :Git<Space>
-map <leader>/ :Ag<Space>
-map <leader>p :YRShow<cr>
+map <leader>/ :Ag<cr>
+
+map <leader>h :History:<cr>
 
 " Removing search highlighting
 nnoremap <ESC><ESC> :nohlsearch<CR>

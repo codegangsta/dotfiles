@@ -9,6 +9,7 @@ brew "the_silver_searcher"
 brew "ctags"
 brew "heroku"
 brew "go"
+brew "git-delta"
 
 # Mac apps
 cask "alacritty"
