@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/vim-easy-align'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
+  Plug 'plasticboy/vim-markdown'
   Plug 'preservim/vimux'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-commentary'
@@ -147,3 +148,6 @@ autocmd BufNewFile,BufRead *.thor set filetype=ruby
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Vim Markdown config
+let g:vim_markdown_folding_disabled = 1
