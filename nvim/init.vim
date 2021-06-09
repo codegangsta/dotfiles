@@ -1,25 +1,25 @@
 " My vim plugins
 "
 call plug#begin(stdpath('data') . '/plugged')
-  Plug 'scrooloose/nerdtree'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'tpope/vim-endwise'
-  Plug 'pangloss/vim-javascript'
-  Plug 'tpope/vim-ragtag'
-  Plug 'vim-ruby/vim-ruby'
-  Plug 'tpope/vim-rails'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-sleuth'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-fugitive'
-  Plug 'preservim/vimux'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'junegunn/fzf.vim'
   Plug 'danchoi/ri.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'pangloss/vim-javascript'
+  Plug 'preservim/vimux'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-endwise'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-ragtag'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-sleuth'
+  Plug 'tpope/vim-surround'
+  Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " Basic Configuration

@@ -56,18 +56,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# Postgres
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-
-# Calibre
-export PATH="/Applications/calibre.app/Contents/MacOS/:$PATH"
-
-# SlimerJS
-export SLIMERJSLAUNCHER="/Applications/Firefox.app/Contents/MacOS/firefox"
-
-# Dependencies
-export DEPENDENCIES_NEXT=1
-
 # Pomodoro baby
 pom() { pompom -e "$*" && pompom -d 5 "Break Time" }
 
@@ -84,3 +72,4 @@ eval "$(rbenv init - --no-rehash)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
