@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/goyo.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
@@ -112,6 +113,7 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 map <leader>g :Git<Space>
 map <leader>/ :Ag<cr>
+map <leader>w :Goyo<cr>
 
 map <leader>h :History:<cr>
 
