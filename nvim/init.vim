@@ -130,17 +130,6 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-" Relative line numbers
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
-
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 
