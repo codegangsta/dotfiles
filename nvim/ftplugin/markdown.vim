@@ -6,3 +6,5 @@ setlocal spelllang=en
 setlocal spell!
 
 highlight ColorColumn ctermbg=0
+
+map <Leader>p :MarkdownPreview<cr>
