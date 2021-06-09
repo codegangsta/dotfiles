@@ -132,11 +132,11 @@ noremap   <Right>  <NOP>
 
 " Relative line numbers
 function! NumberToggle()
-        if(&relativenumber == 1)
-                set number
-        else
-                set relativenumber
-        endif
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
