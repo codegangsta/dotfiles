@@ -9,6 +9,8 @@ ZSH_THEME="robbyrussell"
 
 ZSH_DISABLE_COMPFIX=true
 
+JOURNAL=$HOME/notes/journal
+
 #rbenv
 eval "$(rbenv init -)"
 
@@ -23,6 +25,7 @@ alias -g github='git hub'
 alias -g tks='tmux kill-session'
 alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
 alias -g s3='s3cmd'
+alias -g journal='vim -f "$JOURNAL/$(date +%F).md" && git -C $JOURNAL add . && git -C $JOURNAL c && echo "pb" | xargs -p git -C $JOURNAL'
 alias vim="nvim"
 alias vi="nvim"
 

@@ -147,3 +147,7 @@ set conceallevel=2
 
 " Vim Surround
 let g:surround_42 = "**\r**"
+
+" Spelling Errors
+hi clear SpellBad
+hi SpellBad cterm=underline
