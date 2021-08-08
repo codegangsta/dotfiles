@@ -18,7 +18,6 @@ eval "$(rbenv init -)"
 eval "$(hub alias -s)"
 
 # Global aliases
-alias ctags="`brew --prefix`/bin/ctags"
 alias -g gits='git status'
 alias -g be='bundle exec'
 alias -g github='git hub'

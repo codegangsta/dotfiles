@@ -1,18 +1,9 @@
 window:
   title: Terminal
 
-font:
-  normal:
-    family: SF Mono
-
-  bold:
-    family: SF Mono
-
-  italic:
-    family: SF Mono
-
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
+  - { key: K, mods: Alt, chars: "clear;\n" }
 
 colors:
   primary:
