@@ -25,8 +25,8 @@ alias -g tks='tmux kill-session'
 alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
 alias -g s3='s3cmd'
 alias -g journal='vim -f "$JOURNAL/$(date +%F).md" && git -C $JOURNAL add . && git -C $JOURNAL c && echo "pb" | xargs -p git -C $JOURNAL'
-alias vim="nvim"
-alias vi="nvim"
+alias -g vim="nvim"
+alias -g vi="nvim"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -36,10 +36,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 # Disable auto correct
 unsetopt correct_all
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
 
 export GOPATH=$HOME/code/gocode
 export PATH=$PATH:$GOPATH/bin
@@ -57,9 +53,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
-
-# Pomodoro baby
-pom() { pompom -e "$*" && pompom -d 5 "Break Time" }
 
 # Status
 status() {
