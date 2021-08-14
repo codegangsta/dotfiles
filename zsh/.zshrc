@@ -9,7 +9,8 @@ ZSH_THEME="robbyrussell"
 
 ZSH_DISABLE_COMPFIX=true
 
-JOURNAL=$HOME/notes/journal
+export JOURNAL=$HOME/notes/journal
+export DOTFILES=$HOME/.dotfiles
 
 #rbenv
 eval "$(rbenv init -)"
