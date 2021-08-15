@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-
-##? Initializes the dotfiles tmux project
-echo "Hello world"

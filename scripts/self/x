@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-printf "${DOTFILES}/scripts/${1}/${2}"
