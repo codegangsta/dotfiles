@@ -11,7 +11,6 @@ ZSH_DISABLE_COMPFIX=true
 
 export JOURNAL=$HOME/notes/journal
 export DOTFILES=$HOME/.dotfiles
-export PATH=$DOTFILES/bin/:$PATH
 
 #rbenv
 eval "$(rbenv init -)"
