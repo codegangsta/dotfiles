@@ -37,6 +37,9 @@ source $ZSH/oh-my-zsh.sh
 # Disable auto correct
 unsetopt correct_all
 
+# Shell scripts
+export PATH=$PATH:$HOME/.dotfiles/bin
+
 export GOPATH=$HOME/code/gocode
 export PATH=$PATH:$GOPATH/bin
 

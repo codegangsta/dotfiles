@@ -1,0 +1,17 @@
+# First window: Code
+new-session -s kajabi -c ~/code/kajabi-products -n code
+  # First pane: vim
+  send-keys "vim ." Enter
+
+  # Second pane:
+  split-window -v -l 30%
+    send-keys "docker-compose run web bash" Enter "clear" Enter
+
+  # Third pane:
+  split-window -h
+
+  new-window -n server
+    send-keys "docker-compose up" Enter
+
+select-window -t code
+select-pane -t 0
