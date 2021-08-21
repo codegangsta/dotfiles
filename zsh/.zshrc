@@ -12,9 +12,6 @@ ZSH_DISABLE_COMPFIX=true
 export JOURNAL=$HOME/notes/journal
 export DOTFILES=$HOME/.dotfiles
 
-#rbenv
-eval "$(rbenv init -)"
-
 # gh
 eval "$(hub alias -s)"
 
@@ -28,6 +25,8 @@ alias -g s3='s3cmd'
 alias -g journal='vim -f "$JOURNAL/$(date +%F).md" && git -C $JOURNAL add . && git -C $JOURNAL c && echo "pb" | xargs -p git -C $JOURNAL'
 alias -g vim="nvim"
 alias -g vi="nvim"
+alias -g dc="docker-compose"
+alias -g dcr="docker-compose run"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -49,11 +48,10 @@ export DISABLE_AUTO_TITLE=true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+export PATH="/usr/local/bin:$PATH"
 
 # Status
 status() {
@@ -64,8 +62,14 @@ status() {
         fi
         tmux set-option -q status-right "$* ";
 }
+
 eval "$(rbenv init - --no-rehash)"
 export PATH="$HOME/.rbenv/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
+
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1

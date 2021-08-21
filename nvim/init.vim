@@ -26,6 +26,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-ruby/vim-ruby'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
+  Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 " Basic Configuration
@@ -59,6 +60,7 @@ set hlsearch                      " Highlight matches.
 set t_Co=256
 color Tomorrow-Night
 hi Search term=reverse cterm=reverse gui=reverse ctermfg=237
+hi Normal guibg=NONE ctermbg=NONE
 
 " Show trailing whitespace:
 "

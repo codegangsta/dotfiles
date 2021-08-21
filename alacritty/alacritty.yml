@@ -1,5 +1,6 @@
 window:
   title: Terminal
+background_opacity: 0.9
 
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
