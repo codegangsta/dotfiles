@@ -27,6 +27,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
   Plug 'ekalinin/Dockerfile.vim'
+  Plug 'godlygeek/tabular'
 call plug#end()
 
 " Basic Configuration
