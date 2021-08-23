@@ -30,5 +30,3 @@ else
   # switch to session if we are inside another session
   tmux switch-client -t $session_name
 fi
-
-
