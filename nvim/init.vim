@@ -1,9 +1,14 @@
 " My vim plugins
 "
 call plug#begin(stdpath('data') . '/plugged')
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'danchoi/ri.vim'
+  Plug 'danilo-augusto/vim-afterglow'
+  Plug 'ekalinin/Dockerfile.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'godlygeek/tabular'
+  Plug 'hrsh7th/nvim-compe'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -11,6 +16,8 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/vim-easy-align'
+  Plug 'morhetz/gruvbox'
+  Plug 'neovim/nvim-lspconfig'
   Plug 'pangloss/vim-javascript'
   Plug 'plasticboy/vim-markdown'
   Plug 'preservim/vimux'
@@ -23,11 +30,9 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-compe'
-  Plug 'ekalinin/Dockerfile.vim'
-  Plug 'godlygeek/tabular'
 call plug#end()
 
 " Basic Configuration
@@ -58,20 +63,14 @@ set hlsearch                      " Highlight matches.
 
 " Color Scheme
 "
-set t_Co=256
-color Tomorrow-Night
-hi Search term=reverse cterm=reverse gui=reverse ctermfg=237
+color base16-tomorrow-night
 hi Normal guibg=NONE ctermbg=NONE
-
-" Show trailing whitespace:
-"
-:highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+highlight LineNr guibg=NONE
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -95,12 +94,6 @@ set backupdir=.,$TEMP  " Keep swap files in one location
 set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
-
-" Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
-" NERDTree
-let NERDTreeShowHidden=0
 
 " FZF
 set rtp+=/usr/local/opt/fzf
