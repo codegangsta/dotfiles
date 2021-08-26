@@ -25,6 +25,7 @@ link "~/.dotfiles/git/.git_template", "~/.git_template"
 link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
 link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
 link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
+link "~/.dotfiles/tmux/plugins", "~/.tmux/plugins"
 link "~/.dotfiles/nvim/", "~/.config/nvim/"
 link "~/.dotfiles/alacritty/", "~/.config/alacritty/"
 

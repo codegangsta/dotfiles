@@ -1,9 +1,20 @@
 window:
   title: Terminal
+  decorations: none
+
+background_opacity: 0.9
 
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
   - { key: K, mods: Alt, chars: "clear;\n" }
+
+font:
+  normal:
+    family: FiraCode
+  bold:
+    family: FiraCode
+  italic:
+    family: FiraCode
 
 colors:
   primary:

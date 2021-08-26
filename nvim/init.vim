@@ -5,8 +5,10 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'danilo-augusto/vim-afterglow'
+  Plug 'edkolev/tmuxline.vim'
   Plug 'ekalinin/Dockerfile.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   Plug 'godlygeek/tabular'
   Plug 'hrsh7th/nvim-compe'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -156,6 +158,8 @@ let g:go_info_mode='gopls'
 lua require'lspconfig'.gopls.setup{}
 
 set completeopt=menuone,noselect
+
+let g:airline_powerline_fonts = 1
 
 lua << EOF
 -- Compe setup
