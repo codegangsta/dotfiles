@@ -63,14 +63,7 @@ set hlsearch                      " Highlight matches.
 
 " Color Scheme
 "
-color base16-tomorrow-night
-hi Normal guibg=NONE ctermbg=NONE
-highlight LineNr guibg=NONE
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+color nord
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.

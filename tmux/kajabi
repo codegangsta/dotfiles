@@ -1,7 +1,7 @@
 # First window: Code
 new-session -s kajabi -c ~/code/kajabi-products -n code
   # First pane: vim
-  send-keys "vim ." Enter
+  send-keys "vim" Enter
 
   # Second pane:
   split-window -v -l 30%

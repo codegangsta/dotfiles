@@ -1,6 +1,6 @@
 # First window: Code
 new-session -s dotfiles -c ~/.dotfiles -n code
-  send-keys "vim ." Enter
+  send-keys "vim" Enter
 
   split-window -v -l 30%
 
