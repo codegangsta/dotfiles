@@ -1,3 +1,2 @@
-# First window: Code
-new-session -s top -c ~/.dotfiles -n gotop
+new-session -s top -c ~ -n gotop
   send-keys "gotop" Enter
