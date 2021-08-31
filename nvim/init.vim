@@ -121,6 +121,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" reorder items using K and J
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
 " disable arrow keys
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
@@ -151,7 +157,7 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 
 " Insert Date
-inoremap <F5> <C-R>=strftime("%b %d, %Y %H:%M")<CR>
+inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
 inoremap <F6> <C-R>=strftime("%H:%M")<CR>
 
 let g:go_def_mode='gopls'
