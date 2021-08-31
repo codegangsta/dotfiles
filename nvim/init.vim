@@ -35,6 +35,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
+  Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Basic Configuration
@@ -139,6 +140,9 @@ nmap ga <Plug>(EasyAlign)
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_new_list_item_indent = 2
 set conceallevel=2
+
+" Vimwiki Markdown support
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Vim Surround
 let g:surround_42 = "**\r**"
