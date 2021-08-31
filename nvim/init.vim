@@ -16,7 +16,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
-  Plug 'junegunn/limelight.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'morhetz/gruvbox'
   Plug 'neovim/nvim-lspconfig'
@@ -109,7 +108,7 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 map <leader>g :Git<Space>
 map <leader>/ :Ag<cr>
-map <leader><Space> :Goyo<cr>:Limelight!!<CR>
+map <leader><Space> :Goyo<cr>
 
 map <leader>h :History:<cr>
 
