@@ -127,12 +127,6 @@ nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
-" disable arrow keys
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 
@@ -151,10 +145,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Vim Surround
 let g:surround_42 = "**\r**"
-
-" Spelling Errors
-hi clear SpellBad
-hi SpellBad cterm=underline
 
 " Insert Date
 inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
