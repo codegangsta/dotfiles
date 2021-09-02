@@ -124,6 +124,10 @@ nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
+" Move items between buffers
+nnoremap H dd <C-W><C-H> Gp
+nnoremap L dd <C-W><C-L> Gp
+
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 
@@ -138,7 +142,8 @@ let g:vim_markdown_new_list_item_indent = 2
 set conceallevel=2
 
 " Vimwiki Markdown support
-let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md', 'index': 'README'}]
+let g:vimwiki_markdown_link_ext = 1
 
 " Vim Surround
 let g:surround_42 = "**\r**"
