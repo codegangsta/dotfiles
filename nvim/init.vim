@@ -144,6 +144,7 @@ set conceallevel=2
 " Vimwiki Markdown support
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md', 'index': 'README'}]
 let g:vimwiki_markdown_link_ext = 1
+let g:vimwiki_hl_cb_checked = 2
 
 " Vim Surround
 let g:surround_42 = "**\r**"
