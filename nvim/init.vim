@@ -106,10 +106,7 @@ map <Leader><bar> :vsplit<CR>
 
 map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
-map <leader>g :Git<Space>
 map <leader>/ :Ag<cr>
-map <leader><Space> :Goyo<cr>
-
 map <leader>h :History:<cr>
 
 " Removing search highlighting
