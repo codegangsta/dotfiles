@@ -180,10 +180,7 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = true;
-    buffer = true;
     nvim_lsp = true;
-    calc = true;
   };
 }
 
