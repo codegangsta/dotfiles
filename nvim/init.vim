@@ -35,6 +35,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
   Plug 'vimwiki/vimwiki'
+  Plug 'itchyny/calendar.vim'
 call plug#end()
 
 " Basic Configuration
