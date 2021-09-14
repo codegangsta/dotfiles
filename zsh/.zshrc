@@ -41,6 +41,10 @@ unsetopt correct_all
 # Shell scripts
 export PATH=$PATH:$HOME/.dotfiles/bin
 
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 export GOPATH=$HOME/code/gocode
 export PATH=$PATH:$GOPATH/bin
 

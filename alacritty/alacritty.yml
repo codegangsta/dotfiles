@@ -1,6 +1,5 @@
 window:
   title: Terminal
-  decorations: none
 
 background_opacity: 0.9
 

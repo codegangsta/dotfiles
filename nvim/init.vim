@@ -35,7 +35,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
   Plug 'vimwiki/vimwiki'
-  Plug 'itchyny/calendar.vim'
+  Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Basic Configuration
@@ -119,6 +119,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap j gj
+nnoremap k gk
+
 " reorder items using K and J
 nnoremap K :m .-2<CR>==
 nnoremap J :m .+1<CR>==
@@ -172,6 +175,9 @@ lua require'lspconfig'.gopls.setup{}
 set completeopt=menuone,noselect
 
 let g:airline_powerline_fonts = 1
+
+set shiftwidth=2
+set tabstop=2
 
 lua << EOF
 -- Compe setup
