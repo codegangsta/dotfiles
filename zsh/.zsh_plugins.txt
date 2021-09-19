@@ -1,0 +1,6 @@
+# This file is a list of zsh plugins I use. I can bundle these into a usable
+# shell script by loading the scripts statically
+#
+# antibody byndle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+#
+Aloxaf/fzf-tab

@@ -12,9 +12,6 @@ ZSH_DISABLE_COMPFIX=true
 export JOURNAL=$HOME/notes/journal
 export DOTFILES=$HOME/.dotfiles
 
-# gh
-eval "$(hub alias -s)"
-
 # Global aliases
 alias -g gits='git status'
 alias -g be='bundle exec'
@@ -81,3 +78,5 @@ export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
+
+source ~/.zsh_plugins.sh
