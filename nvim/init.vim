@@ -109,6 +109,7 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>f :NERDTreeFind<cr>
 map <leader>/ :Ag<cr>
 map <leader>h :History:<cr>
+map <leader>s :source ~/.dotfiles/nvim/init.vim<cr>
 
 " Removing search highlighting
 nnoremap <ESC><ESC> :nohlsearch<CR>
@@ -286,3 +287,18 @@ function! FzfSpell()
   return fzf#run({'source': suggestions, 'sink': function("FzfSpellSink"), 'down': 10 })
 endfunction
 nnoremap z= :call FzfSpell()<CR>
+
+
+" Vimwiki Tagging
+
+function! VimwikiToggleTag(tag)
+  call cursor(line("v"), 1)
+  let l:tag = ":".a:tag.":"
+  if search(l:tag, "n", line("v")) > 0
+    echo "foo found"
+    call setline(line("."), substitute(getline("."), " *".l:tag, "", "g"))
+  else
+    echo "foo not found"
+    call setline(line("."), substitute(getline("."), " *$", " ".l:tag, "g"))
+  endif
+endfunction
