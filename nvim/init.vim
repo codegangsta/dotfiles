@@ -295,10 +295,8 @@ function! VimwikiToggleTag(tag)
   call cursor(line("v"), 1)
   let l:tag = ":".a:tag.":"
   if search(l:tag, "n", line("v")) > 0
-    echo "foo found"
     call setline(line("."), substitute(getline("."), " *".l:tag, "", "g"))
   else
-    echo "foo not found"
     call setline(line("."), substitute(getline("."), " *$", " ".l:tag, "g"))
   endif
 endfunction
