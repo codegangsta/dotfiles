@@ -159,6 +159,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki',
 let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_hl_cb_checked = 2
 let g:vimwiki_auto_header = 1
+let g:vimwiki_folding = 'list'
 
 " Vim Surround
 let g:surround_42 = "**\r**"
