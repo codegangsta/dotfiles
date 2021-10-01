@@ -123,12 +123,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap j gj
 nnoremap k gk
 
-" reorder items using K and J
-nnoremap K :m .-2<CR>==
-nnoremap J :m .+1<CR>==
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
-
 " Move items between buffers
 nnoremap H dd <C-W><C-H> Gp
 nnoremap L dd <C-W><C-L> Gp
