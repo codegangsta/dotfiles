@@ -53,6 +53,8 @@ export DISABLE_AUTO_TITLE=true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
 

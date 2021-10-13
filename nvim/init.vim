@@ -31,11 +31,10 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
   Plug 'vimwiki/vimwiki'
   Plug 'hashivim/vim-terraform'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Basic Configuration
@@ -153,7 +152,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki',
 let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_hl_cb_checked = 2
 let g:vimwiki_auto_header = 1
-let g:vimwiki_folding = 'list'
 
 " Vim Surround
 let g:surround_42 = "**\r**"
@@ -169,8 +167,6 @@ let g:go_info_mode='gopls'
 lua require'lspconfig'.gopls.setup{}
 
 set completeopt=menuone,noselect
-
-let g:airline_powerline_fonts = 1
 
 set shiftwidth=2
 set tabstop=2
