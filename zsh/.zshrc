@@ -70,9 +70,6 @@ status() {
         tmux set-option -q status-right "$* ";
 }
 
-eval "$(rbenv init - --no-rehash)"
-export PATH="$HOME/.rbenv/bin:$PATH"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
