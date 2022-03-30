@@ -4,12 +4,12 @@ brew "fzf"
 brew "hub"
 brew "neovim"
 brew "tmux"
-brew "things.sh"
 brew "the_silver_searcher"
 brew "ctags"
 brew "go"
 brew "terraform"
 brew "caddy"
+brew "antibody"
 
 # Mac apps
 cask "alacritty"
