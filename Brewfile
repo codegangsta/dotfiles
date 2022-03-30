@@ -10,6 +10,7 @@ brew "go"
 brew "terraform"
 brew "caddy"
 brew "antibody"
+brew "screenresolution"
 
 # Mac apps
 cask "alacritty"
