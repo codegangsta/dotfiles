@@ -7,10 +7,12 @@ brew "fzf"
 brew "gh"
 brew "go"
 brew "hub"
+brew "mas"
 brew "neovim"
 brew "screenresolution"
 brew "terraform"
 brew "the_silver_searcher"
+brew "tldr"
 brew "tmux"
 
 # Mac apps
@@ -21,3 +23,7 @@ cask "ngrok"
 cask "slack"
 cask "visual-studio-code"
 cask "zoom"
+
+# Mac App Store Apps
+mas "Bear", id: 1091189122
+mas "Vimari", id: 1480933944
