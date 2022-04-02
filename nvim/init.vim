@@ -267,8 +267,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 EOF
 
-autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
-
 " FZF spelling
 function! FzfSpellSink(word)
   exe 'normal! "_ciw'.a:word
