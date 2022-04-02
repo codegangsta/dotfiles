@@ -14,10 +14,10 @@ brew "the_silver_searcher"
 brew "tmux"
 
 # Mac apps
+cask "1password"
 cask "alacritty"
 cask "monitorcontrol"
 cask "ngrok"
-cask "visual-studio-code"
 cask "slack"
-cask "1password"
+cask "visual-studio-code"
 cask "zoom"
