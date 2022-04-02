@@ -10,6 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   Plug 'godlygeek/tabular'
+  Plug 'hashivim/vim-terraform'
   Plug 'hrsh7th/nvim-compe'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'jiangmiao/auto-pairs'
@@ -17,6 +18,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/vim-easy-align'
+  Plug 'mattn/emmet-vim'
   Plug 'morhetz/gruvbox'
   Plug 'neovim/nvim-lspconfig'
   Plug 'pangloss/vim-javascript'
@@ -33,8 +35,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-surround'
   Plug 'vim-ruby/vim-ruby'
   Plug 'vimwiki/vimwiki'
-  Plug 'hashivim/vim-terraform'
-  Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Basic Configuration
@@ -109,6 +109,7 @@ map <leader>f :NERDTreeFind<cr>
 map <leader>/ :Ag<cr>
 map <leader>h :History:<cr>
 map <leader>s :source ~/.dotfiles/nvim/init.vim<cr>
+map <leader><space> :lua vim.lsp.buf.hover()<cr>
 
 " Removing search highlighting
 nnoremap <ESC><ESC> :nohlsearch<CR>
@@ -229,12 +230,13 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 --This line is important for auto-import
 EOF
 
 inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
