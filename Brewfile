@@ -19,12 +19,12 @@ brew "tmux"
 # Mac apps
 cask "1password"
 cask "alacritty"
+cask "font-fira-code"
 cask "monitorcontrol"
 cask "ngrok"
 cask "slack"
 cask "visual-studio-code"
 cask "zoom"
-cask "font-fira-code"
 
 # Mac App Store Apps
 mas "Bear", id: 1091189122
