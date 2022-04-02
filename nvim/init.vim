@@ -15,13 +15,16 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/vim-vsnip'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/vim-easy-align'
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'mattn/emmet-vim'
   Plug 'morhetz/gruvbox'
   Plug 'neovim/nvim-lspconfig'
@@ -39,9 +42,6 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'tpope/vim-surround'
   Plug 'vim-ruby/vim-ruby'
   Plug 'vimwiki/vimwiki'
-  Plug 'hrsh7th/cmp-vsnip'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'ray-x/go.nvim'
 call plug#end()
 
 " Basic Configuration
@@ -180,6 +180,8 @@ lua require'lspconfig'.gopls.setup{}
 set shiftwidth=2
 set tabstop=2
 
+lua require('gitsigns').setup()
+
 " neovim cmp
 set completeopt=menu,menuone,noselect
 
@@ -233,15 +235,6 @@ lua <<EOF
     sources = {
       { name = 'buffer' }
     }
-  })
-
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
-    sources = cmp.config.sources({
-      { name = 'path' }
-    }, {
-      { name = 'cmdline' }
-    })
   })
 
   -- Setup lspconfig.
