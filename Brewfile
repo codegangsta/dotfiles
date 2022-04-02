@@ -1,4 +1,5 @@
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 
 brew "antibody"
 brew "caddy"
@@ -23,6 +24,7 @@ cask "ngrok"
 cask "slack"
 cask "visual-studio-code"
 cask "zoom"
+cask "font-fira-code"
 
 # Mac App Store Apps
 mas "Bear", id: 1091189122

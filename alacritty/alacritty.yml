@@ -8,12 +8,12 @@ key_bindings:
 
 font:
   size: 13
-#   normal:
-#     family: FiraCode
-#   bold:
-#     family: FiraCode
-#   italic:
-#     family: FiraCode
+  normal:
+    family: Fira Code
+  bold:
+    family: Fira Code
+  italic:
+    family: Fira Code
 
 colors:
   primary:

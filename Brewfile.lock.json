@@ -697,6 +697,9 @@
     "tap": {
       "homebrew/cask": {
         "revision": "8af0bd107d5775ce8db1d7d3935f09aa87a099e2"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "262209f9a532621dfefd543f347ccee846d93932"
       }
     },
     "cask": {
@@ -746,6 +749,12 @@
         "version": "5.10.1.5839",
         "options": {
           "full_name": "zoom"
+        }
+      },
+      "font-fira-code": {
+        "version": "6.2",
+        "options": {
+          "full_name": "font-fira-code"
         }
       }
     },
