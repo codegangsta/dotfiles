@@ -15,6 +15,8 @@ brew "terraform"
 brew "the_silver_searcher"
 brew "tldr"
 brew "tmux"
+brew "mosh"
+brew "fish"
 
 # Mac apps
 cask "1password"
