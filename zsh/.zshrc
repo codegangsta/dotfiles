@@ -24,6 +24,7 @@ alias -g vim="nvim"
 alias -g vi="nvim"
 alias -g dc="docker-compose"
 alias -g dcr="docker-compose run"
+alias -g tf="terraform"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
