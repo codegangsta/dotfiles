@@ -173,6 +173,7 @@ let g:go_info_mode='gopls'
 " autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 lua require'lspconfig'.gopls.setup{}
+lua require'lspconfig'.sumneko_lua.setup{}
 
 " set completeopt=menuone,noselect
 
