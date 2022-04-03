@@ -25,7 +25,7 @@ cmd + ctrl - t : open -a /Applications/Things3.app
 cmd + ctrl - a : open -n /Applications/Alacritty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - b : open -a /Applications/Bear.app
-cmd + ctrl - s : open -n /System/Applications/Safari.app
+cmd + ctrl - s : open -a /Applications/Safari.app
 
 
 #Equalize the size of Windows
@@ -38,3 +38,6 @@ cmd + ctrl - y : \
 
 # Fullscreen
 cmd + ctrl - m : yabai -m window --toggle zoom-fullscreen
+
+# Enable / Disable gaps in current workspace
+cmd + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
