@@ -21,6 +21,11 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
                 yabai -m window --resize left:100:0
 
 # Open Applications
+cmd + ctrl - t : open -a /Applications/Things3.app
+cmd + ctrl - a : open -n /Applications/Alacritty.app
+cmd + ctrl - c : open -a /System/Applications/Calendar.app
+cmd + ctrl - b : open -a /Applications/Bear.app
+cmd + ctrl - s : open -n /System/Applications/Safari.app
 
 
 #Equalize the size of Windows
