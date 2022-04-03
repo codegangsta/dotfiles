@@ -131,12 +131,11 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap j gj
 nnoremap k gk
 
-" Move items between buffers
-nnoremap H dd <C-W><C-H> Gp
-nnoremap L dd <C-W><C-L> Gp
-
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
+
+autocmd BufNewFile,BufRead Brewfile set syntax=ruby
+autocmd BufNewFile,BufRead Brewfile set filetype=ruby
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
