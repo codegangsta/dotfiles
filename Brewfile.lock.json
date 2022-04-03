@@ -820,6 +820,9 @@
       },
       "alexanderwillner/tap": {
         "revision": "8a77da801969f1ba483e4e71621f7e5a18a4e256"
+      },
+      "homebrew/services": {
+        "revision": "7ca09a62850de6967c26e1e76ac776292cbead81"
       }
     },
     "cask": {

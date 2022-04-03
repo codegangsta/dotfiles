@@ -1,5 +1,6 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/services"
 tap "AlexanderWillner/tap"
 
 brew "antibody"
