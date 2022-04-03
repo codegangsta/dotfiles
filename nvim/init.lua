@@ -6,6 +6,9 @@ vim.cmd([[
   call plug#begin(stdpath('data') . '/plugged')
   call plug#end()
 
+  " Resize panes when window is resized
+  :autocmd VimResized * wincmd =
+
   " Basic Configuration
   "
   set nocompatible                  " Must come first because it changes other options.

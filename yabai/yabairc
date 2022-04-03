@@ -26,3 +26,8 @@ yabai -m config bottom_padding 20
 yabai -m config left_padding   20
 yabai -m config right_padding  20
 yabai -m config window_gap     20
+
+# Refocus windows with window is closed or app destroyed
+yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
