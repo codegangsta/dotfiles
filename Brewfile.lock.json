@@ -809,6 +809,14 @@
             }
           }
         }
+      },
+      "yabai": {
+        "version": "4.0.0",
+        "bottle": false
+      },
+      "skhd": {
+        "version": "0.3.5",
+        "bottle": false
       }
     },
     "tap": {
@@ -823,6 +831,9 @@
       },
       "homebrew/services": {
         "revision": "7ca09a62850de6967c26e1e76ac776292cbead81"
+      },
+      "koekeishiya/formulae": {
+        "revision": "e611d2d1e400826ede4a68a5e8742033bd75a082"
       }
     },
     "cask": {
@@ -879,6 +890,12 @@
         "options": {
           "full_name": "font-fira-code"
         }
+      },
+      "cheatsheet": {
+        "version": "1.6.3",
+        "options": {
+          "full_name": "cheatsheet"
+        }
       }
     },
     "mas": {
@@ -889,6 +906,18 @@
       "Vimari": {
         "id": "1480933944",
         "version": "2.1.1"
+      },
+      "Things": {
+        "id": "904280696",
+        "version": "3.15.15"
+      },
+      "Divvy": {
+        "id": "413857545",
+        "version": "1.5.2"
+      },
+      "Display Menu": {
+        "id": "549083868",
+        "version": "2.2.4"
       }
     }
   },
@@ -905,7 +934,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.4",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "66647d46f154eb64b976558a41ee2c1e049dd346",
+        "Homebrew/homebrew-core": "0cb8e8fb0aaf4651cbeed11578b0779d17076e69",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.3"

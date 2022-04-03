@@ -1,0 +1,11 @@
+# Navigation
+cmd + ctrl - h : yabai -m window --focus west
+cmd + ctrl - j : yabai -m window --focus south
+cmd + ctrl - k : yabai -m window --focus north
+cmd + ctrl - l : yabai -m window --focus east
+
+# Moving Windows
+cmd + ctrl + shift - h : yabai -m window --warp west
+cmd + ctrl + shift - j : yabai -m window --warp south
+cmd + ctrl + shift - k : yabai -m window --warp north
+cmd + ctrl + shift - l : yabai -m window --warp east

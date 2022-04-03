@@ -2,6 +2,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "AlexanderWillner/tap"
+tap "koekeishiya/formulae"
 
 brew "antibody"
 brew "caddy"
@@ -16,16 +17,18 @@ brew "lua-language-server"
 brew "mas"
 brew "mosh"
 brew "neovim"
-brew "screenresolution"
+brew "skhd"
 brew "terraform"
 brew "the_silver_searcher"
 brew "things.sh"
 brew "tldr"
 brew "tmux"
+brew "yabai"
 
 # Mac apps
 cask "1password"
 cask "alacritty"
+cask "cheatsheet"
 cask "font-fira-code"
 cask "monitorcontrol"
 cask "ngrok"
@@ -35,4 +38,5 @@ cask "zoom"
 
 # Mac App Store Apps
 mas "Bear", id: 1091189122
+mas "Things", id: 904280696
 mas "Vimari", id: 1480933944

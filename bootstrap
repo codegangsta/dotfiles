@@ -29,6 +29,8 @@ link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
 link "~/.dotfiles/tmux/plugins", "~/.tmux/plugins"
 link "~/.dotfiles/nvim/", "~/.config/nvim/"
 link "~/.dotfiles/alacritty/", "~/.config/alacritty/"
+link "~/.dotfiles/yabai/", "~/.config/yabai/"
+link "~/.dotfiles/skhd/", "~/.config/skhd/"
 
 puts "Running 'brew bundle'"
 system "brew bundle --cleanup"
