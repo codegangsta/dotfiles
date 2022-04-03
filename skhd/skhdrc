@@ -5,10 +5,10 @@ cmd + ctrl - k : yabai -m window --focus north
 cmd + ctrl - l : yabai -m window --focus east
 
 # Moving Windows
-cmd + shift - h : yabai -m window --warp west
-cmd + shift - j : yabai -m window --warp south
-cmd + shift - k : yabai -m window --warp north
-cmd + shift - l : yabai -m window --warp east
+cmd + shift - h : yabai -m window --swap west
+cmd + shift - j : yabai -m window --swap south
+cmd + shift - k : yabai -m window --swap north
+cmd + shift - l : yabai -m window --swap east
 
 # Resize Windows
 cmd + alt - h : yabai -m window --resize left:-100:0; \
@@ -21,13 +21,12 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
                 yabai -m window --resize left:100:0
 
 # Open Applications
-cmd + ctrl - t : open -a /Applications/Things3.app
-cmd + ctrl - a : open -n /Applications/Alacritty.app
+cmd + ctrl - space : open -a /Applications/Things3.app
+cmd + ctrl - t : open -n /Applications/Alacritty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - b : open -a /Applications/Bear.app
 cmd + ctrl - s : open -a /Applications/Safari.app
 cmd + ctrl - m : open -a /System/Applications/Mail.app
-
 
 #Equalize the size of Windows
 cmd + ctrl - e : yabai -m space --balance
@@ -38,7 +37,7 @@ cmd + ctrl - y : \
     yabai -m window --toggle border
 
 # Fullscreen
-cmd + ctrl - space : yabai -m window --toggle zoom-fullscreen
+cmd + ctrl - return : yabai -m window --toggle zoom-fullscreen
 
 # Enable / Disable gaps in current workspace
 cmd + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
