@@ -795,6 +795,12 @@
         "options": {
           "full_name": "font-fira-code"
         }
+      },
+      "steam": {
+        "version": "4.0",
+        "options": {
+          "full_name": "steam"
+        }
       }
     },
     "mas": {

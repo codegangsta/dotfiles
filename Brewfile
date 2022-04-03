@@ -25,6 +25,7 @@ cask "font-fira-code"
 cask "monitorcontrol"
 cask "ngrok"
 cask "slack"
+cask "steam"
 cask "visual-studio-code"
 cask "zoom"
 
