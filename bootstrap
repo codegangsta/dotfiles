@@ -31,6 +31,6 @@ link "~/.dotfiles/nvim/", "~/.config/nvim/"
 link "~/.dotfiles/alacritty/", "~/.config/alacritty/"
 
 puts "Running 'brew bundle'"
-system "brew bundle"
+system "brew bundle --cleanup"
 
 puts "done"
