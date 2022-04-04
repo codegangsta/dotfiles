@@ -50,4 +50,9 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
   use 'vimwiki/vimwiki'
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end)
