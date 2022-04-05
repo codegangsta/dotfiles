@@ -65,7 +65,6 @@ vim.cmd([[
   " FZF
   set rtp+=/usr/local/opt/fzf
   nmap <C-P> :Telescope find_files<CR>
-  nmap <C-T> :Telescope<cr>
   nmap <C-F> :Telescope live_grep<cr>
 
   " Map cursor for insert mode
@@ -84,6 +83,7 @@ vim.cmd([[
   map <leader>s :source ~/.dotfiles/nvim/init.lua<cr>
   map <leader><space> :lua vim.lsp.buf.hover()<cr>
   map <Leader>m :call VimuxRunCommand("clear; make") <cr>
+  map <Leader>t :Telescope<cr>
 
   " Removing search highlighting
   nnoremap <ESC><ESC> :nohlsearch<CR>
