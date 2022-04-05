@@ -64,8 +64,10 @@ vim.cmd([[
 
   " FZF
   set rtp+=/usr/local/opt/fzf
-  nmap <C-P> :FZF<CR>
-  nmap <C-F> :Ag<cr>
+  nmap <C-P> :Telescope find_files<CR>
+  nmap <C-T> :Telescope<cr>
+  nmap <C-[> :Telescope commands<cr>
+  nmap <C-F> :Telescope live_grep<cr>
 
   " Map cursor for insert mode
   let &t_SI .= "\<Esc>[5 q"
@@ -80,7 +82,7 @@ vim.cmd([[
   map <leader>f :NERDTreeFind<cr>
   map <leader>/ :Ag<cr>
   map <leader>h :History:<cr>
-  map <leader>s :source ~/.dotfiles/nvim/init.vim<cr>
+  map <leader>s :source ~/.dotfiles/nvim/init.lua<cr>
   map <leader><space> :lua vim.lsp.buf.hover()<cr>
   map <Leader>m :call VimuxRunCommand("clear; make") <cr>
 
