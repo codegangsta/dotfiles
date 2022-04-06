@@ -825,11 +825,15 @@
       "goreleaser-pro": {
         "version": "1.7.0-pro",
         "bottle": false
+      },
+      "kajabi": {
+        "version": "0.0.5",
+        "bottle": false
       }
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "6d14bfd55863b00535f8962cb8a9e6366e81ce42"
+        "revision": "7035ab1e5dd718c591675f16ba72f4498625c3ea"
       },
       "homebrew/cask-fonts": {
         "revision": "b74d4445bdcc70a6775d0aace16ba25d44b6b247"
@@ -845,6 +849,9 @@
       },
       "goreleaser/tap": {
         "revision": "261682e6ff32649893da1a7949a1e649e5aafd94"
+      },
+      "kajabi/tap": {
+        "revision": "0b4cc3a79b11db67d528baf89eef18a2fcbf7d2f"
       }
     },
     "cask": {
@@ -945,7 +952,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.5",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "642b82779d396c1255bed531cf8fdbf82d83ffc6",
+        "Homebrew/homebrew-core": "ec15cbe0be8ec8fbac818e00afff19b6f4d63639",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.3"
