@@ -827,13 +827,13 @@
         "bottle": false
       },
       "kajabi": {
-        "version": "0.0.5",
+        "version": "0.0.6",
         "bottle": false
       }
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "7035ab1e5dd718c591675f16ba72f4498625c3ea"
+        "revision": "a297f10530e9f2d530c069b686ae6658aacc0067"
       },
       "homebrew/cask-fonts": {
         "revision": "b74d4445bdcc70a6775d0aace16ba25d44b6b247"
@@ -851,7 +851,7 @@
         "revision": "261682e6ff32649893da1a7949a1e649e5aafd94"
       },
       "kajabi/tap": {
-        "revision": "0b4cc3a79b11db67d528baf89eef18a2fcbf7d2f"
+        "revision": "e7622090090d169e965fffd0a6d605e26201ca47"
       }
     },
     "cask": {
@@ -952,7 +952,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.5",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "ec15cbe0be8ec8fbac818e00afff19b6f4d63639",
+        "Homebrew/homebrew-core": "dfc1a5ba8bd0370800955700ecda3a1379c6cb97",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.3"
