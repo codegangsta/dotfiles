@@ -64,7 +64,7 @@ vim.cmd([[
 
   " FZF
   set rtp+=/usr/local/opt/fzf
-  nmap <C-P> :Telescope find_files<CR>
+  nmap <C-P> :FZF<CR>
   nmap <C-F> :Telescope live_grep<cr>
 
   " Map cursor for insert mode
