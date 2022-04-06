@@ -817,6 +817,14 @@
       "skhd": {
         "version": "0.3.5",
         "bottle": false
+      },
+      "goreleaser/tap/goreleaser-pro": {
+        "version": "1.7.0-pro",
+        "bottle": false
+      },
+      "goreleaser-pro": {
+        "version": "1.7.0-pro",
+        "bottle": false
       }
     },
     "tap": {
@@ -834,6 +842,9 @@
       },
       "koekeishiya/formulae": {
         "revision": "e611d2d1e400826ede4a68a5e8742033bd75a082"
+      },
+      "goreleaser/tap": {
+        "revision": "261682e6ff32649893da1a7949a1e649e5aafd94"
       }
     },
     "cask": {
@@ -934,7 +945,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.5",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "638a1bade23255a6c691dfea997924918f3dd6b1",
+        "Homebrew/homebrew-core": "642b82779d396c1255bed531cf8fdbf82d83ffc6",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.3"

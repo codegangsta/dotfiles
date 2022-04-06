@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "AlexanderWillner/tap"
 tap "koekeishiya/formulae"
+tap "goreleaser/tap"
 
 brew "antibody"
 brew "caddy"
@@ -24,6 +25,7 @@ brew "things.sh"
 brew "tldr"
 brew "tmux"
 brew "yabai"
+brew "goreleaser-pro"
 
 # Mac apps
 cask "1password"
