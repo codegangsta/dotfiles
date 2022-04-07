@@ -42,10 +42,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export GOPATH=$HOME/code/gocode
 export PATH=$PATH:$GOPATH/bin
-
-export GOCODE=$GOPATH/src/github.com/codegangsta
 
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
