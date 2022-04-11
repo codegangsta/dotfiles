@@ -71,6 +71,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
+export PATH="/Users/jeremy/go/bin:$PATH"
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
