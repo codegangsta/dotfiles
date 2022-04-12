@@ -1,6 +1,9 @@
 window:
   title: Terminal
   decorations: none
+  padding:
+    x: 10
+    y: 10
 
 key_bindings:
   - { key: K, mods: Command, chars: "clear;\n" }
