@@ -1,4 +1,4 @@
-nmap <Leader>t :call VimuxRunCommand("clear; go generate ./... && go-test-color -v ./...") <cr>
+nmap <Leader>t :call VimuxRunCommand("clear; go generate ./... && gotest -v") <cr>
 nmap <Leader>i :call VimuxRunCommand("clear; go install") <cr>
 nmap <Leader>r :call VimuxRunCommand("clear; go run *.go") <cr>
 nmap <Leader>b :call VimuxRunCommand("clear; go build") <cr>
