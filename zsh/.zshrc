@@ -77,3 +77,5 @@ export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
 source ~/.zsh_plugins.sh
+export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH"
