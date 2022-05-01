@@ -1,5 +1,4 @@
 tap "AlexanderWillner/tap"
-tap "goreleaser/tap"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
@@ -13,11 +12,12 @@ brew "antibody"
 brew "asciinema"
 brew "caddy"
 brew "ctags"
+brew "esbuild"
 brew "fish"
 brew "fzf"
 brew "gh"
+brew "git"
 brew "go"
-brew "goreleaser-pro"
 brew "hub"
 brew "jq"
 brew "kajabi"
@@ -27,7 +27,10 @@ brew "mosh"
 brew "nats"
 brew "nats-server"
 brew "neovim"
+brew "node"
+brew "postgresql"
 brew "python"
+brew "ruby@2.7"
 brew "skhd"
 brew "terraform"
 brew "the_silver_searcher"
@@ -55,5 +58,5 @@ cask "visual-studio-code"
 cask "zoom"
 
 # Mac App Store Apps
-mas "Bear", id: 1091189122
-mas "Things", id: 904280696
+# mas "Bear", id: 1091189122
+# mas "Things", id: 904280696
