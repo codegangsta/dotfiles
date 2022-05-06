@@ -34,5 +34,5 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 
 # Window opacity
 yabai -m config window_opacity on
-yabai -m config active_window_opacity 0.9
+yabai -m config active_window_opacity 0.95
 yabai -m config normal_window_opacity 0.8
