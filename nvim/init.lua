@@ -1,11 +1,6 @@
 require("plugins")
 
 vim.cmd([[
-  " My vim plugins
-  "
-  call plug#begin(stdpath('data') . '/plugged')
-  call plug#end()
-
   " Resize panes when window is resized
   :autocmd VimResized * wincmd =
 
