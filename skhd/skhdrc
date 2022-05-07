@@ -51,3 +51,6 @@ cmd + ctrl - m : yabai -m window --toggle zoom-fullscreen
 
 # Enable / Disable gaps in current workspace
 cmd + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# Toggle lights in the office
+cmd + ctrl + fn - f13 : shortcuts run ToggleLights
