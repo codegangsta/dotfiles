@@ -15,15 +15,12 @@ export DOTFILES=$HOME/.dotfiles
 # Global aliases
 alias -g gits='git status'
 alias -g be='bundle exec'
-alias -g github='git hub'
 alias -g tks='tmux kill-session'
 alias -g td='tmux detach'
-alias -g rmswp='find . -name ".*.sw*" | xargs rm -f'
-alias -g journal='vim -f "$JOURNAL/$(date +%F).md" && git -C $JOURNAL add . && git -C $JOURNAL c && echo "pb" | xargs -p git -C $JOURNAL'
+alias -g ta='tmux attach'
 alias -g vim="nvim"
 alias -g vi="nvim"
 alias -g dc="docker-compose"
-alias -g dcr="docker-compose run"
 alias -g tf="terraform"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
