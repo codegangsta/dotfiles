@@ -19,8 +19,8 @@ map("n", "<leader>t", ":Telescope<cr>")
 map("", "<leader>n", ":NERDTreeToggle<cr>")
 map("", "<leader>f", ":NERDTreeFind<cr>")
 
--- Reloading init.lua
-map("n", "<leader>s", "source ~/.dotfiles/nvim/init.lua<cr>")
+map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")
+map("n", "<leader>u", ":Gitsigns reset_buffer<cr>")
 
 -- LSP
 map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
