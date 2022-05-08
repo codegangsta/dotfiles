@@ -1,5 +1,6 @@
 local set = vim.api.nvim_set_option
 
+-- Basic Options
 set("swapfile", false)
 set("showcmd", true)
 set("showmode", true)
@@ -19,3 +20,10 @@ set("backup", false)
 set("writebackup", false)
 set("expandtab", true)
 set("laststatus", 2)
+set("shiftwidth", 2)
+set("tabstop", 2)
+set("conceallevel", 2)
+
+-- Vim Markdown Config
+vim.g["vim_markdown_folding_disabled"] = 1
+vim.g["vim_markdown_new_list_item_indent"] = 2

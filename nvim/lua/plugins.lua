@@ -1,13 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Automatically compile packer when this file is changed
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -29,7 +19,6 @@ return require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
   use 'junegunn/goyo.vim'
-  use 'junegunn/vim-easy-align'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
   use 'morhetz/gruvbox'
@@ -47,7 +36,6 @@ return require('packer').startup(function()
   use 'tpope/vim-sleuth'
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
-  use 'vimwiki/vimwiki'
 
   use {
     'nvim-telescope/telescope.nvim',
