@@ -1,12 +1,11 @@
 require("plugins")
+require("options")
 
 -- Resize panes when wndow is resized
 vim.api.nvim_create_autocmd({"VimResized"}, {
   pattern = { "*" },
   command = "wincmd =",
 })
-
-require("options")
 
 
 vim.cmd([[
@@ -64,20 +63,6 @@ vim.cmd([[
   let g:vim_markdown_folding_disabled = 1
   let g:vim_markdown_new_list_item_indent = 2
   set conceallevel=2
-
-  " Vimwiki Markdown support
-  let g:vimwiki_list = [{'path': '~/vimwiki',
-        \'syntax': 'markdown',
-        \'ext': '.md',
-        \'index': 'README',
-        \'links_space_char': '_',
-        \'auto_tags': 1,
-        \'auto_generate_tags': 1,
-        \'auto_generate_links': 1,
-        \'auto_diary_index': 1}]
-  let g:vimwiki_markdown_link_ext = 1
-  let g:vimwiki_hl_cb_checked = 2
-  let g:vimwiki_auto_header = 1
 
   " Vim Surround
   let g:surround_42 = "**\r**"
