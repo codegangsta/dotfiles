@@ -7,37 +7,23 @@ vim.api.nvim_create_autocmd({"VimResized"}, {
   command = "wincmd =",
 })
 
+-- Set Color Scheme
+vim.cmd("color nord")
 
 vim.cmd([[
-  " Color Scheme
-  "
-  color nord
-
-  " FZF
-  set rtp+=/usr/local/opt/fzf
-  nmap <C-P> :FZF<CR>
-  nmap <C-F> :Telescope live_grep<cr>
-
-  " Map cursor for insert mode
-  let &t_SI .= "\<Esc>[5 q"
-  " solid block
-  let &t_EI .= "\<Esc>[2 q"
-
   " Splitting
   map <Leader>- :split<CR>
   map <Leader><bar> :vsplit<CR>
 
+  nmap <C-P> :Telescope find_files<cr>
+  nmap <leader>h :Telescope help_tags<cr>
+
   map <leader>n :NERDTreeToggle<cr>
   map <leader>f :NERDTreeFind<cr>
-  map <leader>/ :Ag<cr>
-  map <leader>h :History:<cr>
   map <leader>s :source ~/.dotfiles/nvim/init.lua<cr>
   map <leader><space> :lua vim.lsp.buf.hover()<cr>
   map <Leader>m :call VimuxRunCommand("clear; make") <cr>
   map <Leader>t :Telescope<cr>
-
-  " Removing search highlighting
-  nnoremap <ESC><ESC> :nohlsearch<CR>
 
   " split naviagation
   nnoremap <C-J> <C-W><C-J>
@@ -64,17 +50,9 @@ vim.cmd([[
   let g:vim_markdown_new_list_item_indent = 2
   set conceallevel=2
 
-  " Vim Surround
-  let g:surround_42 = "**\r**"
-
-  " Insert Date
-  inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
-  inoremap <F6> <C-R>=strftime("%H:%M")<CR>
-
   let g:go_def_mode='gopls'
   let g:go_info_mode='gopls'
   " autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
-
 
   " set completeopt=menuone,noselect
 

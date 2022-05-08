@@ -28,8 +28,6 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use 'junegunn/goyo.vim'
   use 'junegunn/vim-easy-align'
   use 'lewis6991/gitsigns.nvim'
