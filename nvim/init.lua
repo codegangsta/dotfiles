@@ -1,5 +1,6 @@
 require("plugins")
 require("options")
+require("mappings")
 
 -- Resize panes when wndow is resized
 vim.api.nvim_create_autocmd({"VimResized"}, {
@@ -11,10 +12,6 @@ vim.api.nvim_create_autocmd({"VimResized"}, {
 vim.cmd("color nord")
 
 vim.cmd([[
-  " Splitting
-  map <Leader>- :split<CR>
-  map <Leader><bar> :vsplit<CR>
-
   nmap <C-P> :Telescope find_files<cr>
   nmap <leader>h :Telescope help_tags<cr>
 
