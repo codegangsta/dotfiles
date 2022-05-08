@@ -1,61 +1,18 @@
 require("plugins")
 
+-- Resize panes when wndow is resized
+vim.api.nvim_create_autocmd({"VimResized"}, {
+  pattern = { "*" },
+  command = "wincmd =",
+})
+
+require("options")
+
+
 vim.cmd([[
-  " Resize panes when window is resized
-  :autocmd VimResized * wincmd =
-
-  " Basic Configuration
-  "
-  set nocompatible                  " Must come first because it changes other options.
-
-  set noswapfile
-
-  syntax enable                     " Turn on syntax highlighting.
-  filetype plugin indent on         " Turn on file type detection.
-
-  set showcmd                       " Display incomplete commands.
-  set showmode                      " Display the mode you're in.
-
-  set hidden                        " Handle multiple buffers better.
-
-  set wildmenu                      " Enhanced command line completion.
-  set wildmode=list:longest         " Complete files like a shell.
-
-  set ignorecase                    " Case-insensitive searching.
-  set smartcase                     " But case-sensitive if expression contains a capital letter.
-
-  set number                        " Show line numbers.
-  set ruler                         " Show cursor position.
-
-  set incsearch                     " Highlight matches as you type.
-  set hlsearch                      " Highlight matches.
-
   " Color Scheme
   "
   color nord
-
-  set wrap                          " Turn on line wrapping.
-  set scrolloff=3                   " Show 3 lines of context around the cursor.
-
-  set title                         " Set the terminal's title
-
-  set visualbell                    " No beeping.
-
-  " Setting shell for vim
-  set shell=sh
-
-  " Syntax Completion
-  filetype plugin on
-  set ofu=syntaxcomplete#Complete
-
-  set nobackup                      " Don't make a backup before overwriting a file.
-  set nowritebackup                 " And again.
-  set directory=.,$TEMP  " Keep swap files in one location
-  set backupdir=.,$TEMP  " Keep swap files in one location
-
-  set expandtab                    " Use spaces instead of tabs
-
-  set laststatus=2                  " Show the status line all the time
 
   " FZF
   set rtp+=/usr/local/opt/fzf
@@ -146,13 +103,3 @@ vim.cmd([[
 ]])
 
 require("completion")
-require('lspconfig').gopls.setup{}
-require('lspconfig').sumneko_lua.setup{
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim', 'use' }
-      }
-    }
-  }
-}
