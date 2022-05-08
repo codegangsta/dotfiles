@@ -16,8 +16,8 @@ map("n", "<leader>h", ":Telescope help_tags<cr>")
 map("n", "<leader>t", ":Telescope<cr>")
 
 -- NERDTree
-map("", "<leader>n", ":NERDTreeToggle<cr>")
-map("", "<leader>f", ":NERDTreeFind<cr>")
+map("", "<leader>n", ":NvimTreeToggle<cr>")
+map("", "<leader>f", ":NvimTreeFindFile<cr>")
 
 -- Gitsigns config
 map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")

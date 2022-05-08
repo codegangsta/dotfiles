@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -183,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-easy-align"] = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-easy-align",
-    url = "https://github.com/junegunn/vim-easy-align"
   },
   ["vim-endwise"] = {
     loaded = true,
@@ -263,11 +263,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vimux",
     url = "https://github.com/preservim/vimux"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

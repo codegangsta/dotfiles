@@ -26,7 +26,6 @@ return require('packer').startup(function()
   use 'pangloss/vim-javascript'
   use 'plasticboy/vim-markdown'
   use 'preservim/vimux'
-  use 'scrooloose/nerdtree'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-fugitive'
@@ -40,5 +39,18 @@ return require('packer').startup(function()
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 end)
