@@ -19,6 +19,7 @@ map("n", "<leader>t", ":Telescope<cr>")
 map("", "<leader>n", ":NERDTreeToggle<cr>")
 map("", "<leader>f", ":NERDTreeFind<cr>")
 
+-- Gitsigns config
 map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")
 map("n", "<leader>u", ":Gitsigns reset_buffer<cr>")
 
