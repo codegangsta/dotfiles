@@ -23,6 +23,7 @@ set("laststatus", 2)
 set("shiftwidth", 2)
 set("tabstop", 2)
 set("conceallevel", 2)
+set("completeopt", "menu,menuone,noselect")
 
 -- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1

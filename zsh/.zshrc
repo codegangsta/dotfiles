@@ -45,10 +45,6 @@ export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-
 # NPM path
 export PATH="/usr/local/share/npm/bin:$PATH"
 
@@ -73,7 +69,6 @@ export PATH="/Users/jeremy/go/bin:$PATH"
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
-source ~/.zsh_plugins.sh
 export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH"
 path+=("/Users/jeremy/.local/bin")

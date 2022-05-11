@@ -1,10 +1,6 @@
 return require('packer').startup(function()
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'arcticicestudio/nord-vim'
-  use 'chriskempson/base16-vim'
   use 'christoomey/vim-tmux-navigator'
-  use 'danilo-augusto/vim-afterglow'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
   use 'fatih/vim-go'
@@ -18,14 +14,13 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
-  use 'junegunn/goyo.vim'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
-  use 'morhetz/gruvbox'
   use 'neovim/nvim-lspconfig'
   use 'pangloss/vim-javascript'
   use 'plasticboy/vim-markdown'
   use 'preservim/vimux'
+  use 'rmehri01/onenord.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-fugitive'
@@ -35,6 +30,8 @@ return require('packer').startup(function()
   use 'tpope/vim-sleuth'
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
+  use 'wbthomason/packer.nvim'
+  use 'onsails/lspkind.nvim'
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -52,5 +49,14 @@ return require('packer').startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+      }
+    end
   }
 end)
