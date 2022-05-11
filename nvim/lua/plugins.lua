@@ -4,6 +4,7 @@ return require('packer').startup(function()
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
   use 'fatih/vim-go'
+  use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
   use 'hrsh7th/cmp-buffer'
@@ -17,6 +18,7 @@ return require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
   use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind.nvim'
   use 'pangloss/vim-javascript'
   use 'plasticboy/vim-markdown'
   use 'preservim/vimux'
@@ -31,7 +33,6 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
-  use 'onsails/lspkind.nvim'
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -54,9 +55,5 @@ return require('packer').startup(function()
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-      }
-    end
   }
 end)

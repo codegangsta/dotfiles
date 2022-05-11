@@ -7,10 +7,19 @@ require("completion")
 require("gitsigns").setup()
 
 require("nvim-tree").setup({
-  open_on_setup = true,
+  open_on_setup = false,
   disable_netrw = true,
+  hijack_netrw = false,
   diagnostics = {
     enable = true
+  },
+  view = {
+    mappings = {
+      list = {
+        { key = "<C-e>", action = "" },
+        { key = "<C-t>", action = "" },
+      }
+    }
   },
   actions = {
     open_file = {
@@ -28,6 +37,14 @@ require("nvim-web-devicons").setup({
 
 require("onenord").setup({
   theme = "dark"
+})
+
+require("trouble").setup({
+  position = "right",
+  use_diagnostic_signs = true,
+  action_keys = {
+    open_tab = {}
+  }
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

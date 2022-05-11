@@ -13,10 +13,9 @@ map("", "<leader><bar>", ":vsplit<cr>")
 -- Telescope Mappings
 map("n", "<C-P>", ":Telescope find_files<cr>")
 map("n", "<leader>h", ":Telescope help_tags<cr>")
-map("n", "<leader>t", ":Telescope<cr>")
 
 -- NERDTree
-map("", "<leader>n", ":NvimTreeToggle<cr>")
+map("", "<C-e>", ":NvimTreeToggle<cr>")
 map("", "<leader>f", ":NvimTreeFindFile<cr>")
 
 -- Gitsigns config
@@ -38,3 +37,6 @@ map("n", "<C-H>", "<C-W><C-H>", { noremap = true })
 -- j and k remapping
 map("n", "j", "gj", { noremap = true })
 map("n", "k", "gk", { noremap = true })
+
+-- Opening Trouble
+map("n", "<C-t>", ":TroubleToggle<cr>")
