@@ -3,6 +3,7 @@ require("options")
 require("mappings")
 require("autocmds")
 require("completion")
+require("vsnip-config")
 
 require("gitsigns").setup()
 
@@ -45,6 +46,10 @@ require("trouble").setup({
   action_keys = {
     open_tab = {}
   }
+})
+
+require('hop').setup({
+  keys = 'etovxqpdygfblzhckisuran'
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

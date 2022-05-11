@@ -10,6 +10,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/nvim-cmp'
@@ -22,6 +23,7 @@ return require('packer').startup(function()
   use 'pangloss/vim-javascript'
   use 'plasticboy/vim-markdown'
   use 'preservim/vimux'
+  use 'rafamadriz/friendly-snippets'
   use 'rmehri01/onenord.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
@@ -55,5 +57,10 @@ return require('packer').startup(function()
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
+  }
+
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
   }
 end)

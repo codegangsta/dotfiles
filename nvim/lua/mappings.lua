@@ -40,3 +40,6 @@ map("n", "k", "gk", { noremap = true })
 
 -- Opening Trouble
 map("n", "<C-t>", ":TroubleToggle<cr>")
+
+-- Hop
+map("n", "f", "", { callback = require("hop").hint_words })
