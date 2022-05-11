@@ -4,9 +4,7 @@ require("mappings")
 require("autocmds")
 require("completion")
 
-require("gitsigns").setup({
-  current_line_blame = true
-})
+require("gitsigns").setup()
 
 require("nvim-tree").setup({
   open_on_setup = true,
