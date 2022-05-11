@@ -7,8 +7,3 @@ nmap <Leader>m :call VimuxRunCommand("clear; make clean && make") <cr>
 
 setlocal shiftwidth=2
 setlocal tabstop=2
-
-set completeopt-=preview
-nmap <leader>d <Plug>(go-doc)
-nmap gd <Plug>(go-def)
-nmap gf <Plug>(go-def)

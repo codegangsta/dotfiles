@@ -22,9 +22,6 @@ map("", "<leader>f", ":NvimTreeFindFile<cr>")
 map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")
 map("n", "<leader>u", ":Gitsigns reset_buffer<cr>")
 
--- LSP
-map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
-
 -- Make
 map("", "<leader>m", ":VimuxRunCommand 'clear; make'<cr>")
 
@@ -43,3 +40,13 @@ map("n", "<C-t>", ":TroubleToggle<cr>")
 
 -- Hop
 map("n", "f", "", { callback = require("hop").hint_words })
+
+-- LSP
+-- map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
+map("n", "gD", "", { callback = vim.lsp.buf.declaration })
+map("n", "gd", "", { callback = vim.lsp.buf.definition })
+map("n", "K", "", { callback = vim.lsp.buf.hover })
+map("n", "gi", "", { callback = vim.lsp.buf.implementation })
+map("n", "<leader>rn", "", { callback = vim.lsp.buf.rename })
+map("n", "<leader>ca", "", { callback = vim.lsp.buf.code_action })
+map("n", "gr", "", { callback = vim.lsp.buf.references })
