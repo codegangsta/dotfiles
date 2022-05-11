@@ -30,7 +30,6 @@ require("nvim-web-devicons").setup({
 
 require("onenord").setup({
   theme = "dark"
-
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
