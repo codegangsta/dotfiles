@@ -3,7 +3,7 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
-  use 'fatih/vim-go'
+  use 'ray-x/go.nvim'
   use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'

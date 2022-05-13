@@ -42,11 +42,11 @@ map("n", "<C-t>", ":TroubleToggle<cr>")
 map("n", "f", "", { callback = require("hop").hint_words })
 
 -- LSP
--- map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
+map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
 map("n", "gD", "", { callback = vim.lsp.buf.declaration })
 map("n", "gd", "", { callback = vim.lsp.buf.definition })
 map("n", "K", "", { callback = vim.lsp.buf.hover })
 map("n", "gi", "", { callback = vim.lsp.buf.implementation })
-map("n", "<leader>rn", "", { callback = vim.lsp.buf.rename })
+-- map("n", "<leader>rn", "", { callback = vim.lsp.buf.rename })
 map("n", "<leader>ca", "", { callback = vim.lsp.buf.code_action })
 map("n", "gr", "", { callback = vim.lsp.buf.references })

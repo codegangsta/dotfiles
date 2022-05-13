@@ -12,11 +12,11 @@ key_bindings:
 font:
   size: 13
   normal:
-    family: FiraCode Nerd Font
+    family: SauceCodePro Nerd Font
   bold:
-    family: FiraCode Nerd Font
+    family: SauceCodePro Nerd Font
   italic:
-    family: FiraCode Nerd Font
+    family: SauceCodePro Nerd Font
 
 colors:
   # Default colors

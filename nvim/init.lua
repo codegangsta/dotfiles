@@ -37,12 +37,16 @@ require("nvim-web-devicons").setup({
 })
 
 require("onenord").setup({
-  theme = "dark"
+  theme = "dark",
+  disable = {
+    background = true
+  }
 })
 
 require("trouble").setup({
   position = "right",
   use_diagnostic_signs = true,
+  mode = "document_diagnostics",
   action_keys = {
     open_tab = {}
   }
@@ -51,6 +55,8 @@ require("trouble").setup({
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
+
+require('go').setup()
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

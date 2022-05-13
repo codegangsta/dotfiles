@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  ["base16-vim"] = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/base16-vim",
-    url = "https://github.com/chriskempson/base16-vim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -99,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -109,35 +109,40 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["goyo.vim"] = {
+  ["go.nvim"] = {
     loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/goyo.vim",
-    url = "https://github.com/junegunn/goyo.vim"
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
   },
-  gruvbox = {
+  ["hop.nvim"] = {
     loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
   },
-  nerdtree = {
+  ["lspkind.nvim"] = {
     loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/scrooloose/nerdtree"
-  },
-  ["nord-vim"] = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -149,10 +154,25 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onenord.nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/onenord.nvim",
+    url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -179,10 +199,10 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/tmuxline.vim",
     url = "https://github.com/edkolev/tmuxline.vim"
   },
-  ["vim-afterglow"] = {
+  ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-afterglow",
-    url = "https://github.com/danilo-augusto/vim-afterglow"
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -198,11 +218,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   },
   ["vim-javascript"] = {
     loaded = true,

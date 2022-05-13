@@ -14,3 +14,11 @@ autocmd({"BufNewFile","BufRead"}, {
     vim.api.nvim_buf_set_option(0, "filetype", "ruby")
   end
 })
+
+-- Autoformat go files
+autocmd({"BufWritePre"}, {
+  pattern = {"*.go"},
+  callback = function ()
+    require("go.format").gofmt()
+  end
+})
