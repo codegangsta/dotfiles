@@ -31,7 +31,6 @@ yabai -m config window_gap     20
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 
-
 # Window opacity
 yabai -m config window_opacity on
 yabai -m config active_window_opacity 1
