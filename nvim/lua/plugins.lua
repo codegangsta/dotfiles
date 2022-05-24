@@ -3,7 +3,6 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
-  use 'ray-x/go.nvim'
   use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
@@ -22,8 +21,10 @@ return require('packer').startup(function()
   use 'onsails/lspkind.nvim'
   use 'pangloss/vim-javascript'
   use 'plasticboy/vim-markdown'
+  use 'preservim/nerdtree'
   use 'preservim/vimux'
   use 'rafamadriz/friendly-snippets'
+  use 'ray-x/go.nvim'
   use 'rmehri01/onenord.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
@@ -36,7 +37,6 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
   use 'zsiciarz/caddy.vim'
-  use 'preservim/nerdtree'
 
   use {
     'nvim-telescope/telescope.nvim',
