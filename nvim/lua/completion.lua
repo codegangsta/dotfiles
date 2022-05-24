@@ -74,9 +74,11 @@
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local config = require("lspconfig")
 
-require('lspconfig')['gopls'].setup {
+config.gopls.setup {
   capabilities = capabilities,
+  single_file_support = true,
   settings = {
     gopls = {
       experimentalPostfixCompletions = true,
@@ -92,7 +94,8 @@ require('lspconfig')['gopls'].setup {
   }
 }
 
-require('lspconfig').sumneko_lua.setup{
+config.sumneko_lua.setup{
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -102,10 +105,13 @@ require('lspconfig').sumneko_lua.setup{
   }
 }
 
-require("lspconfig").yamlls.setup{
+config.yamlls.setup{
+  capabilities = capabilities,
   settings = {
     yaml = {
       schemas = { kubernetes = "*.yml" },
     }
   }
 }
+
+config.rust_analyzer.setup{}

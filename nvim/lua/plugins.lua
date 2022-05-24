@@ -35,6 +35,8 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
+  use 'zsiciarz/caddy.vim'
+  use 'preservim/nerdtree'
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -44,14 +46,6 @@ return require('packer').startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  }
-
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   use {

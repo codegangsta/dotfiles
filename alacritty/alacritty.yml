@@ -12,11 +12,11 @@ key_bindings:
 font:
   size: 13
   normal:
-    family: SauceCodePro Nerd Font
+    family: MesloLGSDZ Nerd Font
   bold:
-    family: SauceCodePro Nerd Font
+    family: MesloLGSDZ Nerd Font
   italic:
-    family: SauceCodePro Nerd Font
+    family: MesloLGSDZ Nerd Font
 
 colors:
   # Default colors

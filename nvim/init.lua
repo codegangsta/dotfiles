@@ -7,31 +7,6 @@ require("vsnip-config")
 
 require("gitsigns").setup()
 
-require("nvim-tree").setup({
-  open_on_setup = false,
-  disable_netrw = true,
-  hijack_netrw = false,
-  diagnostics = {
-    enable = true
-  },
-  view = {
-    mappings = {
-      list = {
-        { key = "<C-e>", action = "" },
-        { key = "<C-t>", action = "" },
-      }
-    }
-  },
-  actions = {
-    open_file = {
-      window_picker = {
-        enable = false
-      },
-      resize_window = true
-    }
-  },
-})
-
 require("nvim-web-devicons").setup({
   default = true
 })
