@@ -10,6 +10,9 @@ end
 map("", "<leader>-", ":split<cr>")
 map("", "<leader><bar>", ":vsplit<cr>")
 
+-- Removing highlghts
+map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
+
 -- Telescope Mappings
 map("n", "<C-P>", ":Telescope find_files<cr>")
 map("n", "<leader>h", ":Telescope help_tags<cr>")
