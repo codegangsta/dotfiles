@@ -2043,6 +2043,12 @@
         "options": {
           "full_name": "font-sf-mono-nerd-font"
         }
+      },
+      "inkdrop": {
+        "version": "5.5.1",
+        "options": {
+          "full_name": "inkdrop"
+        }
       }
     },
     "mas": {
