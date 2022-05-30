@@ -22,7 +22,6 @@ set("expandtab", true)
 set("laststatus", 2)
 set("shiftwidth", 2)
 set("tabstop", 2)
-set("conceallevel", 2)
 set("completeopt", "menu,menuone,noselect")
 
 -- Vim Markdown Config
