@@ -12,11 +12,11 @@ key_bindings:
 font:
   size: 13
   normal:
-    family: MesloLGSDZ Nerd Font
+    family: SFMono Nerd Font
   bold:
-    family: MesloLGSDZ Nerd Font
+    family: SFMono Nerd Font
   italic:
-    family: MesloLGSDZ Nerd Font
+    family: SFMono Nerd Font
 
 colors:
   # Default colors
