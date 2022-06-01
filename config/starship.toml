@@ -3,6 +3,10 @@
 
 add_newline = false
 
+[character]
+success_symbol = "[](bold green) "
+error_symbol = "[](bold red) "
+
 [line_break]
 disabled = true
 
@@ -26,6 +30,7 @@ symbol = " "
 
 [directory]
 read_only = " "
+home_symbol = ""
 
 [docker_context]
 symbol = " "

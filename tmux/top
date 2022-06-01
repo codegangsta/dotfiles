@@ -1,2 +1,0 @@
-new-session -s top -c ~ -n gotop
-  send-keys "gotop" Enter
