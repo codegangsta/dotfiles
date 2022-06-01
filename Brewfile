@@ -9,7 +9,6 @@ tap "nats-io/nats-tools"
 tap "ngrok/ngrok"
 tap "tinygo-org/tools"
 
-brew "antibody"
 brew "asciinema"
 brew "binaryen"
 brew "caddy"
