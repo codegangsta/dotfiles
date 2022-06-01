@@ -6,3 +6,7 @@ Session.vim
 *~
 tmux/plugins
 nvim/spell/
+
+config/nats
+config/gh
+config/asciinema
