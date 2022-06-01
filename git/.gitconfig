@@ -23,4 +23,3 @@
   cis = "ci-status"
 [init]
   defaultBranch = main
-  templatedir = ~/.git_template

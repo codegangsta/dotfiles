@@ -1,36 +1,9 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-def link(path, link_name)
-  path = File.expand_path path
-  link_name = File.expand_path link_name
-
-  puts "linking #{link_name}..."
-
-  if File.symlink? link_name
-    puts "\tRemoving symlink..."
-    FileUtils.rm link_name
-  elsif File.exists? link_name
-    puts "\tSkipping because a file already exists."
-    return
-  end
-
-  FileUtils.ln_s(path, link_name)
-end
-
 puts "Bootstrapping Jeremy's Dotfiles..."
-link "~/.dotfiles/.jshintrc", "~/.jshintrc"
-link "~/.dotfiles/git/.gitconfig", "~/.gitconfig"
-link "~/.dotfiles/git/.git_template", "~/.git_template"
-link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
-link "~/.dotfiles/zsh/.zsh_plugins.txt", "~/.zsh_plugins.txt"
-link "~/.dotfiles/git/.gitignore_global", "~/.gitignore_global"
-link "~/.dotfiles/tmux/.tmux.conf", "~/.tmux.conf"
-link "~/.dotfiles/tmux/plugins", "~/.tmux/plugins"
-link "~/.dotfiles/nvim/", "~/.config/nvim/"
-link "~/.dotfiles/alacritty/", "~/.config/alacritty/"
-link "~/.dotfiles/yabai/", "~/.config/yabai/"
-link "~/.dotfiles/skhd/", "~/.config/skhd/"
+# link "~/.dotfiles/zsh/.zshrc", "~/.zshrc"
+# link "~/.dotfiles/zsh/.zsh_plugins.txt", "~/.zsh_plugins.txt"
 
 puts "Running 'brew bundle'"
 system "brew bundle --cleanup"
