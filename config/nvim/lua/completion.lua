@@ -114,4 +114,5 @@ config.yamlls.setup{
   }
 }
 
+config.tsserver.setup{}
 config.rust_analyzer.setup{}

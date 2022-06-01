@@ -1,5 +1,4 @@
 return require('packer').startup(function()
-  -- Packer can manage itself
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
@@ -15,11 +14,13 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
+  use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim'
   use 'pangloss/vim-javascript'
+  use 'peitalin/vim-jsx-typescript'
   use 'plasticboy/vim-markdown'
   use 'preservim/nerdtree'
   use 'preservim/vimux'
