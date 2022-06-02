@@ -19,7 +19,6 @@ require("onenord").setup({
 })
 
 require("trouble").setup({
-  position = "right",
   use_diagnostic_signs = true,
   mode = "document_diagnostics",
   action_keys = {
