@@ -51,6 +51,7 @@ brew "tz"
 brew "watch"
 brew "xsv"
 brew "yabai"
+brew "gotop"
 brew "yaml-language-server"
 
 # Mac apps
