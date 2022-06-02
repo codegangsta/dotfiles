@@ -10,12 +10,6 @@ cmd + shift - j : yabai -m window --swap south
 cmd + shift - k : yabai -m window --swap north
 cmd + shift - l : yabai -m window --swap east
 
-# Warping windows
-cmd + shift - left : yabai -m window --warp west
-cmd + shift - down : yabai -m window --warp south
-cmd + shift - up : yabai -m window --warp north
-cmd + shift - right : yabai -m window --warp east
-
 cmd + ctrl - left : yabai -m space --focus prev
 cmd + ctrl - down : yabai -m space --focus next
 cmd + ctrl - up : yabai -m space --focus prev
@@ -40,6 +34,10 @@ cmd + ctrl - b : open -a /Applications/Brave\ Browser.app
 
 #Equalize the size of Windows
 cmd + ctrl - e : yabai -m space --balance
+
+cmd + ctrl - w : yabai -m space --balance; \
+                 yabai -m window --resize left:-640:0; \
+                 yabai -m window --resize right:480:0
 
 # Float / Unfloat window
 cmd + ctrl - y : \
