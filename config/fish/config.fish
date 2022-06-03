@@ -1,4 +1,4 @@
-starship init fish | source
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 set -gx GOPATH $HOME/go
 set -gx GOROOT /opt/homebrew/opt/go/libexec
@@ -13,7 +13,7 @@ fish_add_path $GOROOT/bin
 fish_add_path /usr/local/bin
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    starship init fish | source
 end
 
 function fish_greeting

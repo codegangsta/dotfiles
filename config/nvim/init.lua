@@ -6,7 +6,8 @@ require("autocmds")
 require("completion")
 require("vsnip-config")
 
-require("gitsigns").setup()
+require("gitsigns").setup({
+})
 
 require("nvim-web-devicons").setup({
   default = true
@@ -21,6 +22,7 @@ require("onenord").setup({
 
 require("trouble").setup({
   use_diagnostic_signs = true,
+  auto_close = true,
   mode = "document_diagnostics",
   action_keys = {
     open_tab = {}
