@@ -38,6 +38,7 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
   use 'zsiciarz/caddy.vim'
+  use 'folke/lsp-colors.nvim'
 
   use {
     'nvim-lualine/lualine.nvim',

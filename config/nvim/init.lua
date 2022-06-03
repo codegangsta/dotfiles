@@ -1,4 +1,5 @@
 require("plugins")
+require("peek-definition")
 require("options")
 require("mappings")
 require("autocmds")
@@ -40,6 +41,13 @@ require('telescope').setup{
 require('go').setup()
 
 require('lualine').setup()
+
+require('lsp-colors').setup{
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
+}
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

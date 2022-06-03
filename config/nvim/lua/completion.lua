@@ -72,6 +72,10 @@
   --   })
   -- })
 
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local config = require("lspconfig")
@@ -116,3 +120,7 @@ config.yamlls.setup{
 
 config.tsserver.setup{}
 config.rust_analyzer.setup{}
+
+vim.diagnostic.config({
+  virtual_text = false,
+})
