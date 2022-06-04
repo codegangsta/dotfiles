@@ -2,6 +2,7 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
+  use 'folke/lsp-colors.nvim'
   use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
@@ -9,7 +10,6 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lsp-document-symbol'
-  use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/nvim-cmp'
@@ -27,6 +27,7 @@ return require('packer').startup(function()
   use 'preservim/vimux'
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
+  use 'ray-x/lsp_signature.nvim'
   use 'rmehri01/onenord.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
@@ -39,7 +40,7 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
   use 'zsiciarz/caddy.vim'
-  use 'folke/lsp-colors.nvim'
+  use 'kdheepak/lazygit.nvim'
 
   use {
     'nvim-lualine/lualine.nvim',

@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["caddy.vim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/caddy.vim",
+    url = "https://github.com/zsiciarz/caddy.vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -94,10 +99,10 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lsp-signature-help"] = {
+  ["cmp-nvim-lsp-document-symbol"] = {
     loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-document-symbol",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -139,10 +144,35 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -153,11 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -204,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -223,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-jsx-typescript"] = {
+    loaded = true,
+    path = "/Users/jeremy/.local/share/nvim/site/pack/packer/start/vim-jsx-typescript",
+    url = "https://github.com/peitalin/vim-jsx-typescript"
   },
   ["vim-markdown"] = {
     loaded = true,
