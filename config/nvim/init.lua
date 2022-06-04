@@ -51,6 +51,11 @@ require('lsp-colors').setup{
   Hint = "#10B981"
 }
 
+require('lsp_signature').setup{
+  hint_enable = false,
+  always_trigger = true,
+}
+
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
