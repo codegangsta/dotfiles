@@ -16,6 +16,7 @@ map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
 -- Telescope Mappings
 map("n", "<C-P>", ":Telescope find_files<cr>")
 map("n", "<leader>h", ":Telescope help_tags<cr>")
+map("n", "<C-t>", ":Telescope<cr>")
 
 -- NERDTree
 map("", "<C-e>", ":NERDTreeToggle<cr>")
@@ -40,9 +41,6 @@ map("n", "<C-G>", ":LazyGit<CR>", { noremap = true })
 -- j and k remapping
 map("n", "j", "gj", { noremap = true })
 map("n", "k", "gk", { noremap = true })
-
--- Opening Trouble
-map("n", "<C-t>", ":TroubleToggle<cr>")
 
 -- Hop
 map("n", "f", "", { callback = require("hop").hint_words })

@@ -1,14 +1,9 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
-
 return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
   use 'folke/lsp-colors.nvim'
+  use 'folke/todo-comments.nvim'
   use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
@@ -21,6 +16,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
+  use 'kdheepak/lazygit.nvim'
   use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
@@ -46,7 +42,6 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
   use 'zsiciarz/caddy.vim'
-  use 'kdheepak/lazygit.nvim'
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -64,18 +59,7 @@ return require('packer').startup(function()
   }
 
   use {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-  }
-
-  use {
     'phaazon/hop.nvim',
     branch = 'v1', -- optional but strongly recommended
   }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
 end)
