@@ -32,9 +32,8 @@
       ['<TAB>'] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
       { name = 'vsnip' },
-    }, {
+      { name = 'nvim_lsp' },
       { name = 'buffer' },
     }),
     experimental = {
@@ -80,7 +79,6 @@ local config = require("lspconfig")
 
 config.gopls.setup {
   capabilities = capabilities,
-  single_file_support = true,
   settings = {
     gopls = {
       experimentalPostfixCompletions = true,
