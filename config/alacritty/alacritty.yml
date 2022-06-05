@@ -10,7 +10,7 @@ key_bindings:
   - { key: K, mods: Alt, chars: "clear;\n" }
 
 font:
-  size: 14
+  size: 12
   normal:
     family: SFMono Nerd Font
     style: Light
