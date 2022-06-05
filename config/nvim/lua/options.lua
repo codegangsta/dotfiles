@@ -2,6 +2,7 @@ local set = vim.api.nvim_set_option
 
 -- Basic Options
 set("swapfile", false)
+set("compatible", false)
 set("showcmd", true)
 set("showmode", true)
 set("hidden", true)
