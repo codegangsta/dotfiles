@@ -7,8 +7,8 @@
 
     formatting = {
       format = lspkind.cmp_format({
-        mode = 'symbol', -- show only symbol annotations
-        maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+        mode = 'symbol',
+        maxwidth = 50,
 
         before = function (_, vim_item)
           return vim_item
@@ -18,7 +18,7 @@
 
     snippet = {
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        vim.fn["vsnip#anonymous"](args.body)
       end,
     },
 
@@ -33,7 +33,7 @@
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
-      ['<TAB>'] = cmp.mapping.confirm({ select = true }),
+      ['<TAB>'] = cmp.mapping.confirm({ select = false }),
     }),
 
     sources = cmp.config.sources({
@@ -55,16 +55,6 @@
       { name = 'buffer' }
     }
   })
-
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  -- cmp.setup.cmdline(':', {
-  --   mapping = cmp.mapping.preset.cmdline(),
-  --   sources = cmp.config.sources({
-  --     { name = 'path' }
-  --   }, {
-  --     { name = 'cmdline' }
-  --   })
-  -- })
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
