@@ -15,8 +15,8 @@ map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
 
 -- Telescope Mappings
 map("n", "<C-P>", ":Telescope find_files<cr>")
-map("n", "<leader>h", ":Telescope help_tags<cr>")
 map("n", "<C-t>", ":Telescope<cr>")
+map("n", "<leader>h", ":Telescope help_tags<cr>")
 
 -- NERDTree
 map("", "<C-e>", ":NERDTreeToggle<cr>")
