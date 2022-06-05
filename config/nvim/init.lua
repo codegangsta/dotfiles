@@ -4,6 +4,7 @@ require("options")
 require("mappings")
 require("autocmds")
 require("completion")
+require("lsp_configs")
 require("vsnip-config")
 
 require("gitsigns").setup({
