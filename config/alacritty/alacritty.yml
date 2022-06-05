@@ -73,3 +73,6 @@ colors:
   selection:
    text: CellForeground
    background: '#3F4758'
+
+env:
+  TERM: xterm-256color

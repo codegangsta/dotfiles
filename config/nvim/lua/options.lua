@@ -25,6 +25,8 @@ set("shiftwidth", 2)
 set("tabstop", 2)
 set("completeopt", "menu,menuone,noselect")
 
+vim.o.termguicolors = true
+
 -- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1
 vim.g["vim_markdown_new_list_item_indent"] = 2
