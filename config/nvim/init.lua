@@ -24,12 +24,9 @@ require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
 
-require('telescope').setup{
-  defaults = {
-    -- TODO: Find a better way to do this through reading .gitignore
-    file_ignore_patterns = { "node_modules" }
-  }
-}
+require('telescope').setup{}
+
+require('todo-comments').setup{}
 
 require('go').setup()
 
