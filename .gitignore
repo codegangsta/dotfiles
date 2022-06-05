@@ -5,8 +5,8 @@ Session.vim
 .netrwhist
 *~
 tmux/plugins
-nvim/spell/
 
 config/nats
 config/gh
 config/asciinema
+config/nvim/plugin
