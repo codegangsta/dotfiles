@@ -126,6 +126,11 @@
               "sha256": "0676404738239fdb2d03a2af7c5c381240ad7beaa7b42038d8e2b11519357163"
             }
           }
+        },
+        "options": {
+          "args": [
+            "HEAD"
+          ]
         }
       },
       "tmux": {
@@ -543,7 +548,7 @@
         }
       },
       "mosh": {
-        "version": "HEAD-dbe419d_18",
+        "version": "HEAD-2f90add_18",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2000,7 +2005,7 @@
         "revision": "a40a9efaaa08c8440e633b9f950331d79c497e28"
       },
       "homebrew/cask-fonts": {
-        "revision": "f681e61bbd8ff63f1dd6bf404c65db36b31daaad"
+        "revision": "5bf37767042019a642702ed775012c0e316e3720"
       },
       "alexanderwillner/tap": {
         "revision": "8a77da801969f1ba483e4e71621f7e5a18a4e256"
@@ -2222,6 +2227,14 @@
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.3.1"
+      }
+    },
+    "linux": {
+      "Pop!_OS 21.04 (hirsute)": {
+        "HOMEBREW_VERSION": "3.4.11",
+        "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
+        "Homebrew/linuxbrew-core": "66dc35732a39e53f4d6160ee9a59615d338c82c2",
+        "GCC": "10.3.0"
       }
     }
   }

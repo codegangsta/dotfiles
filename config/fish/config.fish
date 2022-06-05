@@ -1,7 +1,13 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+switch (uname)
+    case Linux
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        set -gx GOROOT /home/linuxbrew/.linuxbrew/opt/go/libexec
+    case Darwin
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        set -gx GOROOT /opt/homebrew/opt/go/libexec
+end
 
 set -gx GOPATH $HOME/go
-set -gx GOROOT /opt/homebrew/opt/go/libexec
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles

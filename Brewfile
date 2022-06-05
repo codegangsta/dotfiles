@@ -1,3 +1,5 @@
+require "os"
+
 tap "AlexanderWillner/tap"
 tap "epk/epk"
 tap "homebrew/cask"
@@ -33,7 +35,7 @@ brew "mas"
 brew "mosh", args: ["HEAD"]
 brew "nats"
 brew "nats-server"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "node"
 brew "pfetch"
 brew "postgresql"
@@ -41,7 +43,6 @@ brew "protobuf"
 brew "python"
 brew "ruby@2.7"
 brew "rust-analyzer"
-brew "skhd"
 brew "starship"
 brew "terraform"
 brew "the_silver_searcher"
@@ -55,22 +56,27 @@ brew "xsv"
 brew "yabai"
 brew "yaml-language-server"
 
-# Mac apps
-cask "1password"
-cask "alacritty"
-cask "brave-browser"
-cask "cheatsheet"
-cask "docker"
-cask "font-meslo-lg-nerd-font"
-cask "font-sf-mono-nerd-font"
-cask "inkdrop"
-cask "ngrok/ngrok/ngrok"
-cask "signal"
-cask "slack"
-cask "soundsource"
-cask "visual-studio-code"
-cask "zoom"
+if OS.mac?
+	brew "skhd"
+	
+	# Mac apps
+	cask "1password"
+	cask "alacritty"
+	cask "brave-browser"
+	cask "cheatsheet"
+	cask "docker"
+	cask "font-meslo-lg-nerd-font"
+	cask "font-sf-mono-nerd-font"
+	cask "inkdrop"
+	cask "ngrok/ngrok/ngrok"
+	cask "signal"
+	cask "slack"
+	cask "soundsource"
+	cask "visual-studio-code"
+	cask "zoom"
 
-# Mac App Store Apps
-# mas "Bear", id: 1091189122
-# mas "Things", id: 904280696
+	# Mac App Store Apps
+	# mas "Bear", id: 1091189122
+	# mas "Things", id: 904280696
+end
+
