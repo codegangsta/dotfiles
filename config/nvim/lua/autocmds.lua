@@ -22,3 +22,6 @@ autocmd({"BufWritePre"}, {
     require("go.format").goimport()
   end
 })
+
+-- Open all helptags in a vertical split
+vim.cmd [[autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif]]
