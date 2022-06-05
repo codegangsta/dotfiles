@@ -37,6 +37,7 @@ map("n", "<C-K>", "<C-W><C-K>", { noremap = true })
 map("n", "<C-L>", "<C-W><C-L>", { noremap = true })
 map("n", "<C-H>", "<C-W><C-H>", { noremap = true })
 
+-- LazyGit
 map("n", "<C-G>", ":LazyGit<CR>", { noremap = true })
 
 -- j and k remapping
