@@ -1,5 +1,4 @@
 require("plugins")
-require("peek-definition")
 require("options")
 require("mappings")
 require("autocmds")
@@ -18,15 +17,6 @@ require("onenord").setup({
   theme = "dark",
   disable = {
     background = true
-  }
-})
-
-require("trouble").setup({
-  use_diagnostic_signs = true,
-  auto_close = true,
-  mode = "document_diagnostics",
-  action_keys = {
-    open_tab = {}
   }
 })
 
