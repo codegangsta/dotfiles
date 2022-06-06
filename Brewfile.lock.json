@@ -548,7 +548,7 @@
         }
       },
       "mosh": {
-        "version": "HEAD-dbe419d_18",
+        "version": "HEAD-2f90add_18",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2277,7 +2277,7 @@
       "Pop!_OS 21.04 (hirsute)": {
         "HOMEBREW_VERSION": "3.4.11",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "66dc35732a39e53f4d6160ee9a59615d338c82c2",
+        "Homebrew/linuxbrew-core": "5026d357acaf34e34643448f14e7d9d64c27003f",
         "GCC": "10.3.0"
       }
     }
