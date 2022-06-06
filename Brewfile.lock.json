@@ -134,7 +134,7 @@
         }
       },
       "tmux": {
-        "version": "3.3",
+        "version": "HEAD-afb3a5f",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -170,6 +170,11 @@
               "sha256": "a5e292aa2bd7dbf7234ca308f82915af23edf5215dacaa1c515c26d425ad3529"
             }
           }
+        },
+        "options": {
+          "args": [
+            "HEAD"
+          ]
         }
       },
       "things.sh": {
@@ -548,7 +553,7 @@
         }
       },
       "mosh": {
-        "version": "HEAD-dbe419d_18",
+        "version": "HEAD-2f90add_18",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2049,7 +2054,7 @@
         "revision": "3c2bc4922f2fd3e7986797a2d90132326debde86"
       },
       "homebrew/cask-fonts": {
-        "revision": "5bf37767042019a642702ed775012c0e316e3720"
+        "revision": "c9fc957904619acd07ed3e3d8a5dee999d1af3a0"
       },
       "alexanderwillner/tap": {
         "revision": "8a77da801969f1ba483e4e71621f7e5a18a4e256"
@@ -2277,7 +2282,7 @@
       "Pop!_OS 21.04 (hirsute)": {
         "HOMEBREW_VERSION": "3.4.11",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "5026d357acaf34e34643448f14e7d9d64c27003f",
+        "Homebrew/linuxbrew-core": "caf084a68c7fec8f68906865c727c3c3de3df67e",
         "GCC": "10.3.0"
       }
     }

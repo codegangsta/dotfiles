@@ -49,7 +49,7 @@ brew "terraform"
 brew "things.sh"
 brew "tinygo"
 brew "tldr"
-brew "tmux"
+brew "tmux", args: ["HEAD"]
 brew "tz"
 brew "watch"
 brew "xsv"
