@@ -65,6 +65,7 @@ if OS.mac?
 	cask "brave-browser"
 	cask "cheatsheet"
 	cask "docker"
+	cask "font-iosevka"
 	cask "font-meslo-lg-nerd-font"
 	cask "font-sf-mono-nerd-font"
 	cask "inkdrop"

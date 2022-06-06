@@ -2240,6 +2240,12 @@
         "options": {
           "full_name": "kitty"
         }
+      },
+      "font-iosevka": {
+        "version": "15.5.0",
+        "options": {
+          "full_name": "font-iosevka"
+        }
       }
     },
     "mas": {
@@ -2278,7 +2284,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.0",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "a3bec38f4a84dfa37235aa74fb4f70a6b26af5e7",
+        "Homebrew/homebrew-core": "732ee6a59033a32a68787aa7dde39f34f2789cb3",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.4",
         "macOS": "12.3.1"
