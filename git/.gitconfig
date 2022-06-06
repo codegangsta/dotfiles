@@ -23,3 +23,5 @@
   cis = "ci-status"
 [init]
   defaultBranch = main
+[pull]
+	rebase = true
