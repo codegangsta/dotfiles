@@ -1,6 +1,4 @@
 return require('packer').startup(function()
-  use 'christoomey/vim-tmux-navigator'
-  use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
   use 'folke/lsp-colors.nvim'
   use 'folke/todo-comments.nvim'
@@ -24,7 +22,6 @@ return require('packer').startup(function()
   use 'pangloss/vim-javascript'
   use 'peitalin/vim-jsx-typescript'
   use 'plasticboy/vim-markdown'
-  use 'preservim/vimux'
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
   use 'ray-x/lsp_signature.nvim'
