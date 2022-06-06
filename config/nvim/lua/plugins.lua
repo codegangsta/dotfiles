@@ -14,7 +14,6 @@ return require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
   use 'kdheepak/lazygit.nvim'
-  use 'knubie/vim-kitty-navigator'
   use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
@@ -38,6 +37,11 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
   use 'zsiciarz/caddy.vim'
+
+  use {
+    'knubie/vim-kitty-navigator',
+    run = "cp ./*.py ~/.config/kitty/"
+  }
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -65,5 +69,10 @@ return require('packer').startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  use {
+    'yamatsum/nvim-nonicons',
+    requires = {'kyazdani42/nvim-web-devicons'}
   }
 end)
