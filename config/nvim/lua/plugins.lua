@@ -14,6 +14,7 @@ return require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
   use 'kdheepak/lazygit.nvim'
+  use 'knubie/vim-kitty-navigator'
   use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'mattn/emmet-vim'
