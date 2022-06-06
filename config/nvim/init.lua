@@ -40,8 +40,14 @@ require('nvim-tree').setup{
         { key = "<C-e>", action = "" },
         { key = "s", action = "split" },
         { key = "i", action = "vsplit" },
+        { key = "I", action = "toggle_dotfiles" },
         { key = "?", action = "toggle_help" },
       }
+    }
+  },
+  renderer = {
+    indent_markers = {
+      enable = true
     }
   },
   actions = {
