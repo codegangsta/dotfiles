@@ -32,6 +32,25 @@ require('go').setup()
 
 require('lualine').setup()
 
+require('nvim-tree').setup{
+  open_on_setup = true,
+  view = {
+    mappings = {
+      list = {
+        { key = "<C-e>", action = "" },
+        { key = "s", action = "split" },
+        { key = "i", action = "vsplit" },
+        { key = "?", action = "toggle_help" },
+      }
+    }
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true
+    }
+  },
+}
+
 require('lsp-colors').setup{
   Error = "#db4b4b",
   Warning = "#e0af68",

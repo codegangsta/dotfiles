@@ -25,7 +25,6 @@ return require('packer').startup(function()
   use 'pangloss/vim-javascript'
   use 'peitalin/vim-jsx-typescript'
   use 'plasticboy/vim-markdown'
-  use 'preservim/nerdtree'
   use 'preservim/vimux'
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
@@ -61,5 +60,13 @@ return require('packer').startup(function()
   use {
     'phaazon/hop.nvim',
     branch = 'v1', -- optional but strongly recommended
+  }
+
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 end)
