@@ -6,11 +6,13 @@ require("completion")
 require("lsp_configs")
 require("vsnip-config")
 
-require("gitsigns").setup({
-})
-
 require("nvim-web-devicons").setup({
   default = true
+})
+
+require("nvim-nonicons")
+
+require("gitsigns").setup({
 })
 
 require("onenord").setup({
