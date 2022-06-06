@@ -30,14 +30,3 @@ vim.o.termguicolors = true
 -- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1
 vim.g["vim_markdown_new_list_item_indent"] = 2
-
--- Dashboard
-vim.g["dashboard_default_executive"] = "telescope"
-vim.g["dashboard_custom_header"] = {
-' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
-}

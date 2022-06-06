@@ -1,11 +1,9 @@
 return require('packer').startup(function()
-  use "lukas-reineke/indent-blankline.nvim"
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'
   use 'folke/lsp-colors.nvim'
   use 'folke/todo-comments.nvim'
-  use 'glepnir/dashboard-nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
   use 'hrsh7th/cmp-buffer'
@@ -69,10 +67,5 @@ return require('packer').startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
-  use {
-    'yamatsum/nvim-nonicons',
-    requires = {'kyazdani42/nvim-web-devicons'}
   }
 end)

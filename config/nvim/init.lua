@@ -10,8 +10,6 @@ require("nvim-web-devicons").setup({
   default = true
 })
 
-require("nvim-nonicons")
-
 require("gitsigns").setup({
 })
 
@@ -21,8 +19,6 @@ require("onenord").setup({
     background = true
   }
 })
-
-require("indent_blankline").setup{}
 
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
