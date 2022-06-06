@@ -33,7 +33,6 @@ require('go').setup()
 require('lualine').setup()
 
 require('nvim-tree').setup{
-  open_on_setup = true,
   view = {
     mappings = {
       list = {
