@@ -79,4 +79,3 @@ if OS.mac?
 	# mas "Bear", id: 1091189122
 	# mas "Things", id: 904280696
 end
-
