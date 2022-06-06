@@ -68,6 +68,7 @@ if OS.mac?
 	cask "font-meslo-lg-nerd-font"
 	cask "font-sf-mono-nerd-font"
 	cask "inkdrop"
+	cask "kitty"
 	cask "ngrok/ngrok/ngrok"
 	cask "signal"
 	cask "slack"
