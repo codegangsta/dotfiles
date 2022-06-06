@@ -1,4 +1,5 @@
 return require('packer').startup(function()
+  use "lukas-reineke/indent-blankline.nvim"
   use 'christoomey/vim-tmux-navigator'
   use 'edkolev/tmuxline.vim'
   use 'ekalinin/Dockerfile.vim'

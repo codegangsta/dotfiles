@@ -22,6 +22,8 @@ require("onenord").setup({
   }
 })
 
+require("indent_blankline").setup{}
+
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
