@@ -553,7 +553,7 @@
         }
       },
       "mosh": {
-        "version": "HEAD-2f90add_18",
+        "version": "HEAD-dbe419d_18",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2051,7 +2051,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "3c2bc4922f2fd3e7986797a2d90132326debde86"
+        "revision": "4cd950245c4f92963ec3f1a5d834615cba1b2422"
       },
       "homebrew/cask-fonts": {
         "revision": "c9fc957904619acd07ed3e3d8a5dee999d1af3a0"
@@ -2234,6 +2234,12 @@
         "options": {
           "full_name": "inkdrop"
         }
+      },
+      "kitty": {
+        "version": "0.25.1",
+        "options": {
+          "full_name": "kitty"
+        }
       }
     },
     "mas": {
@@ -2270,11 +2276,11 @@
         "macOS": "11.4"
       },
       "monterey": {
-        "HOMEBREW_VERSION": "3.4.11",
+        "HOMEBREW_VERSION": "3.5.0",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "caf084a68c7fec8f68906865c727c3c3de3df67e",
+        "Homebrew/homebrew-core": "a3bec38f4a84dfa37235aa74fb4f70a6b26af5e7",
         "CLT": "13.3.0.0.1.1645755326",
-        "Xcode": "13.3",
+        "Xcode": "13.4",
         "macOS": "12.3.1"
       }
     },
