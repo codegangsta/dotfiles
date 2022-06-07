@@ -68,6 +68,7 @@ require('lsp_signature').setup{
   always_trigger = true,
 }
 
+-- TODO: Extract this into a module
 function kitty_run_command(command)
   -- kitty @ send-text --match "recent:1" hey there
   vim.cmd(":silent !kitty @ send-text -m 'recent:1' '" .. command .. "\\n'")

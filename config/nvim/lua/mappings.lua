@@ -29,7 +29,9 @@ map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")
 map("n", "<leader>u", ":Gitsigns reset_buffer<cr>")
 
 -- Make
-map("", "<leader>m", ":VimuxRunCommand 'clear; make'<cr>")
+map("", "<leader>m", "", { callback = function ()
+  kitty_run_command("clear; make")
+end })
 
 -- Split Navigation
 map("n", "<C-J>", "<C-W><C-J>", { noremap = true })
