@@ -2,6 +2,8 @@ switch (uname)
     case Linux
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         set -gx GOROOT /home/linuxbrew/.linuxbrew/opt/go/libexec
+        fish_add_path ~/.local/kitty.app/bin
+        fish_add_path ~/.local/bin
     case Darwin
         eval "$(/opt/homebrew/bin/brew shellenv)"
         set -gx GOROOT /opt/homebrew/opt/go/libexec
