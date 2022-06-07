@@ -2090,7 +2090,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "c0d3cddf5c4683f437e667b82640502b11d2b26d"
+        "revision": "90263c99ea09c64f7e7b39929ce4472736dff387"
       },
       "homebrew/cask-fonts": {
         "revision": "c9fc957904619acd07ed3e3d8a5dee999d1af3a0"
@@ -2275,7 +2275,7 @@
         }
       },
       "kitty": {
-        "version": "0.25.1",
+        "version": "0.25.2",
         "options": {
           "full_name": "kitty"
         }
@@ -2321,9 +2321,9 @@
         "macOS": "11.4"
       },
       "monterey": {
-        "HOMEBREW_VERSION": "3.5.0",
+        "HOMEBREW_VERSION": "3.5.1",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "732ee6a59033a32a68787aa7dde39f34f2789cb3",
+        "Homebrew/homebrew-core": "c6d166f556351ecfade14930021e2217b59279ec",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.4",
         "macOS": "12.3.1"
