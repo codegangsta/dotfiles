@@ -1,8 +1,0 @@
-# First window: Code
-new-session -s dotfiles -c ~/.dotfiles -n code
-  send-keys "vim" Enter
-
-  split-window -v -l 30%
-
-select-window -t code
-select-pane -t 0
