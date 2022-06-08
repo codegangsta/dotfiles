@@ -1,3 +1,6 @@
+# dotfiles
 cd ~/.dotfiles
 title dotfiles
 launch
+
+# new_tab caddy-nats
