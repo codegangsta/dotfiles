@@ -16,12 +16,7 @@
   db = "!git push origin :\"$(git rev-parse --abbrev-ref HEAD)\""
   pbf = "!git push -f origin \"$(git rev-parse --abbrev-ref HEAD)\""
   up = "!git pull --rebase origin \"$(git rev-parse --abbrev-ref HEAD)\""
-  pr = "pull-request"
-  hub = "browse --"
-  i = "issue"
-  ic = "issue create"
-  cis = "ci-status"
 [init]
   defaultBranch = main
 [pull]
-	rebase = true
+  rebase = true
