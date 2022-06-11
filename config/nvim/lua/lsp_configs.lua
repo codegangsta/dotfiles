@@ -1,60 +1,32 @@
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local config = require("lspconfig")
-
-config.gopls.setup {
-  capabilities = capabilities,
-  settings = {
-    gopls = {
-      experimentalPostfixCompletions = true,
-      analyses = {
-        unusedparams = true,
-        shadow = true,
-      },
-      staticcheck = true,
+local servers = require("nvim-lsp-installer").get_installed_servers()
+local settings = {
+  gopls = {
+    experimentalPostfixCompletions = true,
+    analyses = {
+      unusedparams = true,
+      shadow = true,
     },
+    staticcheck = true,
   },
-}
-
-config.sumneko_lua.setup{
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim', 'use' }
-      }
+  Lua = {
+    diagnostics = {
+      globals = { 'vim', 'use' }
     }
+  },
+  yaml = {
+    schemas = { kubernetes = "*.yml" },
   }
 }
 
-config.yamlls.setup{
-  capabilities = capabilities,
-  settings = {
-    yaml = {
-      schemas = { kubernetes = "*.yml" },
-    }
+for _, server in pairs(servers) do
+  config[server.name].setup{
+    capabilities = capabilities,
+    settings = settings,
   }
-}
-
-config.tailwindcss.setup{
-  capabilities = capabilities
-}
-
-config.tsserver.setup{
-  capabilities = capabilities
-}
-
-config.html.setup{
-  capabilities = capabilities
-}
-
-config.emmet_ls.setup{
-  capabilities = capabilities
-}
-
-config.rust_analyzer.setup{
-  capabilities = capabilities
-}
+end
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
