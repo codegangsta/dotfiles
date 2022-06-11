@@ -13,15 +13,12 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
-  use 'kabouzeid/nvim-lspinstall'
   use 'kdheepak/lazygit.nvim'
   use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'mattn/emmet-vim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-telescope/telescope-ui-select.nvim'
-  use 'williamboman/nvim-lsp-installer'
   use 'onsails/lspkind.nvim'
   use 'pangloss/vim-javascript'
   use 'peitalin/vim-jsx-typescript'
@@ -40,6 +37,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
   use 'wbthomason/packer.nvim'
+  use 'williamboman/nvim-lsp-installer'
   use 'zsiciarz/caddy.vim'
 
   use {

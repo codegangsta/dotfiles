@@ -3,6 +3,8 @@ require("options")
 require("mappings")
 require("autocmds")
 require("completion")
+-- setup lsp installer before we setup our configs
+require('nvim-lsp-installer').setup{}
 require("lsp_configs")
 require("vsnip-config")
 
@@ -24,7 +26,15 @@ require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
 
-require('telescope').setup{}
+require('telescope').setup{
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+      }
+    }
+  }
+}
+require("telescope").load_extension("ui-select")
 
 require('todo-comments').setup{}
 

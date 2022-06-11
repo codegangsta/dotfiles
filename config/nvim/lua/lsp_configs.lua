@@ -36,8 +36,25 @@ config.yamlls.setup{
   }
 }
 
-config.tsserver.setup{}
-config.rust_analyzer.setup{}
+config.tailwindcss.setup{
+  capabilities = capabilities
+}
+
+config.tsserver.setup{
+  capabilities = capabilities
+}
+
+config.html.setup{
+  capabilities = capabilities
+}
+
+config.emmet_ls.setup{
+  capabilities = capabilities
+}
+
+config.rust_analyzer.setup{
+  capabilities = capabilities
+}
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
