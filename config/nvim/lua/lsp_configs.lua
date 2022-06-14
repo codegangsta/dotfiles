@@ -18,7 +18,13 @@ local settings = {
   },
   yaml = {
     schemas = { kubernetes = "*.yml" },
-  }
+  },
+  ltex = {
+    dictionary = {
+      --TODO: Figure out how to get external files working with ltex
+      ['en-US'] = {'NATS', 'nats', 'Caddy-NATS', 'Caddyfile', 'xcaddy'},
+    }
+  },
 }
 
 for _, server in pairs(servers) do

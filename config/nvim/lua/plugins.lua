@@ -1,4 +1,5 @@
 return require('packer').startup(function()
+  use "Pocco81/TrueZen.nvim"
   use 'ekalinin/Dockerfile.vim'
   use 'folke/lsp-colors.nvim'
   use 'folke/todo-comments.nvim'
@@ -27,9 +28,9 @@ return require('packer').startup(function()
   use 'ray-x/go.nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'rmehri01/onenord.nvim'
+  use 'stevearc/dressing.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
-  use 'tpope/vim-fugitive'
   use 'tpope/vim-ragtag'
   use 'tpope/vim-rails'
   use 'tpope/vim-sensible'
