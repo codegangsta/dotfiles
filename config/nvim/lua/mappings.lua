@@ -17,6 +17,7 @@ map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
 map("n", "<C-P>", ":Telescope find_files<cr>")
 map("n", "<C-t>", ":Telescope<cr>")
 map("n", "<C-c>", ":Telescope commands<cr>")
+map("n", "<C-space>", ":Telescope diagnostics<cr>")
 map("n", "<leader>/", ":Telescope live_grep<cr>")
 map("n", "<leader>h", ":Telescope help_tags<cr>")
 
@@ -57,4 +58,8 @@ map("n", "gd", "", { callback = vim.lsp.buf.definition })
 map("n", "K", "", { callback = vim.lsp.buf.hover })
 map("n", "gi", "", { callback = vim.lsp.buf.implementation })
 map("n", "<leader>ca", "", { callback = vim.lsp.buf.code_action })
+map("n", "<C-a>", "", { callback = vim.lsp.buf.code_action })
 map("n", "gr", "", { callback = vim.lsp.buf.references })
+
+-- Focus
+map("", "<C-f>", ":TZAtaraxis<cr>")
