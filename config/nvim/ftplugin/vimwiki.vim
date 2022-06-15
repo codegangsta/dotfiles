@@ -1,10 +1,7 @@
 map <leader><Space> :VimwikiToggleListItem<cr>
 
-sign unplace *
-
 setlocal spell
 setlocal shiftwidth=4
-setlocal tabstop=4
 setlocal nonumber
 setlocal signcolumn=no
 
