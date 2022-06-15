@@ -77,3 +77,16 @@ vim.cmd[[
   vnoremap K :m '<-2<CR>gv=gv
   vnoremap J :m '>+1<CR>gv=gv
 ]]
+
+-- VimwikiToggleTag
+vim.cmd[[
+  function! VimwikiToggleTag(tag)
+    call cursor(line("v"), 1)
+    let l:tag = ":".a:tag.":"
+    if search(l:tag, "n", line("v")) > 0
+      call setline(line("."), substitute(getline("."), " *".l:tag, "", "g"))
+    else
+      call setline(line("."), substitute(getline("."), " *$", " ".l:tag, "g"))
+    endif
+  endfunction
+]]
