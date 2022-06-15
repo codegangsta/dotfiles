@@ -37,6 +37,7 @@ return require('packer').startup(function()
   use 'tpope/vim-sleuth'
   use 'tpope/vim-surround'
   use 'vim-ruby/vim-ruby'
+  use 'vimwiki/vimwiki'
   use 'wbthomason/packer.nvim'
   use 'williamboman/nvim-lsp-installer'
   use 'zsiciarz/caddy.vim'

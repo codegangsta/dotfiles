@@ -29,4 +29,20 @@ vim.o.termguicolors = true
 
 -- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1
-vim.g["vim_markdown_new_list_item_indent"] = 2
+
+-- Vimwiki config
+vim.g["vimwiki_list"] = { {
+  path = "~/code/wiki",
+  syntax = "markdown",
+  ext = ".md",
+  index = "README",
+  links_space_char = "_",
+  auto_tags = 1,
+  auto_generate_tags = 1,
+  auto_generate_links = 1,
+  auto_diary_index = 1,
+} }
+vim.g["vimwiki_markdown_link_ext"] = 1
+vim.g["vimwiki_hl_cb_checked"] = 1
+vim.g["vimwiki_auto_header"] = 1
+vim.g["vimwiki_listsyms"] = " .oOx"

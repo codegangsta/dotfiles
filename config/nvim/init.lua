@@ -104,3 +104,11 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+-- Spelling undercurl
+vim.cmd[[
+  hi clear SpellBad
+  hi SpellBad cterm=underline
+  " Set style for gVim
+  hi SpellBad gui=undercurl guisp=red
+]]

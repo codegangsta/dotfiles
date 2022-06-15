@@ -17,7 +17,7 @@ map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
 map("n", "<C-P>", ":Telescope find_files<cr>")
 map("n", "<C-t>", ":Telescope<cr>")
 map("n", "<C-c>", ":Telescope commands<cr>")
-map("n", "<C-space>", ":Telescope diagnostics<cr>")
+map("n", "<C-s>", ":Telescope diagnostics<cr>")
 map("n", "<leader>/", ":Telescope live_grep<cr>")
 map("n", "<leader>h", ":Telescope help_tags<cr>")
 
@@ -63,3 +63,9 @@ map("n", "gr", "", { callback = vim.lsp.buf.references })
 
 -- Focus
 map("", "<C-f>", ":TZAtaraxis<cr>")
+
+-- Dates/Times
+vim.cmd[[ 
+  inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
+  inoremap <F6> <C-R>=strftime("%H:%M")<CR>
+]]
