@@ -57,6 +57,7 @@ brew "watch"
 brew "xsv"
 brew "yabai"
 brew "yaml-language-server"
+brew "proselint"
 
 if OS.mac?
 	brew "skhd"
