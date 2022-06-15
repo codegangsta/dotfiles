@@ -1,10 +1,12 @@
 map <leader><Space> :VimwikiToggleListItem<cr>
-map <Leader>p       :MarkdownPreview<cr>
-map <leader>g       :Goyo<cr>
+
+sign unplace *
 
 setlocal spell
 setlocal shiftwidth=4
 setlocal tabstop=4
+setlocal nonumber
+setlocal signcolumn=no
 
 nnoremap 0 :call VimwikiToggleTag("waiting")<cr>
 nnoremap 1 :call VimwikiToggleTag("5m")<cr>
