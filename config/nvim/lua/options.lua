@@ -32,7 +32,7 @@ vim.g["vim_markdown_folding_disabled"] = 1
 
 -- Vimwiki config
 vim.g["vimwiki_list"] = { {
-  path = "~/code/wiki",
+  path = "~/Dropbox/wiki",
   syntax = "markdown",
   ext = ".md",
   index = "README",
