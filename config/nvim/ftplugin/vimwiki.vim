@@ -2,8 +2,6 @@ map <leader><Space> :VimwikiToggleListItem<cr>
 
 setlocal spell
 setlocal shiftwidth=4
-setlocal nonumber
-setlocal signcolumn=no
 
 nnoremap <silent> 0 :call VimwikiToggleTag("waiting")<cr>
 nnoremap <silent> 1 :call VimwikiToggleTag("5m")<cr>
