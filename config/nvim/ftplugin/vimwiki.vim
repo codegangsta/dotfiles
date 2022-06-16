@@ -1,5 +1,3 @@
-map <leader><Space> :VimwikiToggleListItem<cr>
-
 setlocal spell
 setlocal shiftwidth=4
 
