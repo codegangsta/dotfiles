@@ -2330,6 +2330,49 @@
             }
           }
         }
+      },
+      "kn": {
+        "version": "1.5.0",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:94d33b9b5f61f5da57dfdd7c4c2cd3fbf653b9f8fb47f1fd963c0f5b4f585542",
+              "sha256": "94d33b9b5f61f5da57dfdd7c4c2cd3fbf653b9f8fb47f1fd963c0f5b4f585542"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:94d33b9b5f61f5da57dfdd7c4c2cd3fbf653b9f8fb47f1fd963c0f5b4f585542",
+              "sha256": "94d33b9b5f61f5da57dfdd7c4c2cd3fbf653b9f8fb47f1fd963c0f5b4f585542"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155",
+              "sha256": "210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155",
+              "sha256": "210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155",
+              "sha256": "210d84300356a5a75f193bea1bb9a4d3f5a4f23739ccb96a5a8e03f665474155"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/kn/blobs/sha256:d11c464196707fdabf4a7cc3b4d161fd305cdc1f72559bbcd1a05ffbd8684bb7",
+              "sha256": "d11c464196707fdabf4a7cc3b4d161fd305cdc1f72559bbcd1a05ffbd8684bb7"
+            }
+          }
+        }
+      },
+      "quickstart": {
+        "version": "v1.5.0",
+        "bottle": false
       }
     },
     "tap": {
@@ -2343,7 +2386,7 @@
         "revision": "8a77da801969f1ba483e4e71621f7e5a18a4e256"
       },
       "homebrew/services": {
-        "revision": "8cfd655bf8d9ccd70b38ed0cb058e4030d855f53"
+        "revision": "1e53e30909247f6465d3fadbbe414f75455c8b10"
       },
       "koekeishiya/formulae": {
         "revision": "14828329ddf9c2cd577c672036371ec706f88579"
@@ -2365,6 +2408,12 @@
       },
       "epk/epk": {
         "revision": "74ef3c1a4e2541bbc008bc33431d8256fab5e144"
+      },
+      "knative/client": {
+        "revision": "b594754c74f5b5a81fbcd47ca5a5c76fb37c2384"
+      },
+      "knative-sandbox/kn-plugins": {
+        "revision": "bebca72e13934174dfa084736f8fe35a739f5332"
       }
     },
     "cask": {
@@ -2577,7 +2626,7 @@
       "Pop!_OS 21.04 (hirsute)": {
         "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "6aa066b9081db4648e7a63aac0a94d755f885e4f",
+        "Homebrew/linuxbrew-core": "c0c57d7a86ceeef0522197475bddbb737042dced",
         "GCC": "10.3.0"
       }
     }
