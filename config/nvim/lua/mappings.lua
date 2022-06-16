@@ -43,6 +43,7 @@ map("n", "<C-H>", "<C-W><C-H>", { noremap = true })
 
 -- LazyGit
 map("n", "<C-G>", ":LazyGit<CR>", { noremap = true })
+map("n", "<C-B>", ":LazyGitFilterCurrentFile<CR>", { noremap = true })
 
 -- j and k remapping
 map("n", "j", "gj", { noremap = true })
@@ -53,6 +54,7 @@ map("n", "f", "", { callback = require("hop").hint_words })
 
 -- LSP
 map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
+map("", "<C-space>", "", { callback = vim.lsp.buf.hover })
 map("n", "gD", "", { callback = vim.lsp.buf.declaration })
 map("n", "gd", "", { callback = vim.lsp.buf.definition })
 map("n", "K", "", { callback = vim.lsp.buf.hover })

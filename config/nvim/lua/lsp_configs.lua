@@ -17,7 +17,9 @@ local settings = {
     }
   },
   yaml = {
-    schemas = { kubernetes = "*.yml" },
+    schemas = { 
+      kubernetes = {"config/**/*.yml", "config/**/*.yaml"}
+    },
   },
   ltex = {
     dictionary = {
