@@ -43,7 +43,16 @@ require('todo-comments').setup{}
 
 require('go').setup()
 
-require('lualine').setup()
+require('lualine').setup{
+  sections = {
+    lualine_c = {
+      {
+        "filename",
+        path = 1
+      }
+    }
+  }
+}
 
 require('nvim-tree').setup{
   view = {
