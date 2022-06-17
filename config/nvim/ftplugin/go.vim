@@ -1,4 +1,4 @@
-nmap <Leader>t :lua kitty_run_command("clear; go generate ./... && gotest -v") <cr>
+nmap <Leader>t :lua kitty_run_command("clear; gotest -race -v ./...") <cr>
 nmap <Leader>i :lua kitty_run_command("clear; go install") <cr>
 nmap <Leader>r :lua kitty_run_command("clear; go run .") <cr>
 nmap <Leader>b :lua kitty_run_command("clear; go build") <cr>
