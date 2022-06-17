@@ -13,6 +13,7 @@ set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
+set -gx KO_DOCKER_REPO k3d-ko.localhost:12345
 
 fish_add_path $HOME/.dotfiles/bin
 fish_add_path $HOME/.local/bin
