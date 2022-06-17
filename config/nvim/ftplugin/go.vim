@@ -6,5 +6,9 @@ nmap <Leader>g :lua kitty_run_command("clear; go get")<cr>
 nmap <Leader>e :GoIfErr<cr>
 nmap <Leader>l :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<cr>:e<cr>
 
+command! -buffer A GoAlt
+command! -buffer AV GoAltV
+command! -buffer AS GoAltS
+
 setlocal shiftwidth=2
 setlocal tabstop=2
