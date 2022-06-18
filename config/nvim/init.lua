@@ -7,6 +7,7 @@ require("completion")
 require('nvim-lsp-installer').setup{}
 require("lsp_configs")
 require("vsnip-config")
+require("util")
 
 require("nvim-web-devicons").setup({
   default = true
@@ -28,7 +29,7 @@ require('hop').setup({
 
 require('telescope').setup{
   defaults = {
-    file_ignore_patterns = { "node_modules" },
+    file_ignore_patterns = { "node_modules", "vendor" },
   },
   extensions = {
     ["ui-select"] = {
