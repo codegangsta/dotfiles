@@ -62,6 +62,7 @@ map("n", "gi", "", { callback = vim.lsp.buf.implementation })
 map("n", "<leader>ca", "", { callback = vim.lsp.buf.code_action })
 map("n", "<C-a>", "", { callback = vim.lsp.buf.code_action })
 map("n", "gr", "", { callback = vim.lsp.buf.references })
+map("n", "<C-n>", "", { callback = vim.lsp.diagnostic.goto_next })
 
 -- Focus
 map("", "<C-f>", ":TZAtaraxis<cr>")
