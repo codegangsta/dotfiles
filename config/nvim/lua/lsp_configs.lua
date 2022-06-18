@@ -40,6 +40,8 @@ end
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
 vim.diagnostic.config({
   virtual_text = false,
 })
