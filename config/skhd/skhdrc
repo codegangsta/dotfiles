@@ -28,7 +28,7 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
 
 # Open Applications
 cmd + ctrl - space : open -a /Applications/Things3.app
-cmd + ctrl - t : open -n /Applications/Alacritty.app
+cmd + ctrl - t : open -n /Applications/Kitty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - b : open -a /Applications/Brave\ Browser.app
 
