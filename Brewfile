@@ -57,26 +57,27 @@ brew "yabai"
 brew "yaml-language-server"
 
 if OS.mac?
-	brew "skhd"
-	
-	# Mac apps
-	cask "1password"
-	cask "alacritty"
-	cask "brave-browser"
-	cask "cheatsheet"
-	cask "docker"
-	cask "font-sf-mono-nerd-font"
-	cask "font-fira-code-nerd-font"
-	cask "inkdrop"
-	cask "kitty"
-	cask "ngrok/ngrok/ngrok"
-	cask "signal"
-	cask "slack"
-	cask "soundsource"
-	cask "visual-studio-code"
-	cask "zoom"
+  brew "skhd"
 
-	# Mac App Store Apps
-	# mas "Bear", id: 1091189122
-	# mas "Things", id: 904280696
+  # Mac apps
+  cask "1password"
+  cask "alacritty"
+  cask "brave-browser"
+  cask "cheatsheet"
+  cask "docker"
+  cask "font-sf-mono-nerd-font"
+  cask "font-fira-code-nerd-font"
+  cask "inkdrop"
+  cask "kitty"
+  cask "ngrok/ngrok/ngrok"
+  cask "signal"
+  cask "slack"
+  cask "soundsource"
+  cask "visual-studio-code"
+  cask "zoom"
+  cask "whichspace"
+
+  # Mac App Store Apps
+  # mas "Bear", id: 1091189122
+  # mas "Things", id: 904280696
 end
