@@ -40,6 +40,7 @@ brew "mas"
 brew "nats"
 brew "nats-server"
 brew "neovim", args: ["HEAD"]
+brew "neovim-remote"
 brew "neofetch"
 brew "node"
 brew "protobuf"
