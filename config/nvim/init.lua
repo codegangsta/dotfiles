@@ -89,11 +89,6 @@ require('lsp-colors').setup{
   Hint = "#10B981"
 }
 
-require('lsp_signature').setup{
-  hint_enable = false,
-  always_trigger = true,
-}
-
 require('nvim-treesitter.configs').setup{
   highlight =  {
     enable = true,

@@ -2,6 +2,9 @@ local lspkind = require'lspkind'
 local cmp = require'cmp'
 
 cmp.setup({
+  completion = {
+    autocomplete = false
+  },
 
   formatting = {
     format = lspkind.cmp_format({
@@ -29,12 +32,17 @@ cmp.setup({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['.'] = cmp.mapping(function(fallback)
+      cmp.complete()
+      fallback()
+    end, {"i", "s"}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<TAB>'] = cmp.mapping.confirm({ select = false }),
   }),
 
   sources = cmp.config.sources({
+    { name = 'nvim_lsp_signature_help' },
     { name = 'vsnip' },
     { name = 'nvim_lsp' },
   }),
