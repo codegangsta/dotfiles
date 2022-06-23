@@ -19,6 +19,6 @@ autocmd({"BufNewFile","BufRead"}, {
 autocmd({"BufWritePre"}, {
   pattern = {"*.go"},
   callback = function ()
-    require("go.format").goimport()
+    vim.lsp.buf.format()
   end
 })
