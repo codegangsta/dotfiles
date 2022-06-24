@@ -2,6 +2,9 @@
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local config = require("lspconfig")
 local servers = require("nvim-lsp-installer").get_installed_servers()
+
+require("lsp-format").setup {}
+
 local settings = {
   gopls = {
     experimentalPostfixCompletions = true,
@@ -16,7 +19,7 @@ local settings = {
     }
   },
   yaml = {
-    schemas = { 
+    schemas = {
       kubernetes = {"config/**/*.yml", "config/**/*.yaml"}
     },
   },
@@ -32,6 +35,7 @@ for _, server in pairs(servers) do
   config[server.name].setup{
     capabilities = capabilities,
     settings = settings,
+    on_attach = require("lsp-format").on_attach
   }
 end
 

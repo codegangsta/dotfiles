@@ -1,5 +1,5 @@
 return require('packer').startup(function()
-  use "Pocco81/TrueZen.nvim"
+  use 'Pocco81/TrueZen.nvim'
   use 'ekalinin/Dockerfile.vim'
   use 'folke/lsp-colors.nvim'
   use 'folke/todo-comments.nvim'
@@ -19,6 +19,7 @@ return require('packer').startup(function()
   use 'leafgarland/typescript-vim'
   use 'lewis6991/gitsigns.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'lukas-reineke/lsp-format.nvim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-telescope/telescope-ui-select.nvim'
   use 'onsails/lspkind.nvim'
@@ -27,7 +28,6 @@ return require('packer').startup(function()
   use 'plasticboy/vim-markdown'
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
-  use 'ray-x/lsp_signature.nvim'
   use 'rmehri01/onenord.nvim'
   use 'stevearc/dressing.nvim'
   use 'tpope/vim-commentary'
