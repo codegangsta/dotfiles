@@ -45,6 +45,9 @@ require('todo-comments').setup{}
 require('go').setup()
 
 require('lualine').setup{
+  options = {
+    globalstatus = true
+  },
   sections = {
     lualine_c = {
       {
