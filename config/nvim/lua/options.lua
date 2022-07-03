@@ -32,7 +32,7 @@ vim.g["vim_markdown_folding_disabled"] = 1
 
 -- Vimwiki config
 vim.g["vimwiki_list"] = { {
-  path = "~/Dropbox/wiki",
+  path = "~/wiki",
   syntax = "markdown",
   ext = ".md",
   index = "README",
@@ -48,6 +48,6 @@ vim.g["vimwiki_auto_header"] = 1
 vim.g["vimwiki_listsyms"] = " .oOx"
 vim.g["vimwiki_folding"] = "list"
 
-vim.cmd[[
+vim.cmd [[
   set clipboard+=unnamedplus
 ]]
