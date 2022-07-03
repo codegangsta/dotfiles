@@ -4,7 +4,7 @@ require("mappings")
 require("autocmds")
 require("completion")
 -- setup lsp installer before we setup our configs
-require('nvim-lsp-installer').setup{}
+require('nvim-lsp-installer').setup {}
 require("lsp_configs")
 require("vsnip-config")
 require("util")
@@ -27,7 +27,7 @@ require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
 
-require('telescope').setup{
+require('telescope').setup {
   defaults = {
     file_ignore_patterns = { "node_modules", "vendor" },
   },
@@ -40,14 +40,11 @@ require('telescope').setup{
 }
 require("telescope").load_extension("ui-select")
 
-require('todo-comments').setup{}
+require('todo-comments').setup {}
 
 require('go').setup()
 
-require('lualine').setup{
-  options = {
-    globalstatus = true
-  },
+require('lualine').setup {
   sections = {
     lualine_c = {
       {
@@ -58,7 +55,7 @@ require('lualine').setup{
   }
 }
 
-require('nvim-tree').setup{
+require('nvim-tree').setup {
   view = {
     mappings = {
       list = {
@@ -85,22 +82,22 @@ require('nvim-tree').setup{
   },
 }
 
-require('lsp-colors').setup{
+require('lsp-colors').setup {
   Error = "#db4b4b",
   Warning = "#e0af68",
   Information = "#0db9d7",
   Hint = "#10B981"
 }
 
-require('nvim-treesitter.configs').setup{
-  highlight =  {
+require('nvim-treesitter.configs').setup {
+  highlight = {
     enable = true,
   },
 }
 
-require('true-zen').setup{}
+require('true-zen').setup {}
 
-require('dressing').setup{}
+require('dressing').setup {}
 
 function kitty_run_command(command)
   -- kitty @ send-text --match "recent:1" hey there
@@ -114,7 +111,7 @@ for type, icon in pairs(signs) do
 end
 
 -- Spelling undercurl
-vim.cmd[[
+vim.cmd [[
   hi clear SpellBad
   hi SpellBad cterm=underline
   " Set style for gVim
