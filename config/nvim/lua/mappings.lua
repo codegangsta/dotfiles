@@ -31,7 +31,7 @@ map("n", "<leader>s", ":Gitsigns stage_buffer<cr>")
 map("n", "<leader>u", ":Gitsigns reset_buffer<cr>")
 
 -- Make
-map("", "<leader>m", "", { callback = function ()
+map("", "<leader>m", "", { callback = function()
   kitty_run_command("clear; make")
 end })
 
@@ -66,3 +66,9 @@ map("n", "<C-n>", "", { callback = vim.lsp.diagnostic.goto_next })
 
 -- Focus
 map("", "<C-f>", ":TZAtaraxis<cr>")
+
+-- Dates/Times
+vim.cmd [[
+  inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
+  inoremap <F6> <C-R>=strftime("%H:%M")<CR>
+]]
