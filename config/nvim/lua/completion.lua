@@ -1,17 +1,13 @@
-local lspkind = require'lspkind'
-local cmp = require'cmp'
+local lspkind = require 'lspkind'
+local cmp = require 'cmp'
 
 cmp.setup({
-  completion = {
-    autocomplete = false
-  },
-
   formatting = {
     format = lspkind.cmp_format({
       mode = 'symbol',
       maxwidth = 50,
 
-      before = function (_, vim_item)
+      before = function(_, vim_item)
         return vim_item
       end
     })
@@ -32,10 +28,6 @@ cmp.setup({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['.'] = cmp.mapping(function(fallback)
-      cmp.complete()
-      fallback()
-    end, {"i", "s"}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<TAB>'] = cmp.mapping.confirm({ select = false }),
