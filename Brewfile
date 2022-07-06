@@ -67,6 +67,7 @@ if OS.mac?
   cask "alacritty"
   cask "brave-browser"
   cask "cheatsheet"
+  cask "discord"
   cask "docker"
   cask "font-fira-code-nerd-font"
   cask "font-inter"
