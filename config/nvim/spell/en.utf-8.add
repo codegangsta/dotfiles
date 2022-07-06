@@ -16,3 +16,5 @@ neovim
 JetStream
 CRDs
 screencast
+nvim
+cmp

@@ -14,6 +14,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
+  use 'f3fora/cmp-spell'
   use 'jiangmiao/auto-pairs'
   use 'kdheepak/lazygit.nvim'
   use 'leafgarland/typescript-vim'
@@ -54,7 +55,7 @@ return require('packer').startup(function()
 
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use {
@@ -77,6 +78,6 @@ return require('packer').startup(function()
 
   use {
     'yamatsum/nvim-nonicons',
-    requires = {'kyazdani42/nvim-web-devicons'}
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 end)

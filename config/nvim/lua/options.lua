@@ -46,7 +46,6 @@ vim.g["vimwiki_markdown_link_ext"] = 1
 vim.g["vimwiki_hl_cb_checked"] = 1
 vim.g["vimwiki_auto_header"] = 1
 vim.g["vimwiki_listsyms"] = " .oOx"
-vim.g["vimwiki_folding"] = "list"
 
 vim.cmd [[
   set clipboard+=unnamedplus

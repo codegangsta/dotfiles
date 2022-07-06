@@ -95,7 +95,12 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
-require('true-zen').setup {}
+require('true-zen').setup {
+  integrations = {
+    gitsigns = true,
+    lualine = true,
+  }
+}
 
 require('dressing').setup {}
 
