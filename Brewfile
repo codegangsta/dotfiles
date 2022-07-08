@@ -74,13 +74,14 @@ if OS.mac?
   cask "font-sf-mono-nerd-font"
   cask "imageoptim"
   cask "kitty"
+  cask "maccy"
   cask "ngrok/ngrok/ngrok"
   cask "signal"
   cask "slack"
   cask "soundsource"
   cask "visual-studio-code"
-  cask "zoom"
   cask "whichspace"
+  cask "zoom"
 
   # Mac App Store Apps
   # mas "Bear", id: 1091189122
