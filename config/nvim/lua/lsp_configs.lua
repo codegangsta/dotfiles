@@ -20,23 +20,25 @@ local settings = {
   },
   yaml = {
     schemas = {
-      kubernetes = {"config/**/*.yml", "config/**/*.yaml"}
+      kubernetes = { "config/**/*.yml", "config/**/*.yaml" }
     },
-  },
-  ltex = {
-    dictionary = {
-      --TODO: Figure out how to get external files working with ltex
-      ['en-US'] = {'NATS', 'nats', 'Caddy-NATS', 'Caddyfile', 'xcaddy'},
-    }
   },
 }
 
+local luadev = require("lua-dev").setup({
+  lspconfig = settings
+})
+
 for _, server in pairs(servers) do
-  config[server.name].setup{
-    capabilities = capabilities,
-    settings = settings,
-    on_attach = require("lsp-format").on_attach
-  }
+  if server.name == 'sumneko_lua' then
+    config[server.name].setup(luadev)
+  else
+    config[server.name].setup {
+      capabilities = capabilities,
+      settings = settings,
+      on_attach = require("lsp-format").on_attach
+    }
+  end
 end
 
 -- Show line diagnostics automatically in hover window
