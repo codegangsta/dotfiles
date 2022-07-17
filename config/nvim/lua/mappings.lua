@@ -14,7 +14,10 @@ map("", "<leader><bar>", ":vsplit<cr>")
 map("n", "<esc>", ":noh<CR><esc>", { noremap = true, silent = true })
 
 -- Telescope Mappings
-map("n", "<C-P>", ":Telescope find_files<cr>")
+map("n", "<C-P>", ":Telescope find_files<cr>", { callback = function()
+  -- override find_files with hot reloading of telescope
+  R('codegangsta.telescope').find_files()
+end})
 map("n", "<C-t>", ":Telescope<cr>")
 map("n", "<C-c>", ":Telescope commands<cr>")
 map("n", "<C-s>", ":Telescope diagnostics<cr>")

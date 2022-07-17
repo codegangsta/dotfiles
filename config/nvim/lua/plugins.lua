@@ -55,7 +55,8 @@ return require('packer').startup(function()
   }
 
   use {
-    'nvim-telescope/telescope.nvim',
+    -- 'nvim-telescope/telescope.nvim', -- github version of telescope
+    '~/code/telescope.nvim', -- local version of telescope
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
