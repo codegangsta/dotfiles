@@ -6,10 +6,10 @@ require "completion"
 -- setup lsp installer before we setup our configs
 require "nvim-lsp-installer".setup {}
 require "lsp-configs"
-require "vsnip-config"
 require "util"
 require "globals"
 require "codegangsta.telescope.setup"
+require "codegangsta.luasnip"
 
 require("nvim-web-devicons").setup({
   default = true

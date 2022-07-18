@@ -14,9 +14,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp-document-symbol'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/vim-vsnip'
   use 'jiangmiao/auto-pairs'
   use 'kdheepak/lazygit.nvim'
   use 'leafgarland/typescript-vim'
@@ -32,6 +30,7 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
   use 'rmehri01/onenord.nvim'
+  use 'saadparwaiz1/cmp_luasnip'
   use 'stevearc/dressing.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
@@ -60,6 +59,11 @@ return require('packer').startup(function()
     '~/code/telescope.nvim', -- local version of telescope
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   use {
     'nvim-treesitter/nvim-treesitter',

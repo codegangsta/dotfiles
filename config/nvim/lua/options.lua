@@ -30,6 +30,8 @@ vim.o.termguicolors = true
 -- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1
 
+vim.g["mkdp_filetypes"] = { "markdown", "vimwiki" }
+
 -- Vimwiki config
 vim.g["vimwiki_list"] = { {
   path = "~/wiki",
