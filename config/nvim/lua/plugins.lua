@@ -1,8 +1,10 @@
 return require('packer').startup(function()
+  use 'L3MON4D3/LuaSnip'
   use 'Pocco81/TrueZen.nvim'
   use 'ekalinin/Dockerfile.vim'
   use 'f3fora/cmp-spell'
   use 'folke/lsp-colors.nvim'
+  use 'folke/lua-dev.nvim'
   use 'folke/todo-comments.nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
@@ -11,7 +13,6 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lsp-document-symbol'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'folke/lua-dev.nvim'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/nvim-cmp'
