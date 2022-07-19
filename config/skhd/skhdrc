@@ -39,7 +39,10 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
 cmd + ctrl - space : open -a /Applications/Things3.app
 cmd + ctrl - t : open -a /Applications/Kitty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
-cmd + ctrl - b : open -a /Applications/Brave\ Browser.app
+
+# Things 3 urls
+cmd + ctrl - b : open "things:///show?id=today&filter=Break"
+cmd + ctrl - f : open "things:///show?id=today&filter=Focus"
 
 #Equalize the size of Windows
 cmd + ctrl - e : yabai -m space --balance
