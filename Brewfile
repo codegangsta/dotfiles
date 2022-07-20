@@ -77,6 +77,7 @@ if OS.mac?
   cask "kitty"
   cask "maccy"
   cask "ngrok/ngrok/ngrok"
+  cask "obs"
   cask "signal"
   cask "slack"
   cask "soundsource"
