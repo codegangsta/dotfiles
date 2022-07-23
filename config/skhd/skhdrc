@@ -5,10 +5,10 @@ cmd + ctrl - k : yabai -m window --focus north
 cmd + ctrl - l : yabai -m window --focus east
 
 # Moving Windows
-cmd + shift - h : yabai -m window --swap west
-cmd + shift - j : yabai -m window --swap south
-cmd + shift - k : yabai -m window --swap north
-cmd + shift - l : yabai -m window --swap east
+cmd + ctrl + shift - h : yabai -m window --swap west
+cmd + ctrl + shift - j : yabai -m window --swap south
+cmd + ctrl + shift - k : yabai -m window --swap north
+cmd + ctrl + shift - l : yabai -m window --swap east
 
 cmd + ctrl - left : yabai -m space --focus prev
 cmd + ctrl - down : yabai -m space --focus next
