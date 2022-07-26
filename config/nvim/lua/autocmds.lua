@@ -1,16 +1,19 @@
-local autocmd = vim.api.nvim_create_autocmd
 
 -- Resize panes when wndow is resized
-autocmd({"VimResized"}, {
+local resize = vim.api.nvim_create_augroup("Resize", { clear = true })
+vim.api.nvim_create_autocmd({"VimResized"}, {
   pattern = { "*" },
   command = "wincmd =",
+  group = resize
 })
 
 -- Treat Brewfile as a ruby file
-autocmd({"BufNewFile","BufRead"}, {
+local brewfile = vim.api.nvim_create_augroup("Brewfile", { clear = true })
+vim.api.nvim_create_autocmd({"BufNewFile","BufRead"}, {
   pattern = {"BrewFile"},
   callback = function ()
     vim.api.nvim_buf_set_option(0, "syntax", "ruby")
     vim.api.nvim_buf_set_option(0, "filetype", "ruby")
-  end
+  end,
+  group = brewfile
 })
