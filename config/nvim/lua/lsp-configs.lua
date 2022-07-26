@@ -43,6 +43,7 @@ end
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
+-- TODO: Add this to autocommands file
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
