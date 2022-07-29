@@ -5,6 +5,12 @@ local servers = require("nvim-lsp-installer").get_installed_servers()
 
 require("lsp-format").setup {}
 
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.formatting.stylua,
+    },
+})
+
 local settings = {
   gopls = {
     experimentalPostfixCompletions = true,
