@@ -73,6 +73,7 @@ if OS.mac?
   cask "font-fira-code-nerd-font"
   cask "font-inter"
   cask "font-sf-mono-nerd-font"
+  cask "google-chrome"
   cask "handbrake"
   cask "imageoptim"
   cask "kitty"
