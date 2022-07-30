@@ -38,7 +38,6 @@ brew "kubectl"
 brew "lazygit"
 brew "llvm"
 brew "lua-language-server"
-brew "mas"
 brew "nats-server"
 brew "neovim", args: ["HEAD"]
 brew "neovim-remote"
@@ -87,8 +86,4 @@ if OS.mac?
   cask "visual-studio-code"
   cask "whichspace"
   cask "zoom"
-
-  # Mac App Store Apps
-  # mas "Bear", id: 1091189122
-  # mas "Things", id: 904280696
 end
