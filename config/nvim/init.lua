@@ -78,11 +78,11 @@ require('lsp-colors').setup {
   Hint = "#10B981"
 }
 
-require('nvim-treesitter.configs').setup {
-  highlight = {
-    enable = true,
-  },
-}
+-- require('nvim-treesitter.configs').setup {
+--   highlight = {
+--     enable = true,
+--   },
+-- }
 
 require('indent_blankline').setup({
   show_current_context = true,
@@ -95,7 +95,7 @@ require('true-zen').setup {
   }
 }
 
-require('dressing').setup {}
+-- require('dressing').setup {}
 
 function kitty_run_command(command)
   -- kitty @ send-text --match "recent:1" hey there

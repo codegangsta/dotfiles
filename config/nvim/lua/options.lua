@@ -25,6 +25,8 @@ set("shiftwidth", 2)
 set("tabstop", 2)
 set("completeopt", "menu,menuone,noselect")
 
+set("shell", "/bin/bash")
+
 vim.o.termguicolors = true
 
 -- Vim Markdown Config

@@ -32,7 +32,7 @@ return require('packer').startup(function()
   use 'ray-x/go.nvim'
   use 'rmehri01/onenord.nvim'
   use 'saadparwaiz1/cmp_luasnip'
-  use 'stevearc/dressing.nvim'
+  -- use 'stevearc/dressing.nvim'
   use 'tpope/vim-commentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-ragtag'
@@ -77,10 +77,10 @@ return require('packer').startup(function()
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+  -- use {
+  --   'nvim-treesitter/nvim-treesitter',
+  --   run = ':TSUpdate'
+  -- }
 
   use {
     'phaazon/hop.nvim',

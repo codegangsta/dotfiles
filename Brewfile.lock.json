@@ -90,7 +90,7 @@
         }
       },
       "neovim": {
-        "version": "0.7.2_1",
+        "version": "HEAD-605631a",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2708,7 +2708,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "9dde3929147a2df6c001a4fda87e6e53e7b2ff6c"
+        "revision": "6f22e105854835c5e9d0bd020f9d672750b61c19"
       },
       "homebrew/cask-fonts": {
         "revision": "11a767f768b600112501c938a2d08137300dcdad"
@@ -2998,7 +2998,7 @@
         "Homebrew/homebrew-core": "d27ca8adc8b08fcab88eb3876f4cc8c316b0560f",
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.4",
-        "macOS": "12.3.1"
+        "macOS": "12.2.1"
       }
     },
     "linux": {
