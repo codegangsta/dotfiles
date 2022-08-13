@@ -6,7 +6,6 @@ require "completion"
 -- setup lsp installer before we setup our configs
 require "nvim-lsp-installer".setup {}
 require "lsp-configs"
-require "util"
 require "globals"
 require "codegangsta.telescope.setup"
 require "codegangsta.luasnip"
@@ -78,24 +77,9 @@ require('lsp-colors').setup {
   Hint = "#10B981"
 }
 
--- require('nvim-treesitter.configs').setup {
---   highlight = {
---     enable = true,
---   },
--- }
+require('indent_blankline').setup({ })
 
-require('indent_blankline').setup({
-  show_current_context = true,
-})
-
-require('true-zen').setup {
-  integrations = {
-    gitsigns = true,
-    lualine = true,
-  }
-}
-
--- require('dressing').setup {}
+require('dressing').setup {}
 
 function kitty_run_command(command)
   -- kitty @ send-text --match "recent:1" hey there

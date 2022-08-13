@@ -69,9 +69,6 @@ map("n", "<C-a>", "", { callback = vim.lsp.buf.code_action })
 map("n", "gr", "", { callback = vim.lsp.buf.references })
 map("n", "<C-n>", "", { callback = vim.lsp.diagnostic.goto_next })
 
--- Focus
-map("", "<C-f>", ":TZAtaraxis<cr>")
-
 -- Dates/Times
 vim.cmd [[
   inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
