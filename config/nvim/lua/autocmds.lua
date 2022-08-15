@@ -17,3 +17,12 @@ vim.api.nvim_create_autocmd({"BufNewFile","BufRead"}, {
   end,
   group = brewfile
 })
+
+local nats_config = vim.api.nvim_create_augroup("NATSConfig", { clear = true })
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = { "*.conf" },
+  callback = function ()
+    vim.cmd [[ set ft=terraform ]]
+  end,
+  group = nats_config
+})
