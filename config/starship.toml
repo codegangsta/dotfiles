@@ -1,6 +1,11 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+[custom.nats]
+command = "cat ~/.config/nats/context.txt"
+when = true
+shell = "/bin/bash"
+
 [character]
 success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
