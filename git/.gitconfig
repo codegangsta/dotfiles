@@ -21,4 +21,4 @@
 [pull]
   rebase = true
 [format]
-  signoff = true
+  signOff = true
