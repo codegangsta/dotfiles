@@ -20,3 +20,5 @@
   defaultBranch = main
 [pull]
   rebase = true
+[format]
+  signoff = true
