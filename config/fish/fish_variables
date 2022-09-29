@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -29,4 +30,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:cyan\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/jeremysaenz/go/bin\x1e/home/jeremysaenz/\x2elocal/bin\x1e/home/jeremysaenz/\x2elocal/kitty\x2eapp/bin\x1e/home/jeremysaenz/go/bin\x1e/home/linuxbrew/\x2elinuxbrew/opt/go/libexec/bin\x1e/home/jeremysaenz/\x2edotfiles/bin\x1e/usr/local/bin\x1e/opt/homebrew/opt/go/libexec/bin\x1e/Users/jeremy/go/bin\x1e/Users/jeremy/\x2elocal/bin\x1e/Users/jeremy/\x2edotfiles/bin
+SETUVAR fish_user_paths:/Users/jeremysaenz/\x2elocal/bin\x1e/Users/jeremysaenz/go/bin\x1e/home/jeremysaenz/\x2elocal/bin\x1e/home/jeremysaenz/\x2elocal/kitty\x2eapp/bin\x1e/home/jeremysaenz/go/bin\x1e/home/linuxbrew/\x2elinuxbrew/opt/go/libexec/bin\x1e/home/jeremysaenz/\x2edotfiles/bin\x1e/usr/local/bin\x1e/opt/homebrew/opt/go/libexec/bin\x1e/Users/jeremy/go/bin\x1e/Users/jeremy/\x2elocal/bin\x1e/Users/jeremy/\x2edotfiles/bin

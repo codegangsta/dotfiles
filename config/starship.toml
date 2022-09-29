@@ -10,6 +10,9 @@ shell = "/bin/bash"
 success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
 
+[kubernetes]
+disabled = false
+
 [git_status]
 disabled = true
 
