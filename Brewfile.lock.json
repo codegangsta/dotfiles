@@ -2820,7 +2820,7 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "7147e7603c9807e5a217dd744e573de72e075530"
+        "revision": "c0caa28c12ed642ba509279c8df2e009d7470064"
       },
       "homebrew/cask-fonts": {
         "revision": "72236f3eaad4638c0b64953c8b927b7b4c345335"
@@ -3068,7 +3068,7 @@
         }
       },
       "google-chrome": {
-        "version": "106.0.5249.61",
+        "version": "106.0.5249.91",
         "options": {
           "full_name": "google-chrome"
         }
@@ -3122,10 +3122,10 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.6.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "28650b43920085eb80d1f7b097e4b5910ec26fd8",
-        "CLT": "13.3.0.0.1.1645755326",
-        "Xcode": "13.4",
-        "macOS": "12.3.1"
+        "Homebrew/homebrew-core": "c9b7366c9a715e805b5b78c50d27480c0b0a0a64",
+        "CLT": "14.0.0.0.1.1661618636",
+        "Xcode": "14.0",
+        "macOS": "12.6"
       }
     },
     "linux": {
