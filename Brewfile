@@ -43,7 +43,7 @@ brew "llvm"
 brew "lua-language-server"
 brew "nats-server"
 brew "neofetch"
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 brew "neovim-remote"
 brew "node"
 brew "protobuf"
