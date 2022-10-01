@@ -5,6 +5,7 @@ return require('packer').startup(function()
   use 'folke/lsp-colors.nvim'
   use 'folke/lua-dev.nvim'
   use 'folke/todo-comments.nvim'
+  use 'folke/zen-mode.nvim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
   use 'hrsh7th/cmp-buffer'

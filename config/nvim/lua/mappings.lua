@@ -71,6 +71,9 @@ map("n", "<C-a>", "", { callback = vim.lsp.buf.code_action })
 map("n", "gr", "", { callback = vim.lsp.buf.references })
 map("n", "<C-n>", "", { callback = vim.diagnostic.goto_next })
 
+-- Zen Mode
+map("n", "<leader>z", "", { callback = require("zen-mode").toggle })
+
 -- Dates/Times
 vim.cmd [[
   inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>

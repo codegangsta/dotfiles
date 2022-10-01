@@ -28,6 +28,22 @@ require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'
 })
 
+require("zen-mode").setup {
+  window = {
+    options = {
+      number = false
+    }
+  },
+  plugins = {
+    gitsigns = {
+      enabled = true
+    },
+    kitty = {
+      enabled = true
+    }
+  }
+}
+
 require('todo-comments').setup {}
 
 require('go').setup()
