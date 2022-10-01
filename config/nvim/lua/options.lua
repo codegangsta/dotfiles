@@ -36,7 +36,7 @@ vim.g["mkdp_filetypes"] = { "markdown", "vimwiki" }
 
 -- Vimwiki config
 vim.g["vimwiki_list"] = { {
-  path = "~/wiki",
+  path = "~/code/notes",
   syntax = "markdown",
   ext = ".md",
   index = "README",
@@ -46,10 +46,11 @@ vim.g["vimwiki_list"] = { {
   auto_generate_links = 1,
   auto_diary_index = 1,
 } }
-vim.g["vimwiki_markdown_link_ext"] = 1
+-- vim.g["vimwiki_markdown_link_ext"] = 1
 vim.g["vimwiki_hl_cb_checked"] = 1
 vim.g["vimwiki_auto_header"] = 1
 vim.g["vimwiki_listsyms"] = " .oOx"
+vim.g["vimwiki_diary_rel_path"] = "."
 
 vim.cmd [[
   set clipboard+=unnamedplus
