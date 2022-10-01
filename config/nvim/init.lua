@@ -38,9 +38,6 @@ require("zen-mode").setup {
     gitsigns = {
       enabled = true
     },
-    kitty = {
-      enabled = true
-    }
   }
 }
 
