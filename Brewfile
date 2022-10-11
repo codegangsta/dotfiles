@@ -61,14 +61,12 @@ brew "tinygo"
 brew "vercel-cli"
 brew "viddy"
 brew "watch"
-brew "yabai"
 brew "yaml-language-server"
 
 if OS.mac?
-  brew "skhd"
-
   # Mac apps
   cask "1password"
+  cask "amethyst"
   cask "brave-browser"
   cask "cheatsheet"
   cask "discord"
