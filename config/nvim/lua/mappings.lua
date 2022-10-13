@@ -79,3 +79,12 @@ vim.cmd [[
   inoremap <F5> <C-R>=strftime("%b %d, %Y")<CR>
   inoremap <F6> <C-R>=strftime("%H:%M")<CR>
 ]]
+
+-- easy align
+vim.cmd [[
+  " Start interactive EasyAlign in visual mode (e.g. vipga)
+  xmap ga <Plug>(EasyAlign)
+
+  " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+  nmap ga <Plug>(EasyAlign)
+]]
