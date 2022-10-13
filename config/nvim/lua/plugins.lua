@@ -17,6 +17,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'jiangmiao/auto-pairs'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'junegunn/vim-easy-align'
   use 'kdheepak/lazygit.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'leafgarland/typescript-vim'
