@@ -30,8 +30,9 @@ require('hop').setup({
 
 require("zen-mode").setup {
   window = {
+    backdrop = 0,
     options = {
-      number = false
+      number = true
     }
   },
   plugins = {
