@@ -22,3 +22,5 @@
   rebase = true
 [format]
   signOff = true
+[commit]
+	gpgsign = true
