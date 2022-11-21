@@ -1,6 +1,6 @@
-nmap <Leader>t :lua kitty_run_command(string.format("gotest -race %s/*.go", vim.fn.expand("%:p:h"))) <cr>
-nmap <Leader>a :lua kitty_run_command("gotest -race ./...") <cr>
-nmap <Leader>l :lua kitty_run_command(string.format("gotest -race %s/*.go -run %s", vim.fn.expand("%:p:h"), get_parent_function_name())) <cr>
+nmap <Leader>t :lua kitty_run_command(string.format("gotest %s/*.go", vim.fn.expand("%:p:h"))) <cr>
+nmap <Leader>a :lua kitty_run_command("gotest ./...") <cr>
+nmap <Leader>l :lua kitty_run_command(string.format("gotest %s/*.go -run %s", vim.fn.expand("%:p:h"), get_parent_function_name())) <cr>
 
 nmap <Leader>i :lua kitty_run_command("go install") <cr>
 nmap <Leader>r :lua kitty_run_command("go run .") <cr>

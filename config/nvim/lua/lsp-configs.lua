@@ -26,7 +26,7 @@ local settings = {
   },
   yaml = {
     schemas = {
-      kubernetes = { "config/**/*.yml", "config/**/*.yaml", "*.yml", "*.yaml" }
+      -- kubernetes = { "config/**/*.yml", "config/**/*.yaml", "*.yml", "*.yaml" }
     },
   },
 }
@@ -47,13 +47,4 @@ for _, server in pairs(servers) do
   end
 end
 
--- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
--- TODO: Add this to autocommands file
-vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
-
 vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
-
-vim.diagnostic.config({
-  virtual_text = false,
-})
