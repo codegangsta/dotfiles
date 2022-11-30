@@ -61,6 +61,7 @@ map("n", "f", "", { callback = require("hop").hint_words })
 
 -- LSP
 map("", "<leader><space>", "", { callback = vim.lsp.buf.hover })
+map("", "<leader><leader>", "", { callback = vim.diagnostic.open_float })
 map("", "<C-space>", "", { callback = vim.lsp.buf.hover })
 map("n", "gD", "", { callback = vim.lsp.buf.declaration })
 map("n", "gd", "", { callback = vim.lsp.buf.definition })
