@@ -1,5 +1,5 @@
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local config = require("lspconfig")
 local servers = require("nvim-lsp-installer").get_installed_servers()
 
@@ -31,13 +31,19 @@ local settings = {
   },
 }
 
-local luadev = require("lua-dev").setup({
-  lspconfig = settings
-})
+require("neodev").setup({})
 
 for _, server in pairs(servers) do
   if server.name == 'sumneko_lua' then
-    config[server.name].setup(luadev)
+    config[server.name].setup({
+      settings = {
+        Lua = {
+          completion = {
+            callSnippet = "Replace"
+          }
+        }
+      }
+    })
   else
     config[server.name].setup {
       capabilities = capabilities,

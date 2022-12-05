@@ -16,6 +16,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
   use 'jiangmiao/auto-pairs'
+  use 'jjo/vim-cue'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'junegunn/vim-easy-align'
   use 'kdheepak/lazygit.nvim'

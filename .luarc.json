@@ -4,5 +4,6 @@
         "vim",
         "use",
         "kitty_run_command"
-    ]
+    ],
+    "Lua.workspace.checkThirdParty": false
 }
