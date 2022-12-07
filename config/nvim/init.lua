@@ -1,3 +1,9 @@
+require("onenord").setup({
+  theme = "dark",
+  disable = {
+    background = true
+  }
+})
 require "plugins"
 require "options"
 require "mappings"
@@ -17,12 +23,7 @@ require("nvim-web-devicons").setup({
 require("gitsigns").setup({
 })
 
-require("onenord").setup({
-  theme = "dark",
-  disable = {
-    background = true
-  }
-})
+vim.notify = require("notify")
 
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'

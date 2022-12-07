@@ -34,6 +34,7 @@ return require('packer').startup(function()
   use 'plasticboy/vim-markdown'
   use 'rafamadriz/friendly-snippets'
   use 'ray-x/go.nvim'
+  use 'rcarriga/nvim-notify'
   use 'rmehri01/onenord.nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'stevearc/dressing.nvim'

@@ -9,12 +9,14 @@ switch (uname)
         set -gx GOROOT /opt/homebrew/opt/go/libexec
 end
 
+bind "[101;9u" edit_command_buffer
+
 set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 set -gx KO_DOCKER_REPO ghcr.io/codegangsta
-set -g fish_autosuggestion_enabled 0
+#set -g fish_autosuggestion_enabled 0
 
 fish_add_path $HOME/.dotfiles/bin
 fish_add_path $HOME/.local/bin
