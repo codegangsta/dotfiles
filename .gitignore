@@ -9,3 +9,4 @@ config/nats
 config/gh
 config/asciinema
 config/nvim/plugin
+config/op
