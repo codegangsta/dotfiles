@@ -1,5 +1,5 @@
 -- Install friendly snippets
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load()
 
 -- TODO: Extract this into our mappings file
 vim.cmd [[
