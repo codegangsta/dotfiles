@@ -23,7 +23,7 @@ require("nvim-web-devicons").setup({
 require("gitsigns").setup({
 })
 
-vim.notify = require("notify")
+-- vim.notify = require("notify")
 
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'

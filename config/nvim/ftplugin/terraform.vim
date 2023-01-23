@@ -1,2 +1,2 @@
-map <Leader>a :call VimuxRunCommand("clear; terraform apply -auto-approve\n") <cr>
-map <Leader>p :call VimuxRunCommand("clear; terraform plan\n") <cr>
+map <Leader>a :lua kitty_run_command("terraform apply -auto-approve") <cr>
+map <Leader>p :lua kitty_run_command("terraform plan") <cr>
