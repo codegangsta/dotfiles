@@ -71,6 +71,7 @@ if OS.mac?
   cask "font-inter"
   cask "font-sf-mono-nerd-font"
   cask "google-chrome"
+  cask "google-cloud-sdk"
   cask "gpg-suite"
   cask "kitty"
   cask "maccy"
