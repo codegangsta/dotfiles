@@ -26,7 +26,7 @@ local settings = {
   },
   yaml = {
     schemas = {
-      -- kubernetes = { "config/**/*.yml", "config/**/*.yaml", "*.yml", "*.yaml" }
+      -- kubernetes = { "*.yml", "*.yaml" }
     },
   },
 }
