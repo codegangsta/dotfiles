@@ -7,6 +7,7 @@ Session.vim
 
 config/nats
 config/gh
+config/github-copilot
 config/asciinema
 config/nvim/plugin
 config/op
