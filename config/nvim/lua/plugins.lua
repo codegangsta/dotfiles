@@ -6,6 +6,7 @@ return require('packer').startup(function()
   use 'folke/lua-dev.nvim'
   use 'folke/todo-comments.nvim'
   use 'folke/zen-mode.nvim'
+  use 'github/copilot.vim'
   use 'godlygeek/tabular'
   use 'hashivim/vim-terraform'
   use 'hrsh7th/cmp-buffer'

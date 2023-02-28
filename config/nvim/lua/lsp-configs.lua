@@ -34,23 +34,11 @@ local settings = {
 require("neodev").setup({})
 
 for _, server in pairs(servers) do
-  if server.name == 'sumneko_lua' then
-    config[server.name].setup({
-      settings = {
-        Lua = {
-          completion = {
-            callSnippet = "Replace"
-          }
-        }
-      }
-    })
-  else
-    config[server.name].setup {
-      capabilities = capabilities,
-      settings = settings,
-      on_attach = require("lsp-format").on_attach
-    }
-  end
+  config[server.name].setup {
+    capabilities = capabilities,
+    settings = settings,
+    on_attach = require("lsp-format").on_attach
+  }
 end
 
 vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
