@@ -11,7 +11,7 @@ success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
 
 [kubernetes]
-disabled = false
+disabled = true
 
 [gcloud]
 disabled = true
