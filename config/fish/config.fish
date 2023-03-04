@@ -21,6 +21,7 @@ set -gx KO_DOCKER_REPO ghcr.io/codegangsta
 
 fish_add_path $HOME/.dotfiles/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.cargo/bin
 fish_add_path $GOPATH/bin
 fish_add_path $GOROOT/bin
 fish_add_path /usr/local/bin
