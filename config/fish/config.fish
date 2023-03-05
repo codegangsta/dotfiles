@@ -18,6 +18,7 @@ set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 set -gx KO_DOCKER_REPO ghcr.io/codegangsta
+set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 
 fish_add_path $HOME/.dotfiles/bin
 fish_add_path $HOME/.local/bin
