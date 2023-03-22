@@ -30,7 +30,6 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete({}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<TAB>'] = cmp.mapping.confirm({ select = false }),
   }),
 
   sources = cmp.config.sources({
@@ -41,7 +40,7 @@ cmp.setup({
   }),
 
   experimental = {
-    ghost_text = true
+    ghost_text = false
   },
 })
 
