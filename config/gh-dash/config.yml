@@ -1,0 +1,55 @@
+prSections:
+- title: My Pull Requests
+  filters: is:open author:@me
+- title: Needs My Review
+  filters: is:open review-requested:@me
+- title: Involved
+  filters: is:open involves:@me -author:@me
+- title: Helix
+  filters: is:open repo:ConnectEverything/helix
+issuesSections:
+- title: Assigned
+  filters: is:open assignee:@me
+- title: Helix
+  filters: is:open repo:ConnectEverything/helix
+- title: Terraform
+  filters: is:open repo:codegangsta/terraform
+- title: My Issues
+  filters: is:open author:@me
+- title: Involved
+  filters: is:open involves:@me -author:@me
+defaults:
+  preview:
+    open: true
+    width: 50
+  prsLimit: 20
+  issuesLimit: 20
+  view: issues
+  layout:
+    prs:
+      updatedAt:
+        width: 7
+      repo:
+        width: 15
+      author:
+        width: 15
+      lines:
+        width: 16
+    issues:
+      updatedAt:
+        width: 7
+      repo:
+        width: 15
+      creator:
+        width: 10
+      assignees:
+        width: 20
+  refetchIntervalMinutes: 30
+keybindings:
+  prs: []
+  issues:
+    - key: n
+      command: gh issue create -R {{.RepoName}}
+repoPaths: {}
+pager:
+  diff: ""
