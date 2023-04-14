@@ -79,3 +79,12 @@ map <C-1> :toggle_tag_5m
 map <C-2> :toggle_tag_15m
 map <C-3> :toggle_tag_30m
 map <C-4> :toggle_tag_1h
+
+" Set o and O to open new lines above and below the current line
+" (make sure to remove default Obsidian shortcuts for these to work)
+exmap openbelow jsfile Scripts/vim-helpers.js {openBelow()}
+nunmap o
+nmap o :openbelow
+exmap openabove jsfile Scripts/vim-helpers.js {openAbove()}
+nunmap O
+nmap O :openabove
