@@ -79,6 +79,7 @@ map <C-1> :toggle_tag_5m
 map <C-2> :toggle_tag_15m
 map <C-3> :toggle_tag_30m
 map <C-4> :toggle_tag_1h
+map <C-w> :toggle_tag_waiting
 
 " Set o and O to open new lines above and below the current line
 " (make sure to remove default Obsidian shortcuts for these to work)
