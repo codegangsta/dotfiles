@@ -6,12 +6,12 @@ prSections:
 - title: Involved
   filters: is:open involves:@me -author:@me
 - title: Helix
-  filters: is:open repo:ConnectEverything/helix
+  filters: is:open repo:ConnectEverything/control-plane
 issuesSections:
 - title: Assigned
   filters: is:open assignee:@me
 - title: Helix
-  filters: is:open repo:ConnectEverything/helix
+  filters: is:open repo:ConnectEverything/control-plane
 - title: Terraform
   filters: is:open repo:codegangsta/terraform
 - title: My Issues
