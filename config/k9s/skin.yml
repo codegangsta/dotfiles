@@ -1,0 +1,119 @@
+# Nord theme skin for k9s
+#
+# Install by putting this file in $XDG_CONFIG_HOME/k9s/skin.yml (usually it's ~/.config/k9s/skin.yml).
+#
+# Palette reference:
+# https://www.nordtheme.com/docs/colors-and-palettes
+
+# Polar Night
+nord0: &nord0 "#2E3440" #black
+nord1: &nord1 "#3B4252" #lighter black
+
+# Snow Storm
+nord4: &nord4 "#D8DEE9" #white
+
+# Frost
+nord8: &nord8 "#88C0D0" #blue
+nord10: &nord10 "#5E81AC" #dark blue
+
+# Aurora
+nord11: &nord11 "#BF616A" #red
+nord13: &nord13 "#EBCB8B" #yellow
+nord14: &nord14 "#A3BE8C" #green
+
+
+k9s:
+  # General K9s styles
+  body:
+    fgColor: *nord4
+    bgColor: *nord0
+    logoColor: *nord10
+  # ClusterInfoView styles.
+  info:
+    fgColor: *nord8
+    sectionColor: *nord4
+  # Dialog styles.
+  dialog:
+    fgColor: *nord4
+    bgColor: *nord0
+    buttonFgColor: *nord4
+    buttonBgColor: *nord1
+    buttonFocusFgColor: *nord4
+    buttonFocusBgColor: *nord1
+    labelFgColor: *nord8
+    fieldFgColor: *nord11
+  frame:
+    # Borders styles.
+    border:
+      fgColor: *nord10
+      focusColor: *nord10
+    menu:
+      fgColor: *nord4
+      keyColor: *nord14
+      # Used for favorite namespaces
+      numKeyColor: *nord14
+    # CrumbView attributes for history navigation.
+    crumbs:
+      fgColor: *nord4
+      bgColor: *nord0
+      activeColor: *nord1
+    # Resource status and update styles
+    status:
+      newColor: *nord8
+      modifyColor: *nord13
+      addColor: *nord14
+      pendingColor: *nord13
+      errorColor: *nord11
+      highlightcolor: *nord8
+      killColor: *nord14
+      completedColor: *nord10
+    # Border title styles.
+    title:
+      fgColor: *nord4
+      bgColor: *nord0
+      highlightColor: *nord8
+      counterColor: *nord8
+      filterColor: *nord13
+  views:
+    # Charts skins...
+    charts:
+      bgColor: *nord0
+      dialBgColor: *nord0
+      chartBgColor: *nord0
+      defaultDialColors:
+        - *nord8
+        - *nord11
+      defaultChartColors:
+        - *nord8
+        - *nord11
+    # TableView attributes.
+    table:
+      fgColor: *nord4
+      bgColor: *nord0
+      cursorFgColor: *nord0
+      cursorBgColor: *nord0
+      markColor: *nord4
+      # Header row styles.
+      header:
+        fgColor: *nord4
+        bgColor: *nord0
+        sorterColor: *nord8
+    # Xray view attributes.
+    xray:
+      fgColor: *nord4
+      bgColor: *nord0
+      cursorColor: *nord8
+      cursorTextColor: *nord4
+      graphicColor: *nord8
+    # YAML info styles.
+    yaml:
+      keyColor: *nord8
+      colonColor: *nord8
+      valueColor: *nord4
+    # Logs styles.
+    logs:
+      fgColor: *nord4
+      bgColor: *nord0
+      indicator:
+        fgColor: *nord4
+        bgColor: *nord10
