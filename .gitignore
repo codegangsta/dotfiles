@@ -13,3 +13,4 @@ config/nvim/plugin
 config/op
 config/gcloud
 config/raycast
+config/fish/secrets.fish
