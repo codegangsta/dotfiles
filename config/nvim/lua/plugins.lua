@@ -89,4 +89,16 @@ return require('packer').startup(function()
     'yamatsum/nvim-nonicons',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
+
+  use({
+    "jackMort/ChatGPT.nvim",
+      config = function()
+        require("chatgpt").setup()
+      end,
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
 end)
