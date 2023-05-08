@@ -20,10 +20,14 @@ require("nvim-web-devicons").setup({
   default = true
 })
 
+require'nvim-treesitter.configs'.setup {
+  autotag = {
+    enable = true,
+  }
+}
+
 require("gitsigns").setup({
 })
-
--- vim.notify = require("notify")
 
 require('hop').setup({
   keys = 'etovxqpdygfblzhckisuran'

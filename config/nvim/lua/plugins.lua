@@ -16,7 +16,6 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
-  use 'jiangmiao/auto-pairs'
   use 'jjo/vim-cue'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'junegunn/vim-easy-align'
@@ -101,4 +100,15 @@ return require('packer').startup(function()
         "nvim-telescope/telescope.nvim"
       }
   })
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use {
+	"windwp/nvim-ts-autotag",
+    config = function() require("nvim-ts-autotag").setup {} end
+  }
+
 end)

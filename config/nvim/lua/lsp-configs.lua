@@ -3,6 +3,18 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 local config = require("lspconfig")
 local servers = require("nvim-lsp-installer").get_installed_servers()
 
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics,
+    {
+        underline = true,
+        virtual_text = {
+            spacing = 5,
+            severity_limit = 'Warning',
+        },
+        update_in_insert = true,
+    }
+)
+
 require("lsp-format").setup {}
 
 require("null-ls").setup({
