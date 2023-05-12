@@ -2,16 +2,18 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [custom.nats]
-command = "cat ~/.config/nats/context.txt"
+command = "head -n 1 ~/.config/nats/context.txt"
 when = true
-shell = "/bin/bash"
+shell = "/bin/sh"
+symbol = " "
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
 
 [kubernetes]
 disabled = false
+symbol = " "
 
 [gcloud]
 disabled = true

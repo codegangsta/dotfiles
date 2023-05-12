@@ -72,6 +72,7 @@ if OS.mac?
   cask "docker"
   cask "figma"
   cask "font-fira-code-nerd-font"
+  cask "font-symbols-only-nerd-font"
   cask "font-inter"
   cask "font-sf-mono-nerd-font"
   cask "google-chrome"
