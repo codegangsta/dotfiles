@@ -18,9 +18,6 @@ M.telescope = {
     ["<C-s>"] = {":Telescope diagnostics<CR>", "Diagnostics"},
     ["<leader>/"] = {":Telescope live_grep<CR>", "Live grep"},
     ["<leader>h"] = {":Telescope help_tags<CR>", "Help tags"},
-
-    -- NvimTree
-
   },
 }
 
