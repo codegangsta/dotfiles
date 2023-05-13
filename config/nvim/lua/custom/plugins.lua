@@ -42,6 +42,9 @@ local plugins = {
   {
     "kdheepak/lazygit.nvim",
     cmd = { "LazyGit" },
+    config = function()
+      vim.g.lazygit_floating_window_use_plenary = 0
+    end
   }
 }
 

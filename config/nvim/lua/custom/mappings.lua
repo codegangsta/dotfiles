@@ -33,10 +33,19 @@ M.nvimtree = {
 }
 
 M.lspconfig = {
+  plugin = true,
+
   n = {
-    -- LSP
     ["<leader><space>"] = { vim.lsp.buf.hover, "LSP Hover" },
   }
+}
+
+M.lazygit = {
+  n = {
+    ["<C-g>"] = { ":LazyGit<CR>" },
+    ["<C-b>"] = { ":LazyGitFilterCurrentFile<CR>" },
+  }
+
 }
 
 return M
