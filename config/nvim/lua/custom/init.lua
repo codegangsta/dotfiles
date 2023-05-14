@@ -1,6 +1,9 @@
+require "custom.autocmds"
+
 local set = vim.api.nvim_set_option
 
--- Basic Options
+vim.g.mapleader = "\\"
+
 set("swapfile", false)
 set("compatible", false)
 set("showcmd", true)
@@ -20,16 +23,14 @@ set("title", true)
 set("backup", false)
 set("writebackup", false)
 set("expandtab", true)
-set("laststatus", 2)
 set("shiftwidth", 2)
 set("tabstop", 2)
-set("completeopt", "menu,menuone,noselect")
+set("whichwrap", "")
 
 set("shell", "/bin/bash")
 
 vim.o.termguicolors = true
 
--- Vim Markdown Config
 vim.g["vim_markdown_folding_disabled"] = 1
 
 vim.g["mkdp_filetypes"] = { "markdown", "vimwiki" }
@@ -55,3 +56,8 @@ vim.g["vimwiki_diary_rel_path"] = "."
 vim.cmd [[
   set clipboard+=unnamedplus
 ]]
+
+function kitty_run_command(command)
+  -- kitty @ send-text --match "recent:1" hey there
+  vim.cmd(":silent !kitty @ send-text -m 'recent:1' '" .. command .. "\\n'")
+end

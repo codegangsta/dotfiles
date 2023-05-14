@@ -76,6 +76,16 @@ local plugins = {
         "stylua"
       },
     },
+  },
+  {
+    "folke/todo-comments.nvim",
+    lazy = false,
+    opts = {},
+  },
+  {
+    'knubie/vim-kitty-navigator',
+    lazy = false,
+    build = "cp ./*.py ~/.config/kitty/"
   }
 }
 
