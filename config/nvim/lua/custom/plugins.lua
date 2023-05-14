@@ -8,7 +8,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {"html", "css", "bash", "fish", "go", "rust", "typescript"},
+      ensure_installed = { "html", "css", "bash", "fish", "go", "rust", "typescript" },
     },
   },
   {
@@ -18,10 +18,10 @@ local plugins = {
         mappings = {
           list = {
             { key = "<C-e>", action = "" },
-            { key = "s", action = "split" },
-            { key = "i", action = "vsplit" },
-            { key = "I", action = "toggle_dotfiles" },
-            { key = "?", action = "toggle_help" },
+            { key = "s",     action = "split" },
+            { key = "i",     action = "vsplit" },
+            { key = "I",     action = "toggle_dotfiles" },
+            { key = "?",     action = "toggle_help" },
           }
         }
       },
@@ -45,6 +45,37 @@ local plugins = {
     config = function()
       vim.g.lazygit_floating_window_use_plenary = 0
     end
+  },
+  {
+    "lukas-reineke/lsp-format.nvim",
+    lazy = false
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    lazy = false,
+    depencencies = {
+      "williamboman/mason.nvim"
+    }
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "gopls",
+        "typescript-language-server",
+        "lua-language-server",
+        "html-lsp",
+        "prettier",
+        "stylua"
+      },
+    },
   }
 }
 

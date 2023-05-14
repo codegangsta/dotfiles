@@ -1,4 +1,4 @@
----@type ChadrcConfig 
+---@type ChadrcConfig
 local M = {}
 M.ui = {
   theme = 'nord',
@@ -37,5 +37,6 @@ set("expandtab", true)
 set("laststatus", 2)
 set("shiftwidth", 2)
 set("tabstop", 2)
+set("laststatus", 3)
 
 return M

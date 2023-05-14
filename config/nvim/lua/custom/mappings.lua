@@ -4,12 +4,14 @@ local M = {}
 M.disabled = {
   n = {
       ["<leader>h"] = "",
-      ["<C-e>"] = ""
+      ["<C-e>"] = "",
+      ["<C-a>"] = "",
+      ["<C-n>"] = "",
   }
 }
 
 M.telescope = {
-  plugin = true,
+plugin = true,
 
   n = {
     ["<C-p>"] = {":Telescope find_files<CR>", "Find files"},
@@ -37,6 +39,10 @@ M.lspconfig = {
 
   n = {
     ["<leader><space>"] = { vim.lsp.buf.hover, "LSP Hover" },
+    ["<leader><leader>"] = { vim.diagnostic.open_float, "Open float" },
+    ["gi"] = { vim.lsp.buf.implementation, "Go to implementation" },
+    ["<C-a>"] = { vim.lsp.buf.code_action, "Code action" },
+    ["<C-n>"] = { vim.diagnostic.goto_next, "Go to next" },
   }
 }
 
