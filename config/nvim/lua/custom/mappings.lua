@@ -11,12 +11,26 @@ M.disabled = {
     ["<C-j>"] = "",
     ["<C-k>"] = "",
     ["<C-l>"] = "",
+
+    ["<up>"] = "",
+    ["<down>"] = "",
+  },
+  i = {
     ["<up>"] = "",
     ["<down>"] = "",
   },
   v = {
     ["<up>"] = "",
     ["<down>"] = "",
+  }
+}
+
+M.cmp = {
+  plugin = true,
+
+  c = {
+    ["<up>"] = ":call v:lua.cmp.utils.keymap.set_map(9)<CR>",
+    ["<down>"] = ":call v:lua.cmp.utils.keymap.set_map(5)<CR>",
   }
 }
 

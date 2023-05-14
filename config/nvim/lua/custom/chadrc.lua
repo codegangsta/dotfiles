@@ -4,8 +4,10 @@ M.ui = {
   theme = 'nord',
   tabufline = {
     enabled = false,
-    show_first_indent_level = true
-  }
+  },
+  statusline = {
+    theme = "default"
+  },
 }
 
 M.mappings = require "custom.mappings"

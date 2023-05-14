@@ -86,6 +86,11 @@ local plugins = {
     'knubie/vim-kitty-navigator',
     lazy = false,
     build = "cp ./*.py ~/.config/kitty/"
+  },
+  {
+    'stevearc/dressing.nvim',
+    lazy = false,
+    opts = {},
   }
 }
 
