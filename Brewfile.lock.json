@@ -4010,7 +4010,7 @@
         "revision": "f1134401b44f7fdfb5794195b6ae2ab7ff7dd854"
       },
       "homebrew/cask-fonts": {
-        "revision": "5c7af0e0d8c124c90fdb73045db2065214c464b3"
+        "revision": "05f1237ea49f7bea85cce74fe3a66c97755585f8"
       },
       "alexanderwillner/tap": {
         "revision": "ad03758c0177c2f5ccd2b86695493dc668563695"
@@ -4141,7 +4141,7 @@
         }
       },
       "font-fira-code-nerd-font": {
-        "version": "3.0.0",
+        "version": "3.0.1",
         "options": {
           "full_name": "font-fira-code-nerd-font"
         }
@@ -4297,7 +4297,7 @@
         }
       },
       "font-symbols-only-nerd-font": {
-        "version": "3.0.0",
+        "version": "3.0.1",
         "options": {
           "full_name": "font-symbols-only-nerd-font"
         }
@@ -4337,7 +4337,7 @@
         "macOS": "11.4"
       },
       "monterey": {
-        "HOMEBREW_VERSION": "4.0.17",
+        "HOMEBREW_VERSION": "4.0.18",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "13.4.0.0.1.1651278267",
