@@ -73,7 +73,8 @@ local plugins = {
         "lua-language-server",
         "html-lsp",
         "prettier",
-        "stylua"
+        "stylua",
+        "yaml-language-server",
       },
     },
   },
@@ -91,7 +92,7 @@ local plugins = {
     'stevearc/dressing.nvim',
     lazy = false,
     opts = {},
-  }
+  },
 }
 
 return plugins

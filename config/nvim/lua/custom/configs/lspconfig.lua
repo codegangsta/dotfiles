@@ -44,6 +44,11 @@ local settings = {
       -- kubernetes = { "*.yml", "*.yaml" }
     },
   },
+  rust_analyzer = {
+    cargo = {
+      allFeatures = true,
+    }
+  }
 }
 
 require("mason-lspconfig").setup_handlers {
