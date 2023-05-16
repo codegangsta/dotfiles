@@ -81,10 +81,11 @@ symbol = " "
 disabled = true
 
 [package]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = " "
+disabled = true
 
 [spack]
 symbol = "🅢 "
