@@ -6,7 +6,15 @@ M.ui = {
     enabled = false,
   },
   statusline = {
-    theme = "default"
+    theme = "default",
+
+    overriden_modules = function()
+      return {
+        LSP_progress = function()
+          return ""
+        end
+      }
+    end
   },
 }
 

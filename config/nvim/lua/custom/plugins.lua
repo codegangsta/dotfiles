@@ -14,17 +14,7 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
-      view = {
-        mappings = {
-          list = {
-            { key = "<C-e>", action = "" },
-            { key = "s",     action = "split" },
-            { key = "i",     action = "vsplit" },
-            { key = "I",     action = "toggle_dotfiles" },
-            { key = "?",     action = "toggle_help" },
-          }
-        }
-      },
+      on_attach = require("custom.configs.nvim-tree-onattach"),
       renderer = {
         indent_markers = {
           enable = true
@@ -125,6 +115,28 @@ local plugins = {
   {
     "github/copilot.vim",
     lazy = false,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  },
+  {
+    'rcarriga/nvim-notify',
+    lazy = false,
+    config = function()
+      vim.notify = require("notify")
+    end
+  },
+  {
+    'j-hui/fidget.nvim',
+    lazy = false,
+    opts = {},
   }
 }
 
