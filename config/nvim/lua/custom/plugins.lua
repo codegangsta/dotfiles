@@ -62,7 +62,8 @@ local plugins = {
         "typescript-language-server",
         "lua-language-server",
         "html-lsp",
-        "prettier",
+        "prettierd",
+        "eslint_d",
         "stylua",
         "rustfmt",
         "rust-analyzer",
@@ -137,6 +138,10 @@ local plugins = {
     'j-hui/fidget.nvim',
     lazy = false,
     opts = {},
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    lazy = false,
   }
 }
 

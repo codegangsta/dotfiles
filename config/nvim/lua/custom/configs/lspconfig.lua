@@ -10,7 +10,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   {
     underline = true,
     virtual_text = {
-      spacing = 5,
+      spacing = 1,
       severity_limit = 'Warning',
     },
     update_in_insert = true,
@@ -60,3 +60,14 @@ require("mason-lspconfig").setup_handlers {
     }
   end
 }
+
+local null_ls = require("null-ls")
+null_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  sources = {
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.diagnostics.eslint_d,
+  }
+})
