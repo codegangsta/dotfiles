@@ -48,6 +48,11 @@ local settings = {
     cargo = {
       allFeatures = true,
     }
+  },
+  tsserver = {
+    format = {
+      enable = false,
+    }
   }
 }
 
@@ -63,11 +68,10 @@ require("mason-lspconfig").setup_handlers {
 
 local null_ls = require("null-ls")
 null_ls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+  on_attach = require("lsp-format").on_attach,
   sources = {
     null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.code_actions.eslint_d,
-    null_ls.builtins.diagnostics.eslint_d,
+    -- null_ls.builtins.code_actions.eslint_d,
+    -- null_ls.builtins.diagnostics.eslint_d,
   }
 })

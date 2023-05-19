@@ -1,6 +1,6 @@
 -- Resize panes when wndow is resized
 local resize = vim.api.nvim_create_augroup("Resize", { clear = true })
-vim.api.nvim_create_autocmd({"VimResized"}, {
+vim.api.nvim_create_autocmd({ "VimResized" }, {
   pattern = { "*" },
   command = "wincmd =",
   group = resize
@@ -8,9 +8,9 @@ vim.api.nvim_create_autocmd({"VimResized"}, {
 
 -- Treat Brewfile as a ruby file
 local brewfile = vim.api.nvim_create_augroup("Brewfile", { clear = true })
-vim.api.nvim_create_autocmd({"BufNewFile","BufRead"}, {
-  pattern = {"BrewFile"},
-  callback = function ()
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "BrewFile" },
+  callback = function()
     vim.api.nvim_buf_set_option(0, "syntax", "ruby")
     vim.api.nvim_buf_set_option(0, "filetype", "ruby")
   end,
@@ -18,9 +18,9 @@ vim.api.nvim_create_autocmd({"BufNewFile","BufRead"}, {
 })
 
 local nats_config = vim.api.nvim_create_augroup("NATSConfig", { clear = true })
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.conf" },
-  callback = function ()
+  callback = function()
     vim.cmd [[ set ft=terraform ]]
   end,
   group = nats_config
