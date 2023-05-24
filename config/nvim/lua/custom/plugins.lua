@@ -69,6 +69,7 @@ local plugins = {
         "rust-analyzer",
         "yaml-language-server",
         "emmet-ls",
+        "cuelsp",
       },
     },
   },
