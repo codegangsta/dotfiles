@@ -161,7 +161,7 @@ local plugins = {
 
           local rt = require("rust-tools")
 
-          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+          vim.keymap.set("n", "<C-space>", ":Lspsaga hover_doc <cr>", { buffer = bufnr })
           vim.keymap.set("n", "<leader>e", rt.expand_macro.expand_macro, { buffer = bufnr })
         end
       }
