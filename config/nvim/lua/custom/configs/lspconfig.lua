@@ -44,11 +44,6 @@ local settings = {
       -- kubernetes = { "*.yml", "*.yaml" }
     },
   },
-  rust_analyzer = {
-    cargo = {
-      allFeatures = true,
-    }
-  },
   tsserver = {
     format = {
       enable = false,

@@ -143,6 +143,41 @@ local plugins = {
   {
     "jose-elias-alvarez/null-ls.nvim",
     lazy = false,
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    opts = {
+      server = {
+        cargo = {
+          features = "all"
+        },
+        checkOnSave = {
+          command = "clippy",
+        },
+        on_attach = function(client, bufnr)
+          require("lsp-format").on_attach(client)
+          require("plugins.configs.lspconfig").on_attach(client)
+
+          local rt = require("rust-tools")
+
+          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+          vim.keymap.set("n", "<leader>e", rt.expand_macro.expand_macro, { buffer = bufnr })
+        end
+      }
+    },
+    {
+      "glepnir/lspsaga.nvim",
+      event = "LspAttach",
+      config = function()
+        require("lspsaga").setup({})
+      end,
+      dependencies = {
+        { "nvim-tree/nvim-web-devicons" },
+        --Please make sure you install markdown and markdown_inline parser
+        { "nvim-treesitter/nvim-treesitter" }
+      }
+    }
   }
 }
 

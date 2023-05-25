@@ -4,6 +4,7 @@ local M = {}
 M.disabled = {
   n = {
     ["<leader>h"] = "",
+    ["<leader>e"] = "",
     ["<C-e>"] = "",
     ["<C-a>"] = "",
     ["<C-n>"] = "",
@@ -62,7 +63,7 @@ M.lspconfig = {
   plugin = true,
 
   n = {
-    ["<leader><space>"] = { vim.lsp.buf.hover, "LSP Hover" },
+    ["<leader><space>"] = { ":Lspsaga hover_doc", "LSP Hover" },
     ["<leader><leader>"] = { vim.diagnostic.open_float, "Open float" },
     ["gi"] = { vim.lsp.buf.implementation, "Go to implementation" },
     ["<C-a>"] = { vim.lsp.buf.code_action, "Code action" },
