@@ -89,18 +89,6 @@ local plugins = {
     opts = {},
   },
   {
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup()
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-  },
-  {
     "ray-x/go.nvim",
     dependencies = { -- optional packages
       "ray-x/guihua.lua",
@@ -180,7 +168,9 @@ local plugins = {
     },
     {
       "Bryley/neoai.nvim",
-      lazy = false,
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+      },
       cmd = {
         "NeoAI",
         "NeoAIOpen",
@@ -197,6 +187,8 @@ local plugins = {
       keys = {
         { "<leader>as", desc = "summarize text" },
         { "<leader>ag", desc = "generate git message" },
+        { "<leader>ai", desc = "toggle neo ai" },
+        { "<leader>ac", desc = "neoai inject context code" },
       },
       config = function()
         require("neoai").setup({

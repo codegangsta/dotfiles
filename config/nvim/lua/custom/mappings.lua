@@ -80,7 +80,17 @@ M.lazygit = {
     ["<C-g>"] = { ":LazyGit<CR>" },
     ["<C-b>"] = { ":LazyGitFilterCurrentFile<CR>" },
   }
+}
 
+M.neoai = {
+  n = {
+    ["<leader>ai"] = { "<cmd> NeoAiToggle<cr>"},
+    ["<leader>ac"] = { "<cmd> NeoAIInjectContextCode "},
+  },
+  v = {
+    ["<leader>ac"] = { "<cmd> NeoAIInjectContextCode "},
+  }
+  
 }
 
 return M
