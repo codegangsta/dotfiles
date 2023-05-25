@@ -5,6 +5,7 @@ M.disabled = {
   n = {
     ["<leader>h"] = "",
     ["<leader>e"] = "",
+    ["<leader>a"] = "",
     ["<C-e>"] = "",
     ["<C-a>"] = "",
     ["<C-n>"] = "",
@@ -84,13 +85,13 @@ M.lazygit = {
 
 M.neoai = {
   n = {
-    ["<leader>ai"] = { "<cmd> NeoAiToggle<cr>"},
-    ["<leader>ac"] = { "<cmd> NeoAIInjectContextCode "},
+    ["<leader>ai"] = { ":NeoAI <cr>" },
+    ["<leader>ac"] = { ":NeoAIContext <cr>" },
   },
   v = {
-    ["<leader>ac"] = { "<cmd> NeoAIInjectContextCode "},
+    ["<leader>ac"] = { ":NeoAIContext<cr>" },
   }
-  
+
 }
 
 return M
