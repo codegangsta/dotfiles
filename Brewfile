@@ -12,6 +12,7 @@ tap "nats-io/nats-tools"
 tap "ngrok/ngrok"
 tap "tinygo-org/tools"
 
+brew "ansible"
 brew "asciinema"
 brew "binaryen"
 brew "caddy"
