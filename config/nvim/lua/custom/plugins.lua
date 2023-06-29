@@ -43,7 +43,7 @@ local plugins = {
   {
     'williamboman/mason-lspconfig.nvim',
     lazy = false,
-    depencencies = {
+    dependencies = {
       "williamboman/mason.nvim"
     }
   },
