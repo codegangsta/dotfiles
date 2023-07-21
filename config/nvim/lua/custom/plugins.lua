@@ -177,7 +177,7 @@ local plugins = {
           -- Options go here
         })
       end,
-    }
+    },
   }
 }
 
