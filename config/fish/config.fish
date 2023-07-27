@@ -17,7 +17,7 @@ set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
-set -gx KO_DOCKER_REPO ghcr.io/codegangsta
+# set -gx KO_DOCKER_REPO ghcr.io/codegangsta
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 
 set -gx SCP_US_WEST nats://127.0.0.1:14222,nats://127.0.0.1:14223,nats://127.0.0.1:14224,nats://127.0.0.1:14225,nats://127.0.0.1:14226
