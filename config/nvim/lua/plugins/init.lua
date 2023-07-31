@@ -200,7 +200,11 @@ local default_plugins = {
 
   {
     "numToStr/Comment.nvim",
-    keys = { "gcc", "gbc" },
+    keys = {
+      {"gcc"},
+      {"gbc"},
+      {"gc", mode = "v"},
+    },
     init = function()
       require("core.utils").load_mappings "comment"
     end,
