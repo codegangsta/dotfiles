@@ -4432,6 +4432,12 @@
         "options": {
           "full_name": "font-symbols-only-nerd-font"
         }
+      },
+      "intellij-idea-ce": {
+        "version": "2023.2,232.8660.185",
+        "options": {
+          "full_name": "intellij-idea-ce"
+        }
       }
     },
     "mas": {
