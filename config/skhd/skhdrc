@@ -1,0 +1,6 @@
+
+# Create journal entry
+cmd + ctrl + shift - j : shortcuts run Journal
+
+# Toggle Lights
+cmd + ctrl + shift - l : shortcuts run ToggleLights
