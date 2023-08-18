@@ -57,7 +57,6 @@ vim.cmd [[
   set clipboard+=unnamedplus
 ]]
 
-function kitty_run_command(command)
-  -- kitty @ send-text --match "recent:1" hey there
+function kitty_run_command(command, kill)
   vim.cmd(":silent !kitty @ send-text -m 'recent:1' '" .. command .. "\\n'")
 end
