@@ -1,3 +1,66 @@
+# Navigation
+cmd + ctrl - h : yabai -m window --focus west
+cmd + ctrl - j : yabai -m window --focus south
+cmd + ctrl - k : yabai -m window --focus north
+cmd + ctrl - l : yabai -m window --focus east
+
+# Moving Windows
+cmd + shift - h : yabai -m window --swap west
+cmd + shift - j : yabai -m window --swap south
+cmd + shift - k : yabai -m window --swap north
+cmd + shift - l : yabai -m window --swap east
+
+cmd + ctrl - left : yabai -m space --focus prev
+cmd + ctrl - down : yabai -m space --focus next
+cmd + ctrl - up : yabai -m space --focus prev
+cmd + ctrl - right : yabai -m space --focus next
+
+cmd + ctrl + shift - left  : yabai -m window --space prev; \
+                             yabai -m space --focus prev
+cmd + ctrl + shift - down  : yabai -m window --space next; \
+                             yabai -m space --focus next
+cmd + ctrl + shift - up    : yabai -m window --space prev; \
+                             yabai -m space --focus prev
+cmd + ctrl + shift - right : yabai -m window --space next; \
+                             yabai -m space --focus next
+
+cmd + ctrl - 1 : yabai -m space --focus 1
+cmd + ctrl - 2 : yabai -m space --focus 2
+cmd + ctrl - 3 : yabai -m space --focus 3
+cmd + ctrl - 4 : yabai -m space --focus 4
+
+# Resize Windows
+cmd + alt - h : yabai -m window --resize left:-100:0; \
+                yabai -m window --resize right:-100:0
+cmd + alt - l : yabai -m window --resize right:100:0; \
+                yabai -m window --resize left:100:0
+
+# Open Applications
+cmd + ctrl - space : open -a /Applications/Things3.app
+cmd + ctrl - t : open -a /Applications/Kitty.app
+cmd + ctrl - c : open -a /System/Applications/Calendar.app
+
+# Things 3 urls
+cmd + ctrl - b : open "things:///show?id=today&filter=Break"
+cmd + ctrl - f : open "things:///show?id=today&filter=Focus"
+
+#Equalize the size of Windows
+cmd + ctrl - e : yabai -m space --balance
+
+cmd + ctrl - w : yabai -m space --balance; \
+                 yabai -m window --resize left:-640:0; \
+                 yabai -m window --resize right:480:0
+
+# Float / Unfloat window
+cmd + ctrl - y : \
+    yabai -m window --toggle float; \
+    yabai -m window --toggle border
+
+# Fullscreen
+cmd + ctrl - m : yabai -m window --toggle zoom-fullscreen
+
+# Enable / Disable gaps in current workspace
+cmd + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # Create journal entry
 cmd + ctrl + shift - j : shortcuts run Journal

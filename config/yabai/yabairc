@@ -1,0 +1,40 @@
+# the scripting-addition must be loaded manually if
+# you are running yabai on macOS Big Sur. Uncomment
+# the following line to have the injection performed
+# when the config is executed during startup.
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# Layout
+yabai -m config layout bsp
+
+# Window Borders
+yabai -m config window_border on
+yabai -m config window_border_width 1
+yabai -m config active_window_border_color 0xFF81A1C1
+yabai -m config normal_window_border_color 0x3381A1C1
+
+# Mouse Control
+yabai -m config mouse_modifier cmd
+
+# Gaps and Padding
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+# Refocus windows with window is closed or app destroyed
+yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
+yabai -m rule --add app="^zoom.us$" manage=off
+yabai -m rule --add app="Flow" manage=off
+yabai -m rule --add app="Obsidian" manage=off
+
+yabai -m config window_opacity on
+yabai -m config normal_window_opacity 0.95

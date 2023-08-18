@@ -55,12 +55,12 @@ brew "terraform"
 brew "tinygo"
 brew "vercel-cli"
 brew "watch"
+brew "yabai"
 
 if OS.mac?
   # Mac apps
   cask "1password"
   cask "1password-cli"
-  cask "amethyst"
   cask "brave-browser"
   cask "cheatsheet"
   cask "discord"
