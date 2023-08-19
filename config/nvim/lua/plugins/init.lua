@@ -4,9 +4,6 @@ local default_plugins = {
 
   "nvim-lua/plenary.nvim",
 
-  -- nvchad plugins
-  { "NvChad/extensions", branch = "v2.0" },
-
   {
     "NvChad/base46",
     branch = "v2.0",
@@ -19,9 +16,6 @@ local default_plugins = {
     "NvChad/ui",
     branch = "v2.0",
     lazy = false,
-    config = function()
-      require "nvchad_ui"
-    end,
   },
 
   {
@@ -53,7 +47,7 @@ local default_plugins = {
   {
     "nvim-tree/nvim-web-devicons",
     opts = function()
-      return { override = require("nvchad_ui.icons").devicons }
+      return { override = require "nvchad.icons.devicons" }
     end,
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "devicons")
@@ -63,6 +57,7 @@ local default_plugins = {
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    version = "2.20.7",
     init = function()
       require("core.utils").lazy_load "indent-blankline.nvim"
     end,
@@ -201,15 +196,18 @@ local default_plugins = {
   {
     "numToStr/Comment.nvim",
     keys = {
-      {"gcc"},
-      {"gbc"},
-      {"gc", mode = "v"},
+      { "gcc", mode = "n", desc = "Comment toggle current line" },
+      { "gc", mode = { "n", "o" }, desc = "Comment toggle linewise" },
+      { "gc", mode = "x", desc = "Comment toggle linewise (visual)" },
+      { "gbc", mode = "n", desc = "Comment toggle current block" },
+      { "gb", mode = { "n", "o" }, desc = "Comment toggle blockwise" },
+      { "gb", mode = "x", desc = "Comment toggle blockwise (visual)" },
     },
     init = function()
       require("core.utils").load_mappings "comment"
     end,
-    config = function()
-      require("Comment").setup()
+    config = function(_, opts)
+      require("Comment").setup(opts)
     end,
   },
 
@@ -226,12 +224,12 @@ local default_plugins = {
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "nvimtree")
       require("nvim-tree").setup(opts)
-      vim.g.nvimtree_side = opts.view.side
     end,
   },
 
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
     cmd = "Telescope",
     init = function()
       require("core.utils").load_mappings "telescope"
@@ -254,7 +252,7 @@ local default_plugins = {
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
-    keys = { "<leader>", '"', "'", "`", "c", "v" },
+    keys = { "<leader>", '"', "'", "`", "c", "v", "g" },
     init = function()
       require("core.utils").load_mappings "whichkey"
     end,

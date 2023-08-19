@@ -124,11 +124,6 @@ local plugins = {
     end
   },
   {
-    'j-hui/fidget.nvim',
-    lazy = false,
-    opts = {},
-  },
-  {
     "jose-elias-alvarez/null-ls.nvim",
     lazy = false,
   },
