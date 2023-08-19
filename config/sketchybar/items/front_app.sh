@@ -8,7 +8,7 @@ yabai=(
   label.drawing=off
   icon.width=30
   icon=$YABAI_GRID
-  icon.color=$ORANGE
+  icon.color=$GREEN
   associated_display=active
 )
 

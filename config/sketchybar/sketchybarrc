@@ -64,7 +64,7 @@ source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 
 # Center
-sketchybar --add alias "Flow,Item-1" center
+sketchybar --add alias "Flow,Item-0" center
 
 # Right
 clock="Control Center,Clock"
