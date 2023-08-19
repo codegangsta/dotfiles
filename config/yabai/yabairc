@@ -38,3 +38,6 @@ yabai -m rule --add app="Obsidian" manage=off
 
 yabai -m config window_opacity on
 yabai -m config normal_window_opacity 0.9
+
+# Status bar
+yabai -m config external_bar main:48:0
