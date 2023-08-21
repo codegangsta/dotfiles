@@ -51,6 +51,17 @@ local settings = {
   }
 }
 
+require("lspconfig")["sourcekit"].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = { "/usr/bin/sourcekit-lsp" },
+  settings = {
+    sourcekit = {
+      enableDiagnostics = true,
+    }
+  }
+}
+
 require("mason-lspconfig").setup_handlers {
   function(server)
     require("lspconfig")[server].setup {

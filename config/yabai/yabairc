@@ -27,6 +27,7 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 
 yabai -m rule --add app="^zoom.us$" manage=off
 yabai -m rule --add app="Flow" manage=off
+yabai -m rule --add app="Simulator" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 
 yabai -m config window_opacity off
@@ -34,3 +35,5 @@ yabai -m config normal_window_opacity 0.9
 
 # Status bar
 yabai -m config external_bar main:48:0
+
+yabai -m space --balance;
