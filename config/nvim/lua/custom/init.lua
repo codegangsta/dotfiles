@@ -60,3 +60,8 @@ vim.cmd [[
 function kitty_run_command(command, kill)
   vim.cmd(":silent !kitty @ send-text -m 'recent:1' '" .. command .. "\\n'")
 end
+
+-- Override vim.notify to do native desktop notifications in kitty
+vim.notify = function (msg, level)
+  vim.api.nvim_chan_send(vim.v.stderr, '\027]99;;' .. msg .. '\027\\')
+end

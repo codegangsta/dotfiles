@@ -117,13 +117,6 @@ local plugins = {
     end
   },
   {
-    'rcarriga/nvim-notify',
-    lazy = false,
-    config = function()
-      vim.notify = require("notify")
-    end
-  },
-  {
     "jose-elias-alvarez/null-ls.nvim",
     lazy = false,
   },
