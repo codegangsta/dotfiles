@@ -103,8 +103,18 @@ local plugins = {
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
   {
-    "github/copilot.vim",
-    lazy = false,
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = "<tab>",
+          }
+        }
+      })
+    end,
   },
   {
     "kylechui/nvim-surround",
@@ -137,21 +147,9 @@ local plugins = {
 
           local rt = require("rust-tools")
 
-          vim.keymap.set("n", "<C-space>", ":Lspsaga hover_doc <cr>", { buffer = bufnr })
+          vim.keymap.set("n", "<C-space>", vim.lsp.buf.hover, { buffer = bufnr })
           vim.keymap.set("n", "<leader>e", rt.expand_macro.expand_macro, { buffer = bufnr })
         end
-      }
-    },
-    {
-      "glepnir/lspsaga.nvim",
-      event = "LspAttach",
-      config = function()
-        require("lspsaga").setup({})
-      end,
-      dependencies = {
-        { "nvim-tree/nvim-web-devicons" },
-        --Please make sure you install markdown and markdown_inline parser
-        { "nvim-treesitter/nvim-treesitter" }
       }
     },
     {

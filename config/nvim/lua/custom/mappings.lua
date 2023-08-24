@@ -64,15 +64,11 @@ M.lspconfig = {
   plugin = true,
 
   n = {
-    ["<leader><space>"] = { "<cmd>Lspsaga hover_doc <cr>", "Hover doc" },
-    ["<leader><leader>"] = { "<cmd>Lspsaga show_line_diagnostics ++unfocus<cr>", "Show line diagnostics" },
-    ["<leader>o"] = { "<cmd>Lspsaga outline<cr>", "Show outline" },
+    ["<leader><space>"] = { vim.lsp.buf.hover, "Hover doc" },
+    ["<leader><leader>"] = { vim.diagnostic.open_float, "Show line diagnostics" },
     ["gi"] = { vim.lsp.buf.implementation, "Go to implementation" },
-    ["gp"] = { "<cmd>Lspsaga peek_definition <cr>", "Peek definition" },
-    ["gr"] = { "<cmd>Lspsaga rename <cr>", "Rename" },
-    ["<C-a>"] = { "<cmd>Lspsaga code_action <cr>", "Code action" },
-    ["<C-n>"] = { "<cmd>Lspsaga diagnostic_jump_next <cr>", "Go to next" },
-    ["<C-f>"] = { "<cmd>Lspsaga lsp_finder <cr>", "LSP Finder" },
+    ["<C-a>"] = { vim.lsp.buf.code_action, "Code action" },
+    ["<C-n>"] = { vim.diagnostic.goto_next, "Go to next" },
   }
 }
 
