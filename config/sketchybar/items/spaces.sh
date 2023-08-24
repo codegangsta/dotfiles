@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SPACE_ICONS=("code" "social")
+SPACE_ICONS=(1 2 3 4)
 
 # Destroy space on right click, focus space on left click.
 # New space by left clicking separator (>)
