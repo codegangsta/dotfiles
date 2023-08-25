@@ -75,6 +75,7 @@ sketchybar --add alias "$clock" right \
 sound_source="SoundSource,SSMainAppMenuIcon"
 sketchybar --add alias $sound_source right \
            --set $sound_source click_script="open /Applications/SoundSource.app/"
+sketchybar --add alias "Session,Item-0" right
 
 sketchybar --update
 

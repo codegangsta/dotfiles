@@ -32,5 +32,6 @@ yabai -m rule --add app="Simulator" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="System Settings" manage=off
 yabai -m rule --add app="Messages" manage=off
+yabai -m rule --add app="Session" manage=off sticky=on
 
 yabai -m space --balance
