@@ -28,6 +28,7 @@ cmd + ctrl - 1 : yabai -m space --focus 1
 cmd + ctrl - 2 : yabai -m space --focus 2
 cmd + ctrl - 3 : yabai -m space --focus 3
 cmd + ctrl - 4 : yabai -m space --focus 4
+cmd + ctrl - 5 : yabai -m space --focus 5
 
 # Resize Windows
 cmd + alt - h : yabai -m window --resize left:-100:0; \

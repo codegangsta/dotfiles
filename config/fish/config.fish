@@ -19,6 +19,7 @@ set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 # set -gx KO_DOCKER_REPO ghcr.io/codegangsta
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
+set -gx fish_autosuggestion_enabled 0
 
 set -gx SCP_US_WEST nats://127.0.0.1:14222,nats://127.0.0.1:14223,nats://127.0.0.1:14224,nats://127.0.0.1:14225,nats://127.0.0.1:14226
 set -gx SCP_US_CENTRAL nats://127.0.0.1:15222,nats://127.0.0.1:15223,nats://127.0.0.1:15224
