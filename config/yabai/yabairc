@@ -34,5 +34,6 @@ yabai -m rule --add app="System Settings" manage=off
 yabai -m rule --add app="Messages" manage=off
 yabai -m rule --add app="Session" manage=off sticky=on
 yabai -m rule --add app="Hyperfocus" manage=off sticky=on
+yabai -m rule --add app="Streaks" manage=off sticky=off
 
 yabai -m space --balance
