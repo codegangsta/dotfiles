@@ -110,7 +110,7 @@ local plugins = {
         suggestion = {
           auto_trigger = true,
           keymap = {
-            accept = "<tab>",
+            accept = "<c-e>",
           }
         }
       })
