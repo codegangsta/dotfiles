@@ -90,6 +90,14 @@ M.neoai = {
 
 }
 
+M.custom = {
+  n = {
+    ["<leader>m"] = { function()
+      kitty_run_command("make")
+    end, "run default make target"}
+  }
+}
+
 vim.keymap.set('i', '<Tab>', function()
   if require("copilot.suggestion").is_visible() then
     require("copilot.suggestion").accept()
