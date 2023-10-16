@@ -48,7 +48,7 @@ local settings = {
     format = {
       enable = false,
     }
-  }
+  },
 }
 
 require("lspconfig")["sourcekit"].setup {
@@ -64,11 +64,16 @@ require("lspconfig")["sourcekit"].setup {
 
 require("mason-lspconfig").setup_handlers {
   function(server)
-    require("lspconfig")[server].setup {
+    local opts = {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = settings,
     }
+    if server == "omnisharp" then
+      opts.cmd = { "/Users/jeremysaenz/.local/share/nvim/mason/bin/omnisharp", "--languageserver", "--hostPID",
+        tostring(vim.fn.getpid()) }
+    end
+    require("lspconfig")[server].setup(opts)
   end
 }
 
