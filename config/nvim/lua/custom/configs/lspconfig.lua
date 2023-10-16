@@ -49,6 +49,17 @@ local settings = {
       enable = false,
     }
   },
+  xml = {
+    format = {
+      enabled = false,
+    },
+    fileAssociations = {
+      {
+        pattern = "Mutagen/*/Records/*/*.xml",
+        systemId = "Mutagen.Bethesda.Core/MutagenSource.xsd"
+      }
+    },
+  }
 }
 
 require("lspconfig")["sourcekit"].setup {
