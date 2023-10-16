@@ -70,7 +70,8 @@ local plugins = {
         "yaml-language-server",
         "emmet-ls",
         "cuelsp",
-        "omnisharp"
+        "omnisharp",
+        "lemminx",
       },
     },
   },
