@@ -17,6 +17,16 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   group = brewfile
 })
 
+local papyrus = vim.api.nvim_create_augroup("Papyrus", { clear = true })
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.psc" },
+  callback = function()
+    vim.api.nvim_buf_set_option(0, "syntax", "papyrus")
+    vim.api.nvim_buf_set_option(0, "filetype", "papyrus")
+  end,
+  group = brewfile
+})
+
 local nats_config = vim.api.nvim_create_augroup("NATSConfig", { clear = true })
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.conf" },
