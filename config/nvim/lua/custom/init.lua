@@ -26,6 +26,7 @@ set("expandtab", true)
 set("shiftwidth", 2)
 set("tabstop", 2)
 set("whichwrap", "")
+set("mouse", "")
 
 set("shell", "/bin/bash")
 
