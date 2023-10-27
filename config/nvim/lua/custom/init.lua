@@ -26,7 +26,6 @@ set("expandtab", true)
 set("shiftwidth", 2)
 set("tabstop", 2)
 set("whichwrap", "")
-set("mouse", "")
 
 set("shell", "/bin/bash")
 
@@ -63,6 +62,6 @@ function kitty_run_command(command, kill)
 end
 
 -- Override vim.notify to do native desktop notifications in kitty
-vim.notify = function (msg, level)
+vim.notify = function(msg, level)
   vim.api.nvim_chan_send(vim.v.stderr, '\027]99;;' .. msg .. '\027\\')
 end
