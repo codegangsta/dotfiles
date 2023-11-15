@@ -1,5 +1,13 @@
 local plugins = {
   {
+    "mattia72/vim-delphi",
+    lazy = false
+  },
+  {
+    "jjo/vim-cue",
+    lazy = false
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
       show_current_context = false
