@@ -45,6 +45,7 @@ symbol = " "
 [directory]
 read_only = " "
 home_symbol = ""
+truncation_length = 1
 
 [docker_context]
 symbol = " "
