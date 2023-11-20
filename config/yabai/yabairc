@@ -25,12 +25,13 @@ yabai -m config layout bsp \
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 
-yabai -m rule --add app="^zoom.us$" manage=off
-yabai -m rule --add app="Simulator" manage=off
-yabai -m rule --add app="System Settings" manage=off
-yabai -m rule --add app="Messages" manage=off
-yabai -m rule --add app="1Password" manage=off sticky=off
-yabai -m rule --add app="Mail" manage=off sticky=off
-yabai -m rule --add app="Slack" manage=off sticky=off
+yabai -m rule --add app="^zoom.us$" manage=off layer=below
+yabai -m rule --add app="Simulator" manage=off layer=below
+yabai -m rule --add app="System Settings" manage=off layer=below
+yabai -m rule --add app="Messages" manage=off layer=below
+yabai -m rule --add app="1Password" manage=off sticky=off layer=below
+yabai -m rule --add app="Mail" manage=off sticky=off layer=below
+yabai -m rule --add app="Slack" manage=off sticky=off layer=below
+yabai -m rule --add app="Obsidian" manage=off sticky=off layer=below
 
 yabai -m space --balance
