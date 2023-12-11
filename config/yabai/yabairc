@@ -33,3 +33,5 @@ yabai -m rule --add app="Safari" manage=off sticky=off layer=below
 yabai -m rule --add app="Session" manage=off sticky=on layer=below
 
 yabai -m space --balance
+
+borders active_color=0xFF81A1C1 inactive_color=0x00494d64 width=8.0 &
