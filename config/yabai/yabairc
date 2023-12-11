@@ -15,11 +15,7 @@ yabai -m config layout bsp \
       -m config left_padding   10 \
       -m config right_padding  10 \
       -m config window_gap     10 \
-      -m config window_border on \
-      -m config window_border_width 1 \
-      -m config mouse_modifier cmd \
-      -m config active_window_border_color 0xFF286ec3 \
-      -m config normal_window_border_color 0x33286ec3
+      -m config mouse_modifier cmd
 
 # Refocus windows with window is closed or app destroyed
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
@@ -34,5 +30,6 @@ yabai -m rule --add app="Mail" manage=off sticky=off layer=below
 yabai -m rule --add app="Slack" manage=off sticky=off layer=below
 yabai -m rule --add app="Obsidian" manage=off sticky=off layer=below
 yabai -m rule --add app="Safari" manage=off sticky=off layer=below
+yabai -m rule --add app="Session" manage=off sticky=on layer=below
 
 yabai -m space --balance
