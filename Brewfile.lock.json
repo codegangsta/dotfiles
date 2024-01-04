@@ -5026,7 +5026,7 @@
         }
       },
       "obsidian": {
-        "version": "1.3.5",
+        "version": null,
         "options": {
           "full_name": "obsidian"
         }
@@ -5154,7 +5154,7 @@
         "macOS": "13.5.1"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.2-16-g21a6f93",
+        "HOMEBREW_VERSION": "4.2.2-18-gdcd267b",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.0.0.0.1.1694021235",

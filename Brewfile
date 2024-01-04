@@ -79,6 +79,7 @@ if OS.mac?
   cask "google-chrome"
   cask "gpg-suite"
   cask "intellij-idea-ce"
+  cask "obsidian"
   cask "kitty"
   cask "maccy"
   cask "monitorcontrol"
