@@ -6,8 +6,6 @@ cmd + ctrl - l : yabai -m window --focus east
 
 # Moving Windows
 cmd + shift - h : yabai -m window --swap west
-#cmd + shift - j : yabai -m window --swap south
-#cmd + shift - k : yabai -m window --swap north
 cmd + shift - l : yabai -m window --swap east
 
 cmd + ctrl - left : yabai -m space --focus prev
@@ -37,7 +35,6 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
                 yabai -m window --resize left:100:0
 
 # Open Applications
-cmd + ctrl - space : open -a /Applications/Things3.app
 cmd + ctrl - t : open -a /Applications/Kitty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - r : yabai --restart-service
@@ -63,9 +60,6 @@ cmd + ctrl - m : yabai -m window --toggle zoom-fullscreen
 
 # Enable / Disable gaps in current workspace
 cmd + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
-
-# Create journal entry
-cmd + ctrl + shift - j : shortcuts run Journal
 
 # Toggle Lights
 cmd + ctrl + shift - l : shortcuts run ToggleLights
