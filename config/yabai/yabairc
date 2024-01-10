@@ -24,12 +24,8 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 yabai -m rule --add app="^zoom.us$" manage=off layer=below
 yabai -m rule --add app="Simulator" manage=off layer=below
 yabai -m rule --add app="System Settings" manage=off layer=below
-yabai -m rule --add app="Messages" manage=off layer=below
 yabai -m rule --add app="1Password" manage=off sticky=off layer=below
-yabai -m rule --add app="Mail" manage=off sticky=off layer=below
-yabai -m rule --add app="Slack" manage=off sticky=off layer=below
 yabai -m rule --add app="Safari" manage=off sticky=off layer=below
-yabai -m rule --add app="Flow" manage=off sticky=on
 
 yabai -m space --balance
 
