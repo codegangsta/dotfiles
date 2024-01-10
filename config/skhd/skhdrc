@@ -39,16 +39,12 @@ cmd + ctrl - t : open -a /Applications/Kitty.app
 cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - r : yabai --restart-service
 
-# Things 3 urls
-cmd + ctrl - b : open "things:///show?id=today&filter=Break"
-cmd + ctrl - f : open "things:///show?id=today&filter=Focus"
-
 #Equalize the size of Windows
 cmd + ctrl - e : yabai -m space --balance
 
 cmd + ctrl - w : yabai -m space --balance; \
                  yabai -m window --resize left:-640:0 \
-                       -m window --resize right:480:0
+                 yabai -m window --resize right:-480:0
 
 # Float / Unfloat window
 cmd + ctrl - y : \
