@@ -26,6 +26,7 @@ yabai -m rule --add app="Simulator" manage=off layer=below
 yabai -m rule --add app="System Settings" manage=off layer=below
 yabai -m rule --add app="1Password" manage=off sticky=off layer=below
 yabai -m rule --add app="Safari" manage=off sticky=off layer=below
+yabai -m rule --add app="Session" manage=off sticky=off layer=below
 
 yabai -m space --balance
 
