@@ -77,7 +77,6 @@ if OS.mac?
   cask "gpg-suite"
   cask "intellij-idea-ce"
   cask "kitty"
-  cask "maccy"
   cask "monitorcontrol"
   cask "obs"
   cask "raycast"
