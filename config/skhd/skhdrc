@@ -36,7 +36,6 @@ cmd + alt - l : yabai -m window --resize right:100:0; \
 
 # Open Applications
 cmd + ctrl - t : open -a /Applications/Kitty.app
-cmd + ctrl - c : open -a /System/Applications/Calendar.app
 cmd + ctrl - r : yabai --restart-service
 
 #Equalize the size of Windows
