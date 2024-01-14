@@ -4774,10 +4774,10 @@
     },
     "tap": {
       "homebrew/cask": {
-        "revision": "b67a876b29c65d52e770a82912017099e3e7f006"
+        "revision": "ca8594cc635bdb24a89c53541d106b2269c23a82"
       },
       "homebrew/cask-fonts": {
-        "revision": "ce6d85bb40f1113ec132a57007810cb3da052dcb"
+        "revision": "9544a97f8aaa74442abb13f00ce5d9a354610153"
       },
       "alexanderwillner/tap": {
         "revision": "ad03758c0177c2f5ccd2b86695493dc668563695"
@@ -5168,9 +5168,9 @@
         "HOMEBREW_VERSION": "4.2.3-78-g302e83e",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
-        "CLT": "15.0.0.0.1.1694021235",
+        "CLT": "15.1.0.0.1.1700200546",
         "Xcode": "15.2",
-        "macOS": "14.0"
+        "macOS": "14.2.1"
       }
     },
     "linux": {
