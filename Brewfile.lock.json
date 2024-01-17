@@ -2831,55 +2831,45 @@
         }
       },
       "vercel-cli": {
-        "version": "32.3.0",
+        "version": "33.1.0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65",
-              "sha256": "6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41",
+              "sha256": "3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41"
             },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65",
-              "sha256": "6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41",
+              "sha256": "3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41"
             },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65",
-              "sha256": "6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65"
-            },
-            "arm64_big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65",
-              "sha256": "6acd47146d3332e8e7cf52ec00c62c6950a4bdd49545e6cc83cb61d44cd31c65"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41",
+              "sha256": "3a736704079964cdf0e424ae76523cc27ddab68e3ac347193c9f0f709672cb41"
             },
             "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1",
-              "sha256": "8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24",
+              "sha256": "ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1",
-              "sha256": "8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24",
+              "sha256": "ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1",
-              "sha256": "8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1"
-            },
-            "big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1",
-              "sha256": "8b930b93927ca3b085988e004f2c6b6b3a8dd48d8e7b7984f0d138c2fd55eae1"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24",
+              "sha256": "ea5544f3ffc7de502a9f7629d4b0420fb3eae4de436c01d116741f9c8dae7d24"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:5f3d3f1d1ede6935b4f4fa336351835a90f179af386b0eb0cac3b569d74b1827",
-              "sha256": "5f3d3f1d1ede6935b4f4fa336351835a90f179af386b0eb0cac3b569d74b1827"
+              "url": "https://ghcr.io/v2/homebrew/core/vercel-cli/blobs/sha256:45f8bc746787f4c4c79e56391e09b3a861fd2caf4b6868a7f44897f96a71447f",
+              "sha256": "45f8bc746787f4c4c79e56391e09b3a861fd2caf4b6868a7f44897f96a71447f"
             }
           }
         }
