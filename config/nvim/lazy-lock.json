@@ -39,5 +39,6 @@
   "vim-cue": { "branch": "master", "commit": "bd1a62303d096aa24fe4160a475645087f8770b3" },
   "vim-delphi": { "branch": "master", "commit": "8f700ae89e25a1dd9118e3d8f80fff868d36a5cb" },
   "vim-kitty-navigator": { "branch": "master", "commit": "20abf8613aa228a5def1ae02cd9da0f2d210352a" },
-  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
+  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
+  "zen-mode.nvim": { "branch": "main", "commit": "78557d972b4bfbb7488e17b5703d25164ae64e6a" }
 }

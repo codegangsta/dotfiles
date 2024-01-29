@@ -87,15 +87,20 @@ M.neoai = {
   v = {
     ["<leader>ac"] = { ":NeoAIContext<cr>" },
   }
+}
 
+M.zenmode = {
+  n = {
+    ["<leader>z"] = { ":ZenMode<CR>" },
+  }
 }
 
 M.custom = {
   n = {
     ["<leader>m"] = { function()
       kitty_run_command("make")
-    end, "run default make target"}
-  }
+    end, "run default make target" },
+  },
 }
 
 vim.keymap.set('i', '<Tab>', function()

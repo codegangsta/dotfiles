@@ -1,5 +1,17 @@
 local plugins = {
   {
+    "folke/zen-mode.nvim",
+    cmd = { "ZenMode" },
+    opts = {
+      window = {
+        backdrop = 1,
+        options = {
+          number = false
+        }
+      }
+    }
+  },
+  {
     "mattia72/vim-delphi",
     lazy = false
   },
