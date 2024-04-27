@@ -24,6 +24,10 @@ local settings = {
       unusedparams = true,
     },
     staticcheck = true,
+    env = {
+      GOOS = "js",
+      GOARCH = "wasm",
+    }
   },
   Lua = {
     diagnostics = {

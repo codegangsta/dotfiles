@@ -12,6 +12,13 @@ local plugins = {
     }
   },
   {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end
+  },
+  {
     "mattia72/vim-delphi",
     lazy = false
   },
@@ -28,7 +35,10 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = { "html", "css", "bash", "fish", "go", "rust", "typescript" },
+      ensure_installed = { "html", "css", "bash", "fish", "go", "rust", "typescript", "astro", "tsx" },
+      autotag = {
+        enable = true,
+      },
     },
   },
   {

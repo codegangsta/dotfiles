@@ -35,3 +35,12 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   end,
   group = nats_config
 })
+
+local markdoc = vim.api.nvim_create_augroup("Markdoc", { clear = true })
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.mdoc" },
+  callback = function()
+    vim.cmd [[ set ft=markdown ]]
+  end,
+  group = markdoc
+})
