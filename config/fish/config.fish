@@ -11,13 +11,10 @@ end
 
 bind "[101;9u" edit_command_buffer
 
-op completion fish | source
-
 set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
-# set -gx KO_DOCKER_REPO ghcr.io/codegangsta
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 set -gx fish_autosuggestion_enabled 0
 
