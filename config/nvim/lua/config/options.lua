@@ -8,6 +8,8 @@ local opt = vim.opt
 opt.shell = "/bin/bash"
 opt.relativenumber = false
 
+vim.g.mapleader = "\\"
+
 vim.cmd([[
   set clipboard+=unnamedplus
 ]])
