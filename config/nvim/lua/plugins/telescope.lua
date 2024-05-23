@@ -6,6 +6,6 @@ return {
     { "<C-c>", "<cmd>Telescope commands<cr>", desc = "Commands" },
     { "<C-s>", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
     { "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
-    { "<leader>h", "<cmd>Telescope helo_tags<cr>", desc = "Help tags" },
+    { "<leader>h", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
   },
 }
