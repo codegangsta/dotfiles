@@ -9,7 +9,7 @@ config/nats
 config/gh
 config/github-copilot
 config/asciinema
-config/nvim/plugin
+config/nvim.bak/plugin
 config/op
 config/gcloud
 config/raycast

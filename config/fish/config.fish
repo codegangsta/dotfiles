@@ -18,14 +18,7 @@ set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 set -gx fish_autosuggestion_enabled 0
 
-set -gx SCP_US_WEST nats://127.0.0.1:14222,nats://127.0.0.1:14223,nats://127.0.0.1:14224,nats://127.0.0.1:14225,nats://127.0.0.1:14226
-set -gx SCP_US_CENTRAL nats://127.0.0.1:15222,nats://127.0.0.1:15223,nats://127.0.0.1:15224
-set -gx SCP_US_EAST nats://127.0.0.1:16222,nats://127.0.0.1:16223,nats://127.0.0.1:16224
-set -gx SCP_US_APAC nats://127.0.0.1:17222,nats://127.0.0.1:17223,nats://127.0.0.1:17224
-set -gx SCP_US_EU_CENTRAL nats://127.0.0.1:18222,nats://127.0.0.1:18223,nats://127.0.0.1:18224
 set -gx DENO_INSTALL /Users/jeremy/.deno
-
-alias npm=pnpm
 
 source $HOME/.dotfiles/config/fish/secrets.fish
 
@@ -37,6 +30,8 @@ fish_add_path $GOROOT/bin
 fish_add_path /usr/local/bin
 fish_add_path $DENO_INSTALL/bin
 
+alias npm=pnpm
+alias npx=pnpx
 
 if status is-interactive
     starship init fish | source
