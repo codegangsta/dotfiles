@@ -8,6 +8,7 @@ return {
       { "<C-a>", vim.lsp.buf.code_action, { desc = "Code action" } },
       { "<C-n>", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" } },
     },
+    ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local has_words_before = function()
         unpack = unpack or table.unpack
@@ -20,8 +21,7 @@ return {
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
-            -- You could replace select_next_item() with confirm({ select = true }) to get VS Code autocompletion behavior
-            cmp.select_next_item()
+            cmp.confirm({ select = true })
           elseif vim.snippet.active({ direction = 1 }) then
             vim.schedule(function()
               vim.snippet.jump(1)
