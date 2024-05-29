@@ -40,3 +40,10 @@ end
 function fish_greeting
     # Do nothing
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/jeremysaenz/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
