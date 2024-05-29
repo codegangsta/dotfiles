@@ -8,6 +8,7 @@ local opt = vim.opt
 opt.shell = "/bin/bash"
 opt.relativenumber = false
 opt.cursorline = false
+opt.wrap = true
 
 vim.g.mapleader = "\\"
 
