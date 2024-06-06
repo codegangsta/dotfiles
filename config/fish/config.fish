@@ -17,6 +17,7 @@ set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 set -gx fish_autosuggestion_enabled 0
+set -gx NATS_TIMEOUT 10s
 
 set -gx DENO_INSTALL /Users/jeremy/.deno
 
@@ -42,8 +43,8 @@ function fish_greeting
 end
 
 # pnpm
-set -gx PNPM_HOME "/Users/jeremysaenz/Library/pnpm"
+set -gx PNPM_HOME /Users/jeremysaenz/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
