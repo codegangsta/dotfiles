@@ -17,7 +17,6 @@ set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 set -gx fish_autosuggestion_enabled 0
-set -gx NATS_TIMEOUT 10s
 
 set -gx DENO_INSTALL /Users/jeremy/.deno
 
