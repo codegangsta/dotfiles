@@ -5,5 +5,5 @@ return {
     config = true,
   },
   -- Disable the default autopairs
-  { "echasnovski/mini.pairs", enable = false },
+  { "echasnovski/mini.pairs", enabled = false },
 }
