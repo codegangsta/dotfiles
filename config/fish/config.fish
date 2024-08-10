@@ -16,11 +16,9 @@ set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
 set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
-set -gx fish_autosuggestion_enabled 0
+#set -gx fish_autosuggestion_enabled 0
 
-set -gx DENO_INSTALL /Users/jeremy/.deno
-
-source $HOME/.dotfiles/config/fish/secrets.fish
+#source $HOME/.dotfiles/config/fish/secrets.fish
 
 fish_add_path $HOME/.dotfiles/bin
 fish_add_path $HOME/.local/bin
