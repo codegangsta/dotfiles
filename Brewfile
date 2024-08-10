@@ -57,6 +57,7 @@ if OS.mac?
   cask "font-symbols-only-nerd-font"
   cask "gpg-suite"
   cask "kitty"
+  cask "linear-linear"
   cask "obs"
   cask "raycast"
   cask "sf-symbols"
