@@ -1,15 +1,7 @@
 require "os"
 
 tap "1password/tap"
-tap "AlexanderWillner/tap"
-tap "FelixKratz/formulae"
-tap "derailed/k9s"
 tap "epk/epk"
-tap "homebrew/services"
-tap "nats-io/nats-tools"
-tap "stripe/stripe-cli"
-tap "tinygo-org/tools"
-tap "FelixKratz/formulae"
 
 brew "awscli"
 brew "asciinema"
