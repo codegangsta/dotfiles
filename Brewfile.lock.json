@@ -5208,6 +5208,12 @@
         "options": {
           "full_name": "arc"
         }
+      },
+      "steam": {
+        "version": "4.0",
+        "options": {
+          "full_name": "steam"
+        }
       }
     },
     "mas": {

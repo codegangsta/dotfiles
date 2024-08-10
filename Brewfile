@@ -62,6 +62,7 @@ if OS.mac?
   cask "sf-symbols"
   cask "slack"
   cask "soundsource"
+  cask "steam"
   cask "visual-studio-code"
   cask "zoom"
 end
