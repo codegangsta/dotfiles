@@ -22,12 +22,12 @@
   rebase = true
 [format]
   signOff = true
-[commit]
-	gpgsign = true
+; [commit]
+	; gpgsign = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[gpg]
-	program = /usr/local/bin/gpg
+; [gpg]
+; 	program = /usr/local/bin/gpg
