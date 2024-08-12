@@ -18,7 +18,14 @@ return {
 
       local cmp = require("cmp")
 
+      opts.completion = {
+        autocomplete = false,
+        keyword_pattern = [[\k\+]],
+        completeopt = "menu,menuone,noselect",
+      }
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        ["<C-Space>"] = cmp.mapping.complete(),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if require("copilot.suggestion").is_visible() then
             require("copilot.suggestion").accept()
