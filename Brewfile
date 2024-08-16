@@ -1,12 +1,14 @@
 require "os"
 
 tap "1password/tap"
+tap "FelixKratz/formulae"
 tap "epk/epk"
 tap "nikitabobko/tap"
 
 brew "asciinema"
 brew "awscli"
 brew "binaryen"
+brew "borders"
 brew "eksctl"
 brew "fd"
 brew "figlet"

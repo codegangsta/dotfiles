@@ -9,9 +9,11 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget borders active_color=0xFF81A1C1 inactive_color=0x00494d64 width=8.0',
+]
 
-# Start AeroSpace at login
+# Start AeroSpace at logi
 start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
@@ -92,8 +94,8 @@ prev = 'leftSquareBracket'
 # '''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+cmd-ctrl-slash = 'layout tiles horizontal vertical'
+cmd-ctrl-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 cmd-ctrl-h = 'focus left'
@@ -117,6 +119,9 @@ cmd-ctrl-equal = 'resize smart +100'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 cmd-ctrl-next = 'focus-monitor next --wrap-around'
 cmd-ctrl-prev = 'focus-monitor prev --wrap-around'
+
+cmd-ctrl-1 = 'focus-monitor 1'
+cmd-ctrl-2 = 'focus-monitor 2'
 
 cmd-ctrl-shift-next = 'move-node-to-monitor next --wrap-around'
 cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
