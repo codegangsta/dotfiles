@@ -109,8 +109,8 @@ cmd-ctrl-shift-j = 'move down'
 cmd-ctrl-shift-k = 'move up'
 cmd-ctrl-shift-l = 'move right'
 
-cmd-ctrl-shift-r = 'reload-config'
-cmd-ctrl-m = "fullscreen"
+cmd-ctrl-e = 'balance-sizes'
+cmd-ctrl-m = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 cmd-ctrl-minus = 'resize smart -100'
@@ -120,8 +120,8 @@ cmd-ctrl-equal = 'resize smart +100'
 cmd-ctrl-next = 'focus-monitor next --wrap-around'
 cmd-ctrl-prev = 'focus-monitor prev --wrap-around'
 
-cmd-ctrl-1 = 'focus-monitor 1'
-cmd-ctrl-2 = 'focus-monitor 2'
+cmd-ctrl-1 = 'workspace 1'
+cmd-ctrl-2 = 'workspace 2'
 
 cmd-ctrl-shift-next = 'move-node-to-monitor next --wrap-around'
 cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
