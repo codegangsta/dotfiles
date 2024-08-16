@@ -111,6 +111,7 @@ cmd-ctrl-shift-l = 'move right'
 
 cmd-ctrl-e = 'balance-sizes'
 cmd-ctrl-m = 'fullscreen'
+cmd-ctrl-period = 'layout tiling floating'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 cmd-ctrl-minus = 'resize smart -100'
@@ -123,8 +124,8 @@ cmd-ctrl-prev = 'focus-monitor prev --wrap-around'
 cmd-ctrl-1 = 'workspace 1'
 cmd-ctrl-2 = 'workspace 2'
 
-cmd-ctrl-shift-next = 'move-node-to-monitor next --wrap-around'
-cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
+cmd-ctrl-shift-next = 'move-node-to-workspace next --wrap-around'
+cmd-ctrl-shift-prev = 'move-node-to-workspace prev --wrap-around'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'      # Main monitor
