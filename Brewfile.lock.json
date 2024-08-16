@@ -4918,6 +4918,9 @@
       },
       "omnisharp/omnisharp-roslyn": {
         "revision": "257e18462049ff6c4d5f4a61bc6bfe7d38fc3a67"
+      },
+      "nikitabobko/tap": {
+        "revision": "f62ddf53bf5ccec0956a1539663148ad58d7068d"
       }
     },
     "cask": {
@@ -5219,6 +5222,12 @@
         "version": "1.27.0,2408152uraifa26",
         "options": {
           "full_name": "linear-linear"
+        }
+      },
+      "aerospace": {
+        "version": "0.14.2-Beta",
+        "options": {
+          "full_name": "aerospace"
         }
       }
     },

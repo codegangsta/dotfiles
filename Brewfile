@@ -2,9 +2,10 @@ require "os"
 
 tap "1password/tap"
 tap "epk/epk"
+tap "nikitabobko/tap"
 
-brew "awscli"
 brew "asciinema"
+brew "awscli"
 brew "binaryen"
 brew "eksctl"
 brew "fd"
@@ -38,6 +39,7 @@ brew "watch"
 if OS.mac?
   # Mac apps
   cask "1password-cli"
+  cask "aerospace"
   cask "discord"
   cask "docker"
   cask "figma"
