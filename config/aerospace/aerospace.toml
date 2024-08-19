@@ -98,10 +98,10 @@ cmd-ctrl-slash = 'layout tiles horizontal vertical'
 cmd-ctrl-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-cmd-ctrl-h = 'focus left'
-cmd-ctrl-j = 'focus down'
-cmd-ctrl-k = 'focus up'
-cmd-ctrl-l = 'focus right'
+cmd-ctrl-h = 'focus left --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors'
+cmd-ctrl-j = 'focus down --boundaries all-monitors-outer-frame  --boundaries-action wrap-around-all-monitors'
+cmd-ctrl-k = 'focus up --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors'
+cmd-ctrl-l = 'focus right --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 cmd-ctrl-shift-h = 'move left'
@@ -124,8 +124,8 @@ cmd-ctrl-prev = 'focus-monitor prev --wrap-around'
 cmd-ctrl-1 = 'workspace 1'
 cmd-ctrl-2 = 'workspace 2'
 
-cmd-ctrl-shift-next = 'move-node-to-workspace next --wrap-around'
-cmd-ctrl-shift-prev = 'move-node-to-workspace prev --wrap-around'
+cmd-ctrl-shift-next = 'move-node-to-monitor next --wrap-around'
+cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'      # Main monitor
