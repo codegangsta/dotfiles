@@ -130,3 +130,8 @@ cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
 [workspace-to-monitor-force-assignment]
 1 = 'main'      # Main monitor
 2 = 'secondary' # Non-main monitor in case when there are only two monitors
+
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'session'
+run = ['layout floating']
