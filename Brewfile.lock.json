@@ -4824,7 +4824,7 @@
         "revision": "e7622090090d169e965fffd0a6d605e26201ca47"
       },
       "ngrok/ngrok": {
-        "revision": "bde9568f41b1a1d23a15d07b1a916c3553a79e79"
+        "revision": "6e515d2d6ad5c3a5254e40ef8bd9fb9c48b9397f"
       },
       "nats-io/nats-tools": {
         "revision": "08cf0767072b85ba223d6247e6b59c30c57238ed"
@@ -4883,9 +4883,9 @@
         }
       },
       "ngrok": {
-        "version": "3.5.0,6bzFxjd3ikr,a",
+        "version": "3.14.1,fK3fyLNXxVa,a",
         "options": {
-          "full_name": "ngrok/ngrok/ngrok"
+          "full_name": "ngrok"
         }
       },
       "visual-studio-code": {
@@ -5227,7 +5227,7 @@
         "macOS": "13.5.1"
       },
       "sonoma": {
-        "HOMEBREW_VERSION": "4.3.17",
+        "HOMEBREW_VERSION": "4.3.18",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",
