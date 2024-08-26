@@ -54,6 +54,7 @@ if OS.mac?
   cask "gpg-suite"
   cask "kitty"
   cask "linear-linear"
+  cask "notion"
   cask "obs"
   cask "raycast"
   cask "sf-symbols"
