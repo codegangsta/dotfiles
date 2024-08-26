@@ -135,3 +135,19 @@ cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
 [[on-window-detected]]
 if.app-name-regex-substring = 'session'
 run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'bear'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'mail'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'calendar'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'messages'
+run = ['layout floating']
