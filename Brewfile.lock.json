@@ -901,40 +901,45 @@
         "bottle": false
       },
       "docker-compose": {
-        "version": "2.4.1",
+        "version": "2.29.2",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_sonoma": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:9ba560fe16ecce6a672583c04b0627e4ae3d3b0f29d3b9568393c01372620562",
+              "sha256": "9ba560fe16ecce6a672583c04b0627e4ae3d3b0f29d3b9568393c01372620562"
+            },
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:4624c6b01fc315c6463591136d31bdeb34552727df283be0374802fcaf2ea490",
+              "sha256": "4624c6b01fc315c6463591136d31bdeb34552727df283be0374802fcaf2ea490"
+            },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:5162554bb66b87a19adfaa75e28f55ad82abc65c433d5331fb67601a5c168bf5",
-              "sha256": "5162554bb66b87a19adfaa75e28f55ad82abc65c433d5331fb67601a5c168bf5"
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:3ec964f44372039c0e2f8eb79d7e1858d0caf2797b59f22a2a2ab2b764b0d7fa",
+              "sha256": "3ec964f44372039c0e2f8eb79d7e1858d0caf2797b59f22a2a2ab2b764b0d7fa"
             },
-            "arm64_big_sur": {
+            "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:5162554bb66b87a19adfaa75e28f55ad82abc65c433d5331fb67601a5c168bf5",
-              "sha256": "5162554bb66b87a19adfaa75e28f55ad82abc65c433d5331fb67601a5c168bf5"
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:9ca82a0ad04497f344b89578e7c84e2454f2bfea20d680727416b63b148ddd45",
+              "sha256": "9ca82a0ad04497f344b89578e7c84e2454f2bfea20d680727416b63b148ddd45"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:cb8cd96ff9d7416e67799c383b6d88f1844ad951b4c5c79d56544159c8ffc334",
+              "sha256": "cb8cd96ff9d7416e67799c383b6d88f1844ad951b4c5c79d56544159c8ffc334"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8",
-              "sha256": "172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8"
-            },
-            "big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8",
-              "sha256": "172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8"
-            },
-            "catalina": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8",
-              "sha256": "172c802647a2ee7c63402cdf25a0c002f68c73db91c1ce61a51e3fdae91e2ba8"
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:db28f641758dfc143310fd6eff6f7dca78562bdab1456216bfd2707196003a03",
+              "sha256": "db28f641758dfc143310fd6eff6f7dca78562bdab1456216bfd2707196003a03"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:e5ddf6cf3b89be0ec4e722a11d7a95ab119f247213cb116c56a1e055e51a8f40",
-              "sha256": "e5ddf6cf3b89be0ec4e722a11d7a95ab119f247213cb116c56a1e055e51a8f40"
+              "url": "https://ghcr.io/v2/homebrew/core/docker-compose/blobs/sha256:a3cb69f95ae2401219e0fb51666fefbe5d9aab51fd97c3fb2e25c290dcd73ea4",
+              "sha256": "a3cb69f95ae2401219e0fb51666fefbe5d9aab51fd97c3fb2e25c290dcd73ea4"
             }
           }
         }

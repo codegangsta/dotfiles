@@ -25,8 +25,8 @@ fish_add_path $GOROOT/bin
 fish_add_path /usr/local/bin
 fish_add_path $DENO_INSTALL/bin
 
-alias npm=pnpm
-alias npx=pnpx
+#alias npm=pnpm
+#alias npx=pnpx
 
 if status is-interactive
     starship init fish | source
