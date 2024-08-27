@@ -6,6 +6,8 @@ return {
         "stylua",
         "shfmt",
         "gopls",
+        "terraform-ls",
+        "css-lsp",
       },
     },
   },

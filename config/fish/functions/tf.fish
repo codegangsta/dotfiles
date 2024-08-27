@@ -1,3 +1,3 @@
 function tf --wraps=terraform --description 'alias tf=terraform'
-  op run -- terraform $argv; 
+    terraform $argv
 end
