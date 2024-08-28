@@ -159,3 +159,7 @@ run = ['layout floating']
 [[on-window-detected]]
 if.app-name-regex-substring = 'notion'
 run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'slack'
+run = ['layout floating']
