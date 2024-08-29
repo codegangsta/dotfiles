@@ -9,6 +9,9 @@ opt.shell = "/bin/bash"
 opt.relativenumber = false
 opt.cursorline = false
 opt.wrap = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
 vim.g.mapleader = "\\"
 

@@ -3,6 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       document_highlight = false,
+      inlay_hints = {
+        enabled = false,
+      },
       setup = {
         vtsls = function()
           require("lazyvim.util").lsp.on_attach(function(client)
