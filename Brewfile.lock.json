@@ -5266,6 +5266,12 @@
         "options": {
           "full_name": "notion"
         }
+      },
+      "devutils": {
+        "version": "1.17.0",
+        "options": {
+          "full_name": "devutils"
+        }
       }
     },
     "mas": {

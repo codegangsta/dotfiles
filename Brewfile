@@ -45,6 +45,7 @@ if OS.mac?
   # Mac apps
   cask "1password-cli"
   cask "aerospace"
+  cask "devutils"
   cask "discord"
   cask "docker"
   cask "figma"
