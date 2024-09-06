@@ -167,3 +167,7 @@ run = ['layout floating']
 [[on-window-detected]]
 if.app-name-regex-substring = 'raycast'
 run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'linear'
+run = ['layout floating']
