@@ -52,12 +52,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 12
-inner.vertical = 12
-outer.left = 12
-outer.bottom = 12
-outer.top = 12
-outer.right = 12
+inner.horizontal = [{ monitor."sidecar" = 0 }, 12]
+inner.vertical = [{ monitor."sidecar" = 0 }, 12]
+outer.left = [{ monitor."sidecar" = 0 }, 12]
+outer.bottom = [{ monitor."sidecar" = 0 }, 12]
+outer.top = [{ monitor."sidecar" = 0 }, 12]
+outer.right = [{ monitor."sidecar" = 0 }, 12]
 
 [key-mapping.key-notation-to-key-code]
 next = 'rightSquareBracket'
@@ -123,13 +123,15 @@ cmd-ctrl-prev = 'focus-monitor prev --wrap-around'
 
 cmd-ctrl-1 = 'workspace 1'
 cmd-ctrl-2 = 'workspace 2'
+cmd-ctrl-3 = 'workspace 3'
 
 cmd-ctrl-shift-next = 'move-node-to-monitor next --wrap-around'
 cmd-ctrl-shift-prev = 'move-node-to-monitor prev --wrap-around'
 
 [workspace-to-monitor-force-assignment]
-1 = 'main'      # Main monitor
-2 = 'secondary' # Non-main monitor in case when there are only two monitors
+1 = 1
+2 = 2
+3 = 3
 
 
 [[on-window-detected]]
