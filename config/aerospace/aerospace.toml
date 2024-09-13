@@ -139,18 +139,6 @@ if.app-name-regex-substring = 'session'
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'bear'
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'mail'
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'calendar'
-run = ['layout floating']
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'messages'
 run = ['layout floating']
 
@@ -159,17 +147,5 @@ if.app-name-regex-substring = '1password'
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'notion'
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'slack'
-run = ['layout floating']
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'raycast'
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'linear'
 run = ['layout floating']
