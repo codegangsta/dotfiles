@@ -4,12 +4,6 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-[custom.nats]
-command = "head -n 1 ~/.config/nats/context.txt"
-when = true
-shell = "/bin/sh"
-symbol = " "
-
 [character]
 success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
