@@ -11,6 +11,11 @@ end
 
 bind "[101;9u" edit_command_buffer
 
+# Source secrets file if it exists
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
+end
+
 set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim
