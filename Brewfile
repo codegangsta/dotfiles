@@ -38,13 +38,11 @@ brew "rg"
 brew "starship"
 brew "stripe"
 brew "terraform"
-brew "vercel-cli"
 brew "watch"
 
 if OS.mac?
   # Mac apps
   cask "1password-cli"
-  cask "aerospace"
   cask "devutils"
   cask "discord"
   cask "docker"

@@ -16,6 +16,7 @@ if test -f ~/.config/fish/secrets.fish
     source ~/.config/fish/secrets.fish
 end
 
+set -gx RIPGREP_CONFIG_PATH $HOME/config/rg/.ripgreprc
 set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
 set -gx GIT_EDITOR nvim

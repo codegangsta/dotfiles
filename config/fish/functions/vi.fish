@@ -1,3 +1,3 @@
 function vi --wraps=nvim --description 'alias vi=nvim'
-  nvim $argv; 
+    nvm use 18 && nvim $argv
 end
