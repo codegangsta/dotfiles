@@ -3,7 +3,7 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "Nord",
   "editor.fontSize": 13,
   "vscode-neovim.compositeKeys": {},
   "editor.fontFamily": "MonaspiceNe Nerd Font Mono",
@@ -27,6 +27,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.showTabs": "single",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 1,
+  "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "zenMode.showTabs": "none",
   "editor.cursorSmoothCaretAnimation": "on",
