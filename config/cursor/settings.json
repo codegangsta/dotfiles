@@ -6,7 +6,7 @@
   "workbench.colorTheme": "Nord",
   "editor.fontSize": 13,
   "vscode-neovim.compositeKeys": {},
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "SF Mono",
   "workbench.fontAliasing": "antialiased",
   "cursor.aipreview.enabled": true,
   "cursor.chat.smoothStreaming": true,
