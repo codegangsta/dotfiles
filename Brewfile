@@ -50,6 +50,7 @@ if OS.mac?
   cask "font-fira-code-nerd-font"
   cask "font-hack-nerd-font"
   cask "font-inter"
+  cask "font-monaspace-nerd-font"
   cask "font-sf-mono-nerd-font"
   cask "font-sf-pro"
   cask "font-symbols-only-nerd-font"

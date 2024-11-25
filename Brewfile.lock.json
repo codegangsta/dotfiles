@@ -5119,7 +5119,7 @@
         }
       },
       "discord": {
-        "version": "0.0.326",
+        "version": "0.0.327",
         "options": {
           "full_name": "discord"
         }
@@ -5254,6 +5254,18 @@
         "version": "1.17.0",
         "options": {
           "full_name": "devutils"
+        }
+      },
+      "font-monaspace": {
+        "version": "1.101",
+        "options": {
+          "full_name": "font-monaspace"
+        }
+      },
+      "font-monaspace-nerd-font": {
+        "version": "3.3.0",
+        "options": {
+          "full_name": "font-monaspace-nerd-font"
         }
       }
     },

@@ -3,10 +3,10 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
   "editor.fontSize": 13,
   "vscode-neovim.compositeKeys": {},
-  "editor.fontFamily": "SF Mono",
+  "editor.fontFamily": "MonaspiceNe Nerd Font Mono",
   "workbench.fontAliasing": "antialiased",
   "cursor.aipreview.enabled": true,
   "cursor.chat.smoothStreaming": true,
@@ -40,5 +40,7 @@
   "terminal.integrated.tabs.showActions": "never",
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.smoothScrolling": true
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.tabs.hideCondition": "singleGroup"
 }

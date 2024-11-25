@@ -227,13 +227,13 @@
   },
   {
     "key": "shift+cmd+]",
-    "command": "workbench.action.nextPanelView",
-    "when": "panelFocus"
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
   },
   {
     "key": "shift+cmd+[",
-    "command": "workbench.action.previousPanelView",
-    "when": "panelFocus"
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
   },
   {
     "key": "shift+cmd+]",
@@ -331,5 +331,10 @@
   {
     "key": "cmd+g g",
     "command": "-lazygit.openLazygit"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
   }
 ]

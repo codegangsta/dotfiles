@@ -2,11 +2,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = false
+add_newline = true
 
-[character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red)"
 
 [kubernetes]
 disabled = true
