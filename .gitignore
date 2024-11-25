@@ -16,3 +16,9 @@ config/raycast
 config/fish/secrets.fish
 config/stripe
 config/autostart
+
+
+# Ignore some files from cursor/vscode user directory
+config/cursor/globalStorage
+config/cursor/History
+config/cursor/workspaceStorage
