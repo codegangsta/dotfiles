@@ -6,7 +6,7 @@
   "workbench.colorTheme": "Nord",
   "editor.fontSize": 13,
   "vscode-neovim.compositeKeys": {},
-  "editor.fontFamily": "MonaspiceNe Nerd Font Mono",
+  "editor.fontFamily": "SFMono Nerd Font",
   "workbench.fontAliasing": "antialiased",
   "cursor.aipreview.enabled": true,
   "cursor.chat.smoothStreaming": true,
@@ -45,5 +45,10 @@
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
-  "terminal.integrated.tabs.hideCondition": "singleGroup"
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "editor.folding": false,
+  "editor.showFoldingControls": "never",
+  "editor.guides.indentation": false,
+  "editor.cursorStyle": "block",
+  "scm.diffDecorations": "none"
 }

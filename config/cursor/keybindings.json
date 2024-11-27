@@ -326,11 +326,7 @@
   },
   {
     "key": "ctrl+g",
-    "command": "lazygit.openLazygit"
-  },
-  {
-    "key": "cmd+g g",
-    "command": "-lazygit.openLazygit"
+    "command": "lazygit-vscode.toggle"
   },
   {
     "key": "cmd+t",
