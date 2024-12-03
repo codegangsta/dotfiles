@@ -26,9 +26,7 @@
   "[typescript]": {},
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.layoutControl.enabled": false,
-  "workbench.editor.showTabs": "single",
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 1,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "zenMode.showTabs": "none",
@@ -50,5 +48,6 @@
   "editor.showFoldingControls": "never",
   "editor.guides.indentation": false,
   "editor.cursorStyle": "block",
-  "scm.diffDecorations": "none"
+  "scm.diffDecorations": "none",
+  "git.autofetch": true
 }

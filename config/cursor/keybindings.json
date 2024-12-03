@@ -332,5 +332,16 @@
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
+  },
+  {
+    "key": "g d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
   }
+  {
+    "key": "g r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus"
+  }
+
 ]
