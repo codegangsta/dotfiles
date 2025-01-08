@@ -21,8 +21,9 @@ return {
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<Tab>"] = cmp.mapping(function(fallback)
-          if require("copilot.suggestion").is_visible() then
-            require("copilot.suggestion").accept()
+          local suggestion = require("supermaven-nvim.completion_preview")
+          if suggestion.has_suggestion() then
+            suggestion.on_accept_suggestion()
           elseif cmp.visible() then
             cmp.confirm({ select = true })
           elseif vim.snippet.active({ direction = 1 }) then
