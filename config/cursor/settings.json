@@ -48,6 +48,10 @@
   "editor.showFoldingControls": "never",
   "editor.guides.indentation": false,
   "editor.cursorStyle": "block",
-  "scm.diffDecorations": "none",
-  "git.autofetch": true
+  // "scm.diffDecorations": "none",
+  "git.autofetch": true,
+  "cursor.general.enableShadowWorkspace": true,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }
