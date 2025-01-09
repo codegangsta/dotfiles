@@ -4,6 +4,22 @@ return {
     { "tpope/vim-dadbod", lazy = true },
     { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
   },
+  keys = {
+    {
+      "<leader>d",
+      function()
+        vim.cmd("DBUIToggle")
+      end,
+      { desc = "Toggle DBUI" },
+    },
+    {
+      "<C-d>",
+      function()
+        vim.cmd("DBUIToggle")
+      end,
+      { desc = "Toggle DBUI" },
+    },
+  },
   cmd = {
     "DBUI",
     "DBUIToggle",
