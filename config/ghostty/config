@@ -1,0 +1,24 @@
+theme = nord
+
+macos-titlebar-style = tabs
+
+keybind = ctrl+super+k=goto_split:top
+keybind = ctrl+super+j=goto_split:bottom
+keybind = ctrl+super+h=goto_split:left
+keybind = ctrl+super+l=goto_split:right
+
+keybind = super+enter=new_split:right
+keybind = super+ctrl+enter=new_split:down
+
+keybind = super+shift+m=toggle_split_zoom
+
+keybind = super+shift+ctrl+l=resize_split:right,20
+keybind = super+shift+ctrl+h=resize_split:left,20
+keybind = super+shift+ctrl+k=resize_split:up,20
+keybind = super+shift+ctrl+j=resize_split:down,20
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+window-padding-x = 5
+window-padding-y = 5
