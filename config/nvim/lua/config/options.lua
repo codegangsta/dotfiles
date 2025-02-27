@@ -13,6 +13,8 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 
+vim.g.lazyvim_picker = "telescope"
+
 vim.g.mapleader = "\\"
 
 vim.cmd([[

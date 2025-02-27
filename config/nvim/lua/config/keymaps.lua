@@ -8,4 +8,10 @@ local map = LazyVim.safe_keymap_set
 map("n", "<C-g>", function()
   LazyVim.lazygit({ cwd = LazyVim.root.git() })
 end, { desc = "Lazygit (Root Dir)" })
-map("n", "<C-b>", function() end, { desc = "Lazygit Blame line" })
+
+map("n", "<leader>a", "<cmd>CodeCompanionActions<cr>", { desc = "Open CodeCompanion actions" })
+map("v", "<leader>a", "<cmd>CodeCompanionActions<cr>", { desc = "Open CodeCompanion actions" })
+map("n", "<C-x>", "<cmd>CodeCompanionChat<cr>", { desc = "Open CodeCompanion chat" })
+map("v", "<C-x>", "<cmd>CodeCompanionChat<cr>", { desc = "Open CodeCompanion chat" })
+map("n", "<leader>x", "<cmd>CodeCompanion", { desc = "Open CodeCompanion inline" })
+map("v", "<leader>x", "<cmd>CodeCompanion", { desc = "Open CodeCompanion inline" })
