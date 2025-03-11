@@ -9,8 +9,6 @@ switch (uname)
         set -gx GOROOT /opt/homebrew/opt/go/libexec
 end
 
-bind "[101;9u" edit_command_buffer
-
 # Source secrets file if it exists
 if test -f ~/.config/fish/secrets.fish
     source ~/.config/fish/secrets.fish
@@ -18,8 +16,8 @@ end
 
 set -gx RIPGREP_CONFIG_PATH $HOME/config/rg/.ripgreprc
 set -gx GOPATH $HOME/go
-set -gx EDITOR nvim
-set -gx GIT_EDITOR nvim
+set -gx EDITOR code
+set -gx GIT_EDITOR code
 set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 
@@ -30,6 +28,8 @@ fish_add_path $GOPATH/bin
 fish_add_path $GOROOT/bin
 fish_add_path /usr/local/bin
 fish_add_path $DENO_INSTALL/bin
+
+nvm use 18
 
 #alias npm=pnpm
 #alias npx=pnpx

@@ -50,6 +50,7 @@ if OS.mac?
   cask "devutils"
   cask "discord"
   cask "docker"
+  cask "cursor"
   cask "figma"
   cask "font-fira-code"
   cask "font-fira-code-nerd-font"

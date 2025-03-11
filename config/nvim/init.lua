@@ -40,6 +40,9 @@ if vim.g.vscode then
   map("n", "<C-n>", function()
     vscode.call("editor.action.marker.next")
   end)
+  map("n", "gr", function()
+    vscode.call("editor.action.goToReferences")
+  end)
 
   -- clear search highlights in neovim with esc
   map("n", "<Esc>", function()

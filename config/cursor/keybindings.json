@@ -180,8 +180,8 @@
   },
   {
     "key": "ctrl+e",
-    "command": "workbench.files.action.showActiveFileInExplorer",
-    "when": "editorFocus"
+    "command": "workbench.view.explorer",
+    "when": "!explorerViewletVisible"
   },
   {
     "key": "ctrl+e",
@@ -326,11 +326,30 @@
   },
   {
     "key": "ctrl+g",
-    "command": "lazygit-vscode.toggle"
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.extension.sqltoolsActivityBarContainer'"
   },
   {
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
+  },
+  {
+    "key": "g r",
+    "command": "editor.action.goToReferences",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   }
 ]
