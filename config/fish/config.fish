@@ -16,8 +16,8 @@ end
 
 set -gx RIPGREP_CONFIG_PATH $HOME/config/rg/.ripgreprc
 set -gx GOPATH $HOME/go
-set -gx EDITOR code
-set -gx GIT_EDITOR code
+set -gx EDITOR cursor
+set -gx GIT_EDITOR cursor
 set -gx DOTFILES $HOME/.dotfiles
 set -gx TF_VAR_do_token op://codegangsta/do_terraform_token/password
 
