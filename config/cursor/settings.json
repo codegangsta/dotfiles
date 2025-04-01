@@ -53,8 +53,7 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
   "git.branchProtection": [
     "develop",
     "master"
@@ -62,5 +61,9 @@
   "sqltools.results.reuseTabs": "connection",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "githubPullRequests.pullBranch": "never",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "githubPullRequests.fileListLayout": "flat",
+  "diffEditor.hideUnchangedRegions.enabled": true
 }

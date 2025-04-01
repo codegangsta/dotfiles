@@ -1,3 +1,5 @@
-git:
-  commit:
-    signOff: true
+customCommands:
+  - key: "P"
+    command: "git push --no-verify"
+    context: "global"
+    description: "Push without pre-commit hooks"

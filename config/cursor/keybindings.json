@@ -351,5 +351,21 @@
     "key": "g r",
     "command": "editor.action.goToReferences",
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+cmd",
+    "command": "composerMode.chat"
+  },
+  {
+    "key": "shift+cmd+c cmd",
+    "command": "composerMode.chat"
+  },
+  {
+    "key": "ctrl+cmd+space",
+    "command": "composerMode.chat"
   }
 ]
