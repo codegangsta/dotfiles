@@ -22,8 +22,12 @@
   },
   "editor.formatOnSave": true,
   "eslint.codeActionsOnSave.rules": null,
-  "[typescript]": {},
+  "[typescript]": {
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
@@ -46,8 +50,7 @@
   "editor.folding": false,
   "editor.showFoldingControls": "never",
   "editor.guides.indentation": false,
-  "editor.cursorStyle": "block",
-  // "scm.diffDecorations": "none",
+  "editor.cursorStyle": "line",
   "git.autofetch": true,
   "cursor.general.enableShadowWorkspace": true,
   "[astro]": {
@@ -63,7 +66,15 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "githubPullRequests.pullBranch": "never",
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
   "githubPullRequests.fileListLayout": "flat",
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.semanticSearch.includeCommitsWithFiles": true,
+  "cursor.composer.shouldAllowCustomModes": true
 }

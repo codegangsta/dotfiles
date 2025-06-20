@@ -129,7 +129,7 @@
     "command": "workbench.action.navigateDown"
   },
   {
-    "key": "shift+cmd+k",
+    "key": "alt+cmd+k",
     "command": "cursorai.action.generateInTerminal",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
@@ -326,12 +326,7 @@
   },
   {
     "key": "ctrl+g",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && activeViewlet == 'workbench.view.scm'"
+    "command": "lazygit.openLazygit"
   },
   {
     "key": "ctrl+d",
@@ -357,15 +352,31 @@
     "command": "composerMode.agent"
   },
   {
-    "key": "ctrl+cmd",
+    "key": "shift+cmd+k",
     "command": "composerMode.chat"
   },
   {
-    "key": "shift+cmd+c cmd",
-    "command": "composerMode.chat"
+    "key": "cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
   },
   {
-    "key": "ctrl+cmd+space",
-    "command": "composerMode.chat"
+    "key": "cmd+k",
+    "command": "-cursorai.action.generateInTerminal",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
+  },
+  {
+    "key": "cmd+k",
+    "command": "aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "composerMode.code_review"
   }
 ]
