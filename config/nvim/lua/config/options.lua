@@ -13,6 +13,8 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 
+vim.opt.guicursor = "n-v-c:block-Cursor,i:ver25-Cursor"
+
 vim.g.lazyvim_picker = "telescope"
 
 vim.g.mapleader = "\\"
