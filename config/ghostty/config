@@ -2,13 +2,13 @@ theme = nord
 
 macos-titlebar-style = tabs
 
-keybind = ctrl+super+k=goto_split:top
-keybind = ctrl+super+j=goto_split:bottom
-keybind = ctrl+super+h=goto_split:left
-keybind = ctrl+super+l=goto_split:right
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
 
 keybind = super+enter=new_split:right
-keybind = super+ctrl+enter=new_split:down
+keybind = super+alt+enter=new_split:down
 
 keybind = super+shift+m=toggle_split_zoom
 
