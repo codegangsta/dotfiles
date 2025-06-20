@@ -42,7 +42,6 @@
   "telemetry.telemetryLevel": "off",
   "editor.wordWrap": "on",
   "terminal.integrated.tabs.showActions": "never",
-  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
