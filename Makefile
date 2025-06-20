@@ -4,4 +4,5 @@ bootstrap::
 	ln -vsfn ${PWD}/git/.gitconfig ${HOME}/.gitconfig
 	ln -vsfn ${PWD}/git/.gitignore_global ${HOME}/.gitignore_global
 	ln -vsfn ${PWD}/config/lazygit/config.yml ${HOME}/Library/Application\ Support/lazygit/config.yml
+	ln -vsfn ${PWD}/config/claude/settings.json ${HOME}/.claude/settings.json
 	brew bundle --cleanup
