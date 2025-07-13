@@ -55,36 +55,63 @@ alias vim="nvim"
 alias dc="docker-compose"
 alias tf="terraform"
 
-# NVM setup - lazy load for better performance
+# NVM setup - FULLY LAZY LOAD (biggest optimization)
 export NVM_DIR="$HOME/.nvm"
-# Lazy load NVM to improve shell startup time
+
+# Add node to path if default version exists (without loading NVM)
+if [ -s "$NVM_DIR/alias/default" ]; then
+    DEFAULT_NODE_VER=$(cat "$NVM_DIR/alias/default")
+    export PATH="$NVM_DIR/versions/node/v${DEFAULT_NODE_VER#v}/bin:$PATH"
+fi
+
+# Lazy load NVM completely - only when actually needed
 nvm() {
-    unset -f nvm
+    unset -f nvm node npm npx
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
     nvm "$@"
 }
 
-# Add node to path if default version exists
-if [ -s "$NVM_DIR/alias/default" ]; then
-    DEFAULT_NODE_VER=$(cat "$NVM_DIR/alias/default")
-    export PATH="$NVM_DIR/versions/node/v${DEFAULT_NODE_VER}/bin:$PATH"
-fi
+# Create lazy loaders for node/npm/npx that will trigger NVM load if needed
+node() {
+    unset -f nvm node npm npx
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    node "$@"
+}
 
-# Auto-load default node version
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-    \. "$NVM_DIR/nvm.sh" --no-use  # Load nvm but don't use a version yet
-    nvm use default --silent 2>/dev/null || true  # Use default version silently
-fi
+npm() {
+    unset -f nvm node npm npx
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    npm "$@"
+}
 
-# Starship prompt
+npx() {
+    unset -f nvm node npm npx
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    npx "$@"
+}
+
+# Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"
 
-# FZF configuration
-eval "$(fzf --zsh)"
+# FZF configuration - lazy load on first use
+__fzf_init() {
+    eval "$(fzf --zsh)"
+    unset -f __fzf_init
+}
+# Hook FZF to load on first Ctrl-R or Ctrl-T
+bindkey -r '^R'
+bindkey -r '^T'
+bindkey -s '^R' $'\e[1~__fzf_init\n^R'
+bindkey -s '^T' $'\e[1~__fzf_init\n^T'
 
-# Fish-like autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Fish-like autosuggestions - lazy load
+__load_autosuggestions() {
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    unset -f __load_autosuggestions
+}
+# Load after small delay to not block initial prompt
+(sleep 0.1 && __load_autosuggestions) &!
 
 # Disable greeting (zsh doesn't have one by default, so this is just for completeness)
 
