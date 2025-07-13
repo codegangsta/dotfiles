@@ -46,14 +46,15 @@ brew "starship"
 brew "stripe"
 brew "terraform"
 brew "watch"
+brew "zsh-autosuggestions"
 
 if OS.mac?
   # Mac apps
   cask "1password-cli"
+  cask "cursor"
   cask "devutils"
   cask "discord"
-  cask "docker"
-  cask "cursor"
+  cask "docker-desktop"
   cask "figma"
   cask "font-fira-code"
   cask "font-fira-code-nerd-font"

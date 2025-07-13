@@ -28,6 +28,7 @@ export EDITOR=cursor
 export GIT_EDITOR="cursor -w"
 export DOTFILES=$HOME/.dotfiles
 export TF_VAR_do_token=op://codegangsta/do_terraform_token/password
+export BUILDX_BAKE_ENTITLEMENTS_FS=0
 
 # Path configuration
 export PATH="$HOME/.dotfiles/bin:$PATH"
@@ -51,6 +52,8 @@ alias c=claude
 alias lg="lazygit"
 alias gits="git status"
 alias vim="nvim"
+alias dc="docker-compose"
+alias tf="terraform"
 
 # NVM setup - lazy load for better performance
 export NVM_DIR="$HOME/.nvm"
@@ -68,8 +71,20 @@ if [ -s "$NVM_DIR/alias/default" ]; then
     export PATH="$NVM_DIR/versions/node/v${DEFAULT_NODE_VER}/bin:$PATH"
 fi
 
+# Auto-load default node version
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    \. "$NVM_DIR/nvm.sh" --no-use  # Load nvm but don't use a version yet
+    nvm use default --silent 2>/dev/null || true  # Use default version silently
+fi
+
 # Starship prompt
 eval "$(starship init zsh)"
+
+# FZF configuration
+eval "$(fzf --zsh)"
+
+# Fish-like autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Disable greeting (zsh doesn't have one by default, so this is just for completeness)
 
