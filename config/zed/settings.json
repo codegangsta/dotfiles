@@ -10,8 +10,8 @@
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking"
     },
     "play_sound_when_agent_done": true
   },
@@ -26,10 +26,5 @@
   "active_pane_modifiers": {
     "border_size": 1.0,
     "inactive_opacity": 0.8
-  },
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
   }
 }

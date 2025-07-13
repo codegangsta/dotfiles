@@ -60,6 +60,7 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-p": "file_finder::Toggle",
       "ctrl-d": "git::Diff",
       "cmd-]": "workspace::ToggleRightDock",
       "cmd-[": "workspace::ToggleLeftDock"
