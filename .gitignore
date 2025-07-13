@@ -17,6 +17,7 @@ config/fish/secrets.fish
 config/stripe
 config/autostart
 config/configstore
+config/zed/prompts
 
 
 # Ignore some files from cursor/vscode user directory

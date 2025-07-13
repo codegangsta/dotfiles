@@ -4,7 +4,14 @@
       "Bash(ls:*)",
       "Bash(cp:*)",
       "Bash(mkdir:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash([ -f ~/.fzf.zsh ])",
+      "Bash(source:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(nvm alias:*)"
     ],
     "deny": []
   }

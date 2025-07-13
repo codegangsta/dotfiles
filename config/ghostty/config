@@ -22,3 +22,7 @@ shell-integration-features = no-cursor
 
 window-padding-x = 5
 window-padding-y = 5
+keybind = shift+enter=text:\n
+
+font-family = "Zed Plex Mono"
+font-size = 14
