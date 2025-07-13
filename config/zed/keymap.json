@@ -32,7 +32,9 @@
       "ctrl-d": "git::Diff",
       "ctrl-p": "file_finder::Toggle",
       "ctrl-a": "editor::ToggleCodeActions",
-      "ctrl-n": "editor::GoToDiagnostic"
+      "ctrl-n": "editor::GoToDiagnostic",
+      "cmd-]": "workspace::ToggleRightDock",
+      "cmd-[": "workspace::ToggleLeftDock"
     }
   },
   {
@@ -45,7 +47,9 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "cmd-]": "workspace::ToggleRightDock",
+      "cmd-[": "workspace::ToggleLeftDock"
     }
   },
   {
@@ -56,7 +60,9 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-d": "git::Diff"
+      "ctrl-d": "git::Diff",
+      "cmd-]": "workspace::ToggleRightDock",
+      "cmd-[": "workspace::ToggleLeftDock"
     }
   },
   {

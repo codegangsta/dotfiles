@@ -22,5 +22,14 @@
     "mode": "system",
     "light": "One Light",
     "dark": "Nord"
+  },
+  "active_pane_modifiers": {
+    "border_size": 1.0,
+    "inactive_opacity": 0.8
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
   }
 }
