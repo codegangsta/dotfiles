@@ -1,9 +1,8 @@
 {
-  "window.commandCenter": false,
+  "window.commandCenter": true,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.colorTheme": "Nord",
   "editor.fontSize": 13,
   "vscode-neovim.compositeKeys": {},
   "editor.fontFamily": "SFMono Nerd Font",
@@ -75,5 +74,6 @@
   },
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.semanticSearch.includeCommitsWithFiles": true,
-  "cursor.composer.shouldAllowCustomModes": true
+  "cursor.composer.shouldAllowCustomModes": true,
+  "workbench.colorTheme": "Nord"
 }
