@@ -29,6 +29,7 @@ brew "zsh-autosuggestions"
 if OS.mac?
   # Mac apps
   cask "1password-cli"
+  cask "brave-browser"
   cask "cursor"
   cask "figma"
   cask "font-fira-code"
