@@ -54,42 +54,8 @@ alias gits="git status"
 alias vim="nvim"
 alias dc="docker-compose"
 alias tf="terraform"
-
-# NVM setup - FULLY LAZY LOAD (biggest optimization)
-export NVM_DIR="$HOME/.nvm"
-
-# Add node to path if default version exists (without loading NVM)
-if [ -s "$NVM_DIR/alias/default" ]; then
-    DEFAULT_NODE_VER=$(cat "$NVM_DIR/alias/default")
-    export PATH="$NVM_DIR/versions/node/v${DEFAULT_NODE_VER#v}/bin:$PATH"
-fi
-
-# Lazy load NVM completely - only when actually needed
-nvm() {
-    unset -f nvm node npm npx
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-    nvm "$@"
-}
-
-# Create lazy loaders for node/npm/npx that will trigger NVM load if needed
-node() {
-    unset -f nvm node npm npx
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    node "$@"
-}
-
-npm() {
-    unset -f nvm node npm npx
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    npm "$@"
-}
-
-npx() {
-    unset -f nvm node npm npx
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    npx "$@"
-}
+alias npm="pnpm"
+alias npx="pnpx"
 
 # Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"
@@ -112,7 +78,3 @@ __load_autosuggestions() {
 }
 # Load after small delay to not block initial prompt
 (sleep 0.1 && __load_autosuggestions) &!
-
-# Disable greeting (zsh doesn't have one by default, so this is just for completeness)
-
-alias claude="/Users/codegangsta/.claude/local/claude"
