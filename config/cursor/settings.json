@@ -75,5 +75,6 @@
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.semanticSearch.includeCommitsWithFiles": true,
   "cursor.composer.shouldAllowCustomModes": true,
-  "workbench.colorTheme": "Nord"
+  "workbench.colorTheme": "Nord",
+  "cursor.agent_layout_browser_beta_setting": true
 }

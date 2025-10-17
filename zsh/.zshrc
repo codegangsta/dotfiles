@@ -56,6 +56,7 @@ alias dc="docker-compose"
 alias tf="terraform"
 alias npm="pnpm"
 alias npx="pnpx"
+alias n="pnpm"
 
 # Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"
