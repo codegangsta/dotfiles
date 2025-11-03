@@ -46,7 +46,6 @@ if OS.mac?
   cask "font-sf-pro"
   cask "font-symbols-only-nerd-font"
   cask "ghostty"
-  cask "kitty"
   cask "linear-linear"
   cask "ngrok"
   cask "obs"
