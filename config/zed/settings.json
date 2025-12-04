@@ -23,7 +23,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "GitHub Dark Default"
+    "dark": "Github Dark"
   },
   "active_pane_modifiers": {
     "border_size": 1.0,
