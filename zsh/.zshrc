@@ -1,6 +1,6 @@
 # OS-specific configuration - optimized
 if [[ "$(uname)" == "Darwin" ]]; then
-    # Inline brew shellenv for macOS to avoid subprocess  
+    # Inline brew shellenv for macOS to avoid subprocess
     export HOMEBREW_PREFIX="/opt/homebrew"
     export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
     export HOMEBREW_REPOSITORY="/opt/homebrew"
@@ -24,8 +24,8 @@ fi
 
 # Environment variables
 export GOPATH=$HOME/go
-export EDITOR=cursor
-export GIT_EDITOR="cursor -w"
+export EDITOR=zed
+export GIT_EDITOR="zed -w"
 export DOTFILES=$HOME/.dotfiles
 export TF_VAR_do_token=op://codegangsta/do_terraform_token/password
 export BUILDX_BAKE_ENTITLEMENTS_FS=0
@@ -61,16 +61,8 @@ alias n="pnpm"
 # Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"
 
-# FZF configuration - lazy load on first use
-__fzf_init() {
-    eval "$(fzf --zsh)"
-    unset -f __fzf_init
-}
-# Hook FZF to load on first Ctrl-R or Ctrl-T
-bindkey -r '^R'
-bindkey -r '^T'
-bindkey -s '^R' $'\e[1~__fzf_init\n^R'
-bindkey -s '^T' $'\e[1~__fzf_init\n^T'
+# FZF configuration
+eval "$(fzf --zsh)"
 
 # Fish-like autosuggestions - lazy load
 __load_autosuggestions() {
