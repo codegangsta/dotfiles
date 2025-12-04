@@ -18,6 +18,7 @@ config/stripe
 config/autostart
 config/configstore
 config/zed/prompts
+config/neonctl
 
 
 # Ignore some files from cursor/vscode user directory
