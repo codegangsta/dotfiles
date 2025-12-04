@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ui_font_family": ".SystemUIFont",
+  "buffer_font_family": "SFMono Nerd Font",
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
@@ -21,7 +23,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Nord"
+    "dark": "GitHub Dark Default"
   },
   "active_pane_modifiers": {
     "border_size": 1.0,

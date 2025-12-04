@@ -44,7 +44,7 @@ if [ -n "$DENO_INSTALL" ]; then
 fi
 
 # pnpm
-export PNPM_HOME="/Users/jeremysaenz/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Aliases

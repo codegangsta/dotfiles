@@ -34,8 +34,8 @@ if OS.mac?
   # Mac apps
   cask "1password-cli"
   cask "brave-browser"
-  cask "cursor"
   cask "docker-desktop"
+  cask "claude-code"
   cask "figma"
   cask "font-fira-code"
   cask "font-fira-code-nerd-font"
