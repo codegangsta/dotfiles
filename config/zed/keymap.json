@@ -73,5 +73,16 @@
     "bindings": {
       // "j k": "vim::SwitchToNormalMode"
     }
+  },
+  {
+    "bindings": {
+      "cmd-shift-m": "workspace::ToggleZoom"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-m": null
+    }
   }
 ]
