@@ -17,6 +17,7 @@ bootstrap-common::
 	ln -vsfn ${PWD}/config/htop ${HOME}/.config/htop
 	ln -vsfn ${PWD}/config/k9s ${HOME}/.config/k9s
 	ln -vsfn ${PWD}/config/rg ${HOME}/.config/rg
+	ln -vsfn ${PWD}/config/tmux/tmux.conf ${HOME}/.tmux.conf
 
 bootstrap-macos:: bootstrap-common
 	ln -vsfn ${PWD}/config/cursor ${HOME}/Library/Application\ Support/Cursor/User
