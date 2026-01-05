@@ -5,8 +5,8 @@ macos-titlebar-style = hidden
 cursor-style = block
 shell-integration-features = no-cursor
 
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 6
+window-padding-y = 6
 keybind = shift+enter=text:\n
 
 # Unbind Ghostty defaults that conflict with tmux
@@ -47,5 +47,8 @@ keybind = cmd+shift+right_bracket=text:\x01l
 keybind = cmd+shift+left_bracket=text:\x01h
 keybind = cmd+p=text:\x01s
 
-font-family = "Zed Plex Mono"
+font-family = "SFMono Nerd Font"
+font-family-bold = "SFMono Nerd Font"
+font-family-italic = "SFMono Nerd Font"
+font-family-bold-italic = "SFMono Nerd Font"
 font-size = 14
