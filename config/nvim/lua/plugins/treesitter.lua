@@ -5,6 +5,7 @@ return {
     opts = {
       highlight = {
         enable = true,
+        disable = { "vim" },
       },
       ensure_installed = {
         "astro",
@@ -22,7 +23,6 @@ return {
         "rust",
         "tsx",
         "typescript",
-        "vim",
         "yaml",
       },
     },
