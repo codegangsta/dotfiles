@@ -54,9 +54,6 @@ alias gits="git status"
 alias vim="nvim"
 alias dc="docker-compose"
 alias tf="terraform"
-alias npm="pnpm"
-alias npx="pnpx"
-alias n="pnpm"
 
 # Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"
@@ -71,3 +68,10 @@ __load_autosuggestions() {
 }
 # Load after small delay to not block initial prompt
 (sleep 0.1 && __load_autosuggestions) &!
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
