@@ -5,5 +5,5 @@ return {
     config = true,
   },
   -- Disable the default autopairs
-  { "echasnovski/mini.pairs", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
 }
