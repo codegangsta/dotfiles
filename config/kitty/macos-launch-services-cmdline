@@ -1,3 +1,0 @@
---single-instance
---listen-on unix:/tmp/mykitty
--o allow_remote_control=yes
