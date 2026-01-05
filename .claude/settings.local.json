@@ -11,7 +11,8 @@
       "Bash(brew install:*)",
       "Bash(grep:*)",
       "Bash(cat:*)",
-      "Bash(nvm alias:*)"
+      "Bash(nvm alias:*)",
+      "Bash(brew bundle:*)"
     ],
     "deny": []
   }
