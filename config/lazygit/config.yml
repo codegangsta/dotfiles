@@ -1,3 +1,42 @@
+gui:
+  useHunkModeInStagingView: false
+  theme:
+    selectedLineBgColor:
+      - "#3b4252"
+    selectedRangeBgColor:
+      - "#3b4252"
+
+os:
+  editInTerminal: false
+  open: >-
+    nvim_pane=$(tmux list-panes -F '#{pane_id}:#{pane_current_command}' | grep -iE ':n?vim' | head -1 | cut -d: -f1);
+    if [ -n "$nvim_pane" ]; then
+      tmux send-keys -t "$nvim_pane" Escape ":e {{filename}}" Enter;
+      tmux select-pane -t "$nvim_pane";
+    else
+      tmux split-window -v "nvim '{{filename}}'";
+    fi
+  edit: >-
+    nvim_pane=$(tmux list-panes -F '#{pane_id}:#{pane_current_command}' | grep -iE ':n?vim' | head -1 | cut -d: -f1);
+    if [ -n "$nvim_pane" ]; then
+      tmux send-keys -t "$nvim_pane" Escape ":e {{filename}}" Enter;
+      tmux select-pane -t "$nvim_pane";
+    else
+      tmux split-window -v "nvim '{{filename}}'";
+    fi
+  editAtLine: >-
+    nvim_pane=$(tmux list-panes -F '#{pane_id}:#{pane_current_command}' | grep -iE ':n?vim' | head -1 | cut -d: -f1);
+    if [ -n "$nvim_pane" ]; then
+      tmux send-keys -t "$nvim_pane" Escape ":e +{{line}} {{filename}}" Enter;
+      tmux select-pane -t "$nvim_pane";
+    else
+      tmux split-window -v "nvim '+{{line}}' '{{filename}}'";
+    fi
+
+git:
+  pagers:
+    - pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+
 customCommands:
   - key: "P"
     command: "git push --no-verify"
