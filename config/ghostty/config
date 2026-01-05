@@ -46,6 +46,7 @@ keybind = cmd+nine=text:\x01\x39
 keybind = cmd+shift+right_bracket=text:\x01l
 keybind = cmd+shift+left_bracket=text:\x01h
 keybind = cmd+p=text:\x01s
+keybind = cmd+period=text:\x01.
 
 font-family = "SFMono Nerd Font"
 font-family-bold = "SFMono Nerd Font"
