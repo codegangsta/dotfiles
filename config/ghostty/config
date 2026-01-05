@@ -16,15 +16,15 @@ keybind = cmd+t=unbind
 keybind = cmd+w=unbind
 keybind = cmd+n=unbind
 keybind = cmd+d=unbind
-keybind = cmd+1=unbind
-keybind = cmd+2=unbind
-keybind = cmd+3=unbind
-keybind = cmd+4=unbind
-keybind = cmd+5=unbind
-keybind = cmd+6=unbind
-keybind = cmd+7=unbind
-keybind = cmd+8=unbind
-keybind = cmd+9=unbind
+keybind = cmd+digit_1=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+digit_8=unbind
+keybind = cmd+digit_9=unbind
 
 # Tmux integration (prefix is C-a, which is \x01)
 keybind = cmd+k=text:\x01k
@@ -34,27 +34,18 @@ keybind = cmd+n=text:\x01N
 keybind = cmd+d=text:\x01|
 keybind = cmd+shift+d=text:\x01-
 keybind = cmd+shift+m=text:\x01z
-keybind = cmd+1=text:\x01\x31
-keybind = cmd+2=text:\x01\x32
-keybind = cmd+3=text:\x01\x33
-keybind = cmd+4=text:\x01\x34
-keybind = cmd+5=text:\x01\x35
-keybind = cmd+6=text:\x01\x36
-keybind = cmd+7=text:\x01\x37
-keybind = cmd+8=text:\x01\x38
-keybind = cmd+9=text:\x01\x39
+keybind = cmd+one=text:\x01\x31
+keybind = cmd+two=text:\x01\x32
+keybind = cmd+three=text:\x01\x33
+keybind = cmd+four=text:\x01\x34
+keybind = cmd+five=text:\x01\x35
+keybind = cmd+six=text:\x01\x36
+keybind = cmd+seven=text:\x01\x37
+keybind = cmd+eight=text:\x01\x38
+keybind = cmd+nine=text:\x01\x39
 keybind = cmd+shift+right_bracket=text:\x01l
 keybind = cmd+shift+left_bracket=text:\x01h
-keybind = cmd+shift+s=text:\x01s
-keybind = cmd+shift+1=text:\x01!
-keybind = cmd+shift+2=text:\x01@
-keybind = cmd+shift+3=text:\x01#
-keybind = cmd+shift+4=text:\x01$
-keybind = cmd+shift+5=text:\x01%
-keybind = cmd+shift+6=text:\x01^
-keybind = cmd+shift+7=text:\x01&
-keybind = cmd+shift+8=text:\x01*
-keybind = cmd+shift+9=text:\x01(
+keybind = cmd+p=text:\x01s
 
 font-family = "Zed Plex Mono"
 font-size = 14
