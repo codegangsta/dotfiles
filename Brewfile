@@ -1,79 +1,80 @@
-require "os"
+require 'os'
 
-tap "1password/tap"
-tap "FelixKratz/formulae"
-tap "epk/epk"
-tap "nikitabobko/tap"
-tap "ngrok/ngrok"
-tap "nats-io/nats-tools"
-tap "puma/puma"
-tap "schpet/tap"
+tap '1password/tap'
+tap 'FelixKratz/formulae'
+tap 'epk/epk'
+tap 'nikitabobko/tap'
+tap 'ngrok/ngrok'
+tap 'nats-io/nats-tools'
+tap 'puma/puma'
+tap 'schpet/tap'
 
-brew "asdf"
-brew "circleci"
-brew "docker-compose"
-brew "fzf"
-brew "gh"
-brew "git"
-brew "git-lfs"
-brew "gnupg"
-brew "go"
-brew "imagemagick"
-brew "jo"
-brew "jq"
-brew "lazygit"
-brew "mkcert"
-brew "neofetch"
-brew "neovim"
-brew "neovim-remote"
-brew "node"
-brew "overmind"
-brew "pnpm"
-brew "postgresql"
-brew "postgresql@15"
-brew "protobuf"
-brew "qt"
-brew "redis"
-brew "rg"
-brew "ruby-build"
-brew "rust"
-brew "starship"
-brew "stripe"
-brew "terraform"
-brew "tmux"
-brew "vercel-cli"
-brew "vips"
-brew "watch"
-brew "yarn"
-brew "zsh-autosuggestions"
+brew 'asdf'
+brew 'circleci'
+brew 'docker-compose'
+brew 'fzf'
+brew 'git-delta'
+brew 'gh'
+brew 'git'
+brew 'git-lfs'
+brew 'gnupg'
+brew 'go'
+brew 'imagemagick'
+brew 'jo'
+brew 'jq'
+brew 'lazygit'
+brew 'mkcert'
+brew 'neofetch'
+brew 'neovim'
+brew 'neovim-remote'
+brew 'node'
+brew 'overmind'
+brew 'pnpm'
+brew 'postgresql'
+brew 'postgresql@15'
+brew 'protobuf'
+brew 'qt'
+brew 'redis'
+brew 'rg'
+brew 'ruby-build'
+brew 'rust'
+brew 'starship'
+brew 'stripe'
+brew 'terraform'
+brew 'tmux'
+brew 'vercel-cli'
+brew 'vips'
+brew 'watch'
+brew 'yarn'
+brew 'zsh-autosuggestions'
 
 if OS.mac?
   # Mac-specific formulae
-  brew "puma/puma/puma-dev"
-  brew "schpet/tap/linear"
+  brew 'puma/puma/puma-dev'
+  brew 'schpet/tap/linear'
 
   # Mac apps
-  cask "1password-cli"
-  cask "brave-browser"
-  cask "docker-desktop"
-  cask "claude-code"
-  cask "figma"
-  cask "font-fira-code"
-  cask "font-fira-code-nerd-font"
-  cask "font-hack-nerd-font"
-  cask "font-inter"
-  cask "font-monaspice-nerd-font"
-  cask "font-sf-mono-nerd-font"
-  cask "font-sf-pro"
-  cask "font-symbols-only-nerd-font"
-  cask "ghostty"
-  cask "linear-linear"
-  cask "ngrok"
-  cask "obs"
-  cask "raycast"
-  cask "sf-symbols"
-  cask "slack"
-  cask "tailscale"
-  cask "visual-studio-code"
-  cask "zed"
+  cask '1password-cli'
+  cask 'brave-browser'
+  cask 'docker-desktop'
+  cask 'claude-code'
+  cask 'figma'
+  cask 'font-fira-code'
+  cask 'font-fira-code-nerd-font'
+  cask 'font-hack-nerd-font'
+  cask 'font-inter'
+  cask 'font-monaspice-nerd-font'
+  cask 'font-sf-mono-nerd-font'
+  cask 'font-sf-pro'
+  cask 'font-symbols-only-nerd-font'
+  cask 'ghostty'
+  cask 'linear-linear'
+  cask 'ngrok'
+  cask 'obs'
+  cask 'raycast'
+  cask 'sf-symbols'
+  cask 'slack'
+  cask 'tailscale'
+  cask 'visual-studio-code'
+  cask 'zed'
 end
