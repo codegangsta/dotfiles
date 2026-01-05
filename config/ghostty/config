@@ -7,7 +7,7 @@ shell-integration-features = no-cursor
 
 window-padding-x = 6
 window-padding-y = 6
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b\r
 
 # Unbind Ghostty defaults that conflict with tmux
 keybind = cmd+shift+right_bracket=unbind
