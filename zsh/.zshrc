@@ -24,8 +24,8 @@ fi
 
 # Environment variables
 export GOPATH=$HOME/go
-export EDITOR=zed
-export GIT_EDITOR="zed --wait --new"
+export EDITOR=nvim
+export GIT_EDITOR=nvim
 export DOTFILES=$HOME/.dotfiles
 export TF_VAR_do_token=op://codegangsta/do_terraform_token/password
 export BUILDX_BAKE_ENTITLEMENTS_FS=0
