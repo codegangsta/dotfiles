@@ -12,7 +12,9 @@
       "Bash(grep:*)",
       "Bash(cat:*)",
       "Bash(nvm alias:*)",
-      "Bash(brew bundle:*)"
+      "Bash(brew bundle:*)",
+      "Bash(git fetch:*)",
+      "Bash(git rev-list:*)"
     ],
     "deny": []
   }
