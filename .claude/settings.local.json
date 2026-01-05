@@ -14,7 +14,10 @@
       "Bash(nvm alias:*)",
       "Bash(brew bundle:*)",
       "Bash(git fetch:*)",
-      "Bash(git rev-list:*)"
+      "Bash(git rev-list:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:quemy.info)",
+      "WebFetch(domain:playbooks.com)"
     ],
     "deny": []
   }
