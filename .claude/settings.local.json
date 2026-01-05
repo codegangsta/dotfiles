@@ -1,24 +1,23 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(ls:*)",
-      "Bash(cp:*)",
-      "Bash(mkdir:*)",
-      "Bash(find:*)",
-      "Bash([ -f ~/.fzf.zsh ])",
-      "Bash(source:*)",
-      "Bash(brew list:*)",
-      "Bash(brew install:*)",
-      "Bash(grep:*)",
-      "Bash(cat:*)",
-      "Bash(nvm alias:*)",
-      "Bash(brew bundle:*)",
-      "Bash(git fetch:*)",
-      "Bash(git rev-list:*)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:quemy.info)",
-      "WebFetch(domain:playbooks.com)"
-    ],
-    "deny": []
-  }
+    "permissions": {
+        "allow": [
+            "Bash(ls:*)",
+            "Bash(cp:*)",
+            "Bash(mkdir:*)",
+            "Bash(find:*)",
+            "Bash([ -f ~/.fzf.zsh ])",
+            "Bash(source:*)",
+            "Bash(brew list:*)",
+            "Bash(brew install:*)",
+            "Bash(grep:*)",
+            "Bash(cat:*)",
+            "Bash(nvm alias:*)",
+            "Bash(brew bundle:*)",
+            "Bash(git fetch:*)",
+            "Bash(git rev-list:*)",
+            "WebFetch(domain:github.com)",
+            "Bash(tmux list-keys:*)"
+        ],
+        "deny": []
+    }
 }
