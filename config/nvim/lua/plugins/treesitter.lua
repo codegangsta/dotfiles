@@ -1,12 +1,7 @@
 return {
-  -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      highlight = {
-        enable = true,
-        disable = { "vim" },
-      },
       ensure_installed = {
         "astro",
         "bash",
