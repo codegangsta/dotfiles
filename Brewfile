@@ -73,6 +73,7 @@ if OS.mac?
   cask "raycast"
   cask "sf-symbols"
   cask "slack"
+  cask "tailscale"
   cask "visual-studio-code"
   cask "zed"
 end
