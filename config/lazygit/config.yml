@@ -1,6 +1,11 @@
 gui:
   useHunkModeInStagingView: false
   theme:
+    activeBorderColor:
+      - cyan
+      - bold
+    inactiveBorderColor:
+      - "#d8dee9"
     selectedLineBgColor:
       - "#3b4252"
     selectedRangeBgColor:
