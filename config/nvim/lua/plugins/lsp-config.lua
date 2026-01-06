@@ -13,6 +13,11 @@ return {
       inlay_hints = {
         enabled = false,
       },
+      servers = {
+        ruby_lsp = {
+          filetypes = { "ruby" },
+        },
+      },
     },
   },
 }
