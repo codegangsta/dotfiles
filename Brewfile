@@ -76,6 +76,4 @@ if OS.mac?
   cask 'sf-symbols'
   cask 'slack'
   cask 'tailscale'
-  cask 'visual-studio-code'
-  cask 'zed'
 end
