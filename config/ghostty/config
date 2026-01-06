@@ -1,6 +1,6 @@
 theme = nord
 
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 
 cursor-style = block
 shell-integration-features = no-cursor
