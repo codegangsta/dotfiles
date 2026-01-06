@@ -49,6 +49,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Aliases
 alias c=claude
+alias clauded="claude --dangerously-skip-permissions"
 alias lg="lazygit"
 alias gits="git status"
 alias vim="nvim"
