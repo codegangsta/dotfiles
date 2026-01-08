@@ -8,6 +8,8 @@ shell-integration-features = no-cursor
 window-padding-x = 6
 window-padding-y = 6
 keybind = shift+enter=text:\x1b\r
+keybind = cmd+k=text:\x01k
+keybind = cmd+shift+m=text:\x01z
 
 font-family = "SFMono Nerd Font"
 font-family-bold = "SFMono Nerd Font"

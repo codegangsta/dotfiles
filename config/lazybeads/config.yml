@@ -1,0 +1,42 @@
+# LazyBeads custom commands
+# Set LAZYBEADS_CONFIG="$HOME/.dotfiles/lazybeads.yml" in your shell config
+
+customCommands:
+  # AI-powered commands (tmux + claude)
+  - key: "D"
+    description: "AI flesh out description"
+    context: "list"
+    command: >-
+      tmux split-window -v "claude --dangerously-skip-permissions 'Act as a PM. Use bd show {{.ID}} to read the issue, then flesh it out with acceptance criteria and implementation notes. Also update the title to be more descriptive if needed.'"
+
+  - key: "C"
+    description: "Claude agent on issue"
+    context: "list"
+    command: >-
+      tmux split-window -h "claude --dangerously-skip-permissions 'Work on beads issue {{.ID}}. Use bd show {{.ID}} to read the details.'"
+
+  - key: "R"
+    description: "AI review issue"
+    context: "detail"
+    command: >-
+      tmux split-window -v "claude --dangerously-skip-permissions 'Review beads issue {{.ID}} for completeness and clarity. Use bd show {{.ID}} to read it, then suggest improvements.'"
+
+  # File editing (nvim pane integration)
+  - key: "E"
+    description: "Edit in nvim pane"
+    context: "detail"
+    command: >-
+      nvim_pane=$(tmux list-panes -F '#{pane_id}:#{pane_current_command}' | grep -iE ':n?vim' | head -1 | cut -d: -f1);
+      if [ -n "$nvim_pane" ]; then
+        tmux send-keys -t "$nvim_pane" Escape ":e {{.FilePath}}" Enter;
+        tmux select-pane -t "$nvim_pane";
+      else
+        tmux split-window -v "nvim '{{.FilePath}}'";
+      fi
+
+  # Quick actions
+  - key: "W"
+    description: "AI work on issue"
+    context: "list"
+    command: >-
+      tmux split-window -v "claude --dangerously-skip-permissions '/work-bead {{.ID}}'"

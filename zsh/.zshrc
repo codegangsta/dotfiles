@@ -50,11 +50,15 @@ export PATH="$PNPM_HOME:$PATH"
 # Aliases
 alias c=claude
 alias clauded="claude --dangerously-skip-permissions"
+alias cb="claude --dangerously-skip-permissions '/work-bead'"
 alias lg="lazygit"
+alias lb="lazybeads"
 alias gits="git status"
 alias vim="nvim"
 alias dc="docker-compose"
 alias tf="terraform"
+alias tks="tmux kill-server"
+alias ta="tmux attach"
 
 # Starship prompt - consider async loading or simpler prompt
 eval "$(starship init zsh)"

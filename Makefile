@@ -13,11 +13,15 @@ bootstrap-common::
 	ln -vsfn ${PWD}/config/kitty ${HOME}/.config/kitty
 	ln -vsfn ${PWD}/config/ghostty ${HOME}/.config/ghostty
 	ln -vsfn ${PWD}/config/lazygit ${HOME}/.config/lazygit
+	ln -vsfn ${PWD}/config/lazybeads ${HOME}/.config/lazybeads
 	ln -vsfn ${PWD}/config/starship.toml ${HOME}/.config/starship.toml
 	ln -vsfn ${PWD}/config/htop ${HOME}/.config/htop
 	ln -vsfn ${PWD}/config/k9s ${HOME}/.config/k9s
 	ln -vsfn ${PWD}/config/rg ${HOME}/.config/rg
 	ln -vsfn ${PWD}/config/tmux/tmux.conf ${HOME}/.tmux.conf
+	mkdir -p ${HOME}/.claude
+	ln -vsfn ${PWD}/config/claude/commands ${HOME}/.claude/commands
+	ln -vsfn ${PWD}/config/claude/settings.json ${HOME}/.claude/settings.json
 
 bootstrap-macos:: bootstrap-common
 	brew bundle --cleanup
