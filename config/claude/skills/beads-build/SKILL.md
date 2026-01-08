@@ -26,6 +26,8 @@ bd show <issue-id>
 bd update <issue-id> --claim
 ```
 
+**Note:** The issue may already be set to `in_progress` (e.g., from lazybeads B key). This is expected - still run `--claim` to assign yourself.
+
 If the claim fails (already claimed by someone else), STOP and report the conflict.
 
 ### 3. Implement the Solution
