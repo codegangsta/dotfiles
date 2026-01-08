@@ -26,8 +26,12 @@ customCommands:
   - key: "O"
     description: "Open tmux window for issue"
     context: "list"
-    command: "tmux select-window -t '{{.ID}}' 2>/dev/null || true"
-    blocking: true
+    command: >-
+      if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
+        tmux select-window -t '{{.ID}}';
+      else
+        tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions 'Work on beads issue {{.ID}}. Use bd show {{.ID}} to read the details.'";
+      fi
 
   # AI-powered commands (tmux + claude)
   - key: "C"
