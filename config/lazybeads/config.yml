@@ -17,6 +17,7 @@ customCommands:
     description: "Build: implement the issue"
     context: "list"
     command: >-
+      bd update {{.ID}} --status=in_progress 2>/dev/null;
       if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
         tmux select-window -t '{{.ID}}';
       else
