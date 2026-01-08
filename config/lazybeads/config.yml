@@ -7,19 +7,19 @@ customCommands:
     description: "AI flesh out description"
     context: "list"
     command: >-
-      tmux new-window -n '{{.ID}}' "claude --dangerously-skip-permissions 'Act as a PM. Use bd show {{.ID}} to read the issue, then flesh it out with acceptance criteria and implementation notes. Also update the title to be more descriptive if needed.'"
+      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions 'Act as a PM. Use bd show {{.ID}} to read the issue, then flesh it out with acceptance criteria and implementation notes. Also update the title to be more descriptive if needed.'"
 
   - key: "C"
     description: "Claude agent on issue"
     context: "list"
     command: >-
-      tmux new-window -n '{{.ID}}' "claude --dangerously-skip-permissions 'Work on beads issue {{.ID}}. Use bd show {{.ID}} to read the details.'"
+      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions 'Work on beads issue {{.ID}}. Use bd show {{.ID}} to read the details.'"
 
   - key: "R"
     description: "AI review issue"
     context: "detail"
     command: >-
-      tmux new-window -n '{{.ID}}' "claude --dangerously-skip-permissions 'Review beads issue {{.ID}} for completeness and clarity. Use bd show {{.ID}} to read it, then suggest improvements.'"
+      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions 'Review beads issue {{.ID}} for completeness and clarity. Use bd show {{.ID}} to read it, then suggest improvements.'"
 
   # File editing (nvim pane integration)
   - key: "E"
@@ -39,4 +39,4 @@ customCommands:
     description: "AI work on issue"
     context: "list"
     command: >-
-      tmux new-window -n '{{.ID}}' "claude --dangerously-skip-permissions '/work-bead {{.ID}}'"
+      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions '/work-bead {{.ID}}'"
