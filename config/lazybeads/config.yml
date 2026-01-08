@@ -23,8 +23,8 @@ customCommands:
         tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions '/codegangsta:build {{.ID}}'";
       fi
 
-  - key: "G"
-    description: "Go to tmux window for issue"
+  - key: "O"
+    description: "Open tmux window for issue"
     context: "list"
     command: "tmux select-window -t '{{.ID}}' 2>/dev/null || true"
     blocking: true
