@@ -1,7 +1,6 @@
 ---
 description: Autonomously implement a planned bead issue following its acceptance criteria
+argument-hint: <issue-id>
 ---
 
-Read and follow the `beads-build` skill.
-
-ARGUMENTS: $ARGUMENTS
+Follow the `beads-build` skill to implement issue: $ARGUMENTS

@@ -1,30 +1,29 @@
 ---
-description: Autonomously implement a planned bead issue following its acceptance criteria
+name: beads-build
+description: Autonomously implement a planned bead issue following its acceptance criteria. Use when implementing issues, building features, or executing planned work.
 ---
 
+# Beads Build
+
 **IMPORTANT: This is an autonomous workflow. Execute ALL steps continuously without stopping or asking for confirmation. Do NOT pause between steps. Keep working until the issue is CLOSED.**
-
-## Arguments
-
-This skill requires an issue ID as argument (e.g., `/codegangsta:build df-123`).
 
 ## Workflow
 
 ### 1. Read and Validate the Issue
 
 ```bash
-bd show $ARGUMENTS
+bd show <issue-id>
 ```
 
 **Validate before proceeding:**
 - The issue MUST have acceptance criteria (checkbox items)
 - If no acceptance criteria exist, STOP and report:
-  > "Issue `$ARGUMENTS` has no acceptance criteria. Run `/codegangsta:plan $ARGUMENTS` first to prepare it for implementation."
+  > "Issue `<issue-id>` has no acceptance criteria. Run `/codegangsta:plan <issue-id>` first to prepare it for implementation."
 
 ### 2. Claim the Issue
 
 ```bash
-bd update $ARGUMENTS --claim
+bd update <issue-id> --claim
 ```
 
 If the claim fails (already claimed by someone else), STOP and report the conflict.
@@ -51,7 +50,7 @@ bd create --title="..." --type=task --priority=2
 As you complete each criterion, update the issue to check it off:
 
 ```bash
-bd update $ARGUMENTS --description="<description with checked items>"
+bd update <issue-id> --description="<description with checked items>"
 ```
 
 Format completed items as:
@@ -78,14 +77,14 @@ If verification fails, fix the issues before proceeding.
 Once verified:
 
 ```bash
-bd close $ARGUMENTS --reason="Implemented: <brief summary of what was done>"
+bd close <issue-id> --reason="Implemented: <brief summary of what was done>"
 ```
 
 ### 7. Report Completion
 
 Only AFTER the issue is closed, stop and ask the user:
 
-> "Completed and closed `$ARGUMENTS`: <title>
+> "Completed and closed `<issue-id>`: <title>
 >
 > Changes made:
 > - <change 1>

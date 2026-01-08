@@ -1,19 +1,18 @@
 ---
-description: Act as a PM to flesh out a bead issue with acceptance criteria and implementation notes
+name: beads-plan
+description: Act as a PM to flesh out a bead issue with acceptance criteria and implementation notes. Use when planning issues, adding acceptance criteria, or preparing issues for development.
 ---
 
+# Beads Plan
+
 Plan and document a bead issue without implementing it. This skill acts as a PM to prepare issues for development.
-
-## Arguments
-
-This skill requires an issue ID as argument (e.g., `/codegangsta:plan df-123`).
 
 ## Workflow
 
 ### 1. Read the Issue
 
 ```bash
-bd show $ARGUMENTS
+bd show <issue-id>
 ```
 
 Review the current state of the issue including title, description, and any existing details.
@@ -62,39 +61,39 @@ Format as checkboxes:
 Update the issue with the fleshed-out description:
 
 ```bash
-bd update $ARGUMENTS --description="<full updated description>"
+bd update <issue-id> --description="<full updated description>"
 ```
 
 If the title is vague or unclear, update it too:
 
 ```bash
-bd update $ARGUMENTS --title="<clearer title>"
+bd update <issue-id> --title="<clearer title>"
 ```
 
 ### 5. Identify Dependencies
 
 If this issue depends on other work:
 ```bash
-bd dep add $ARGUMENTS <depends-on-id>
+bd dep add <issue-id> <depends-on-id>
 ```
 
 If you discover new issues that should be created:
 ```bash
 bd create --title="..." --type=task --priority=2
-bd dep add <new-id> $ARGUMENTS  # if new issue depends on this one
+bd dep add <new-id> <issue-id>  # if new issue depends on this one
 ```
 
 ### 6. Report Summary
 
 After planning, report:
 
-> "Planned issue `$ARGUMENTS`: <title>
+> "Planned issue `<issue-id>`: <title>
 >
 > Changes made:
 > - <what was added/updated>
 >
 > Acceptance criteria: <count> items
-> Ready for: `/codegangsta:build $ARGUMENTS`"
+> Ready for: `/codegangsta:build <issue-id>`"
 
 ## Guidelines
 
