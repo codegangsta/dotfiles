@@ -49,7 +49,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Aliases
 alias c=claude
-alias clauded="claude --dangerously-skip-permissions"
+alias clauded="claude --allow-dangerously-skip-permissions"
 alias cb="claude --dangerously-skip-permissions '/work-bead'"
 alias lg="lazygit"
 alias lb="lazybeads"
