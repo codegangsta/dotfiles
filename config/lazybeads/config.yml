@@ -26,13 +26,8 @@ customCommands:
   - key: "G"
     description: "Go to tmux window for issue"
     context: "list"
-    command: >-
-      if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
-        tmux select-window -t '{{.ID}}';
-      else
-        echo "No tmux window for {{.ID}}. Press P to plan or B to build.";
-        read -n 1;
-      fi
+    command: "tmux select-window -t '{{.ID}}' 2>/dev/null || true"
+    blocking: true
 
   # AI-powered commands (tmux + claude)
   - key: "C"
