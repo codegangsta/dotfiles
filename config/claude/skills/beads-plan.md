@@ -6,7 +6,7 @@ Plan and document a bead issue without implementing it. This skill acts as a PM 
 
 ## Arguments
 
-This skill requires an issue ID as argument (e.g., `/beads-plan df-123`).
+This skill requires an issue ID as argument (e.g., `/codegangsta:plan df-123`).
 
 ## Workflow
 
@@ -94,7 +94,7 @@ After planning, report:
 > - <what was added/updated>
 >
 > Acceptance criteria: <count> items
-> Ready for: `/beads-build $ARGUMENTS`"
+> Ready for: `/codegangsta:build $ARGUMENTS`"
 
 ## Guidelines
 

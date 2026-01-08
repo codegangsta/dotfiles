@@ -6,7 +6,7 @@ description: Autonomously implement a planned bead issue following its acceptanc
 
 ## Arguments
 
-This skill requires an issue ID as argument (e.g., `/beads-build df-123`).
+This skill requires an issue ID as argument (e.g., `/codegangsta:build df-123`).
 
 ## Workflow
 
@@ -19,7 +19,7 @@ bd show $ARGUMENTS
 **Validate before proceeding:**
 - The issue MUST have acceptance criteria (checkbox items)
 - If no acceptance criteria exist, STOP and report:
-  > "Issue `$ARGUMENTS` has no acceptance criteria. Run `/beads-plan $ARGUMENTS` first to prepare it for implementation."
+  > "Issue `$ARGUMENTS` has no acceptance criteria. Run `/codegangsta:plan $ARGUMENTS` first to prepare it for implementation."
 
 ### 2. Claim the Issue
 
