@@ -2,13 +2,39 @@
 # Set LAZYBEADS_CONFIG="$HOME/.dotfiles/lazybeads.yml" in your shell config
 
 customCommands:
-  # AI-powered commands (tmux + claude)
-  - key: "D"
-    description: "AI flesh out description"
+  # Tmux-based AI workflow commands
+  - key: "P"
+    description: "Plan: flesh out issue requirements"
     context: "list"
     command: >-
-      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions 'Act as a PM. Use bd show {{.ID}} to read the issue, then flesh it out with acceptance criteria and implementation notes. Also update the title to be more descriptive if needed.'"
+      if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
+        tmux select-window -t '{{.ID}}';
+      else
+        tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions '/codegangsta:plan {{.ID}}'";
+      fi
 
+  - key: "B"
+    description: "Build: implement the issue"
+    context: "list"
+    command: >-
+      if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
+        tmux select-window -t '{{.ID}}';
+      else
+        tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions '/codegangsta:build {{.ID}}'";
+      fi
+
+  - key: "G"
+    description: "Go to tmux window for issue"
+    context: "list"
+    command: >-
+      if tmux list-windows -F '#{window_name}' | grep -q '^{{.ID}}$'; then
+        tmux select-window -t '{{.ID}}';
+      else
+        echo "No tmux window for {{.ID}}. Press P to plan or B to build.";
+        read -n 1;
+      fi
+
+  # AI-powered commands (tmux + claude)
   - key: "C"
     description: "Claude agent on issue"
     context: "list"
@@ -33,10 +59,3 @@ customCommands:
       else
         tmux split-window -v "nvim '{{.FilePath}}'";
       fi
-
-  # Quick actions
-  - key: "W"
-    description: "AI work on issue"
-    context: "list"
-    command: >-
-      tmux new-window -dn '{{.ID}}' "claude --dangerously-skip-permissions '/work-bead {{.ID}}'"
