@@ -18,7 +18,8 @@
       "WebFetch(domain:github.com)",
       "Bash(tmux list-keys:*)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(osascript:*)"
+      "Bash(osascript:*)",
+      "Bash(time osascript:*)"
     ],
     "deny": []
   }

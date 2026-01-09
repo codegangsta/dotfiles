@@ -5,169 +5,105 @@ description: Morning briefing and assisted daily review with Things 3, Calendar,
 
 # GTD Daily Review
 
-Assist with the daily review by working through the existing **☕️ Daily Review** task in Things 3.
+> **Reference:** See `things3` skill for task requirements, tag taxonomy, and MCP operations.
+
+Work through the **☕️ Daily Review** project in Things 3, completing each child task autonomously where possible.
 
 ## Workflow
 
-### 1. Find and Claim the Daily Review Task
+### 1. Find the Daily Review Project
 
-```applescript
-tell application "Things3"
-    set todayTodos to to dos of list "Today"
-    repeat with t in todayTodos
-        if name of t contains "Daily Review" then
-            return id of t & "|" & name of t & "|" & notes of t
-        end if
-    end repeat
-    return "not found"
-end tell
+Use `get_today` to find tasks belonging to the Daily Review project:
+
+```
+mcp__things__get_today
 ```
 
-If not found in Today, report that and offer to help anyway.
+Look for tasks where `Project: ☕️ Daily Review`. Extract the project UUID from any matching task.
 
-### 2. Work Through Each Step
+Then get all tasks in that project:
 
-The Daily Review task has checkboxes in its notes. Work through each:
-
-#### Step 1: Gather Context
-
-**Calendar - Today's Events:**
-```applescript
-tell application "Calendar"
-    set today to current date
-    set todayStart to today - (time of today)
-    set todayEnd to todayStart + (1 * days)
-    set output to ""
-    repeat with cal in calendars
-        try
-            set evts to (every event of cal whose start date ≥ todayStart and start date < todayEnd)
-            repeat with e in evts
-                set output to output & "- " & (summary of e) & " at " & time string of (start date of e) & linefeed
-            end repeat
-        end try
-    end repeat
-    return output
-end tell
+```
+mcp__things__get_todos(project_uuid="<project-id>")
 ```
 
-**Mail - Unread Counts:**
-```applescript
-tell application "Mail"
-    set personal to unread count of mailbox "INBOX" of account "Personal"
-    set work to unread count of mailbox "INBOX" of account "Kajabi"
-    return "Personal: " & personal & ", Work: " & work
-end tell
-```
+### 2. Work Through Each Task
 
-Present findings concisely:
-```
-## Today's Calendar
-- Team standup at 9:00 AM
-- 1:1 with Sarah at 2:00 PM
+Process tasks in order. For each task:
 
-## Email
-- Personal: 5 unread
-- Work: 12 unread
-```
+1. **Read the task notes** for instructions
+2. **Execute based on note markers:**
+   - `AGENT:` - Execute autonomously, then mark complete
+   - `HUMAN:` - Report what human needs to do, wait for confirmation
+   - Both - Do agent part first, then wait for human
+3. **Update progress** in task notes as you work
+4. **Mark complete** using `update_todo(id, completed=true)`
 
-#### Step 2: Process Inbox
+### 3. Task-Specific Handling
 
-**Check Things Inbox:**
-```applescript
-tell application "Things3"
-    return count of to dos of list "Inbox"
-end tell
-```
+**Check Calendar** - Agent task:
+- Run: `icalBuddy -f -nc -nrd -df "" -tf "%H:%M" eventsToday`
+- Report schedule summary, meetings needing prep
+- Mark complete after reporting
 
-If inbox > 0, offer: "You have X items in your inbox. Run `/gtd:process-inbox`?"
+**Clear Email Inbox** - Mixed:
+- Report unread counts (agent)
+- Human reviews and processes emails
+- Wait for confirmation before completing
 
-#### Step 3: Review Today List
+**Answer Text Messages** - Human only:
+- Skip, report "Human task - respond to texts"
+- Move to next task
 
-**Get Today's Tasks:**
-```applescript
-tell application "Things3"
-    set output to ""
-    set todayTodos to to dos of list "Today"
-    repeat with t in todayTodos
-        if name of t does not contain "Daily Review" then
-            set taskTags to tag names of t
-            set output to output & "- " & name of t
-            if taskTags is not "" then
-                set output to output & " [" & taskTags & "]"
-            end if
-            set output to output & linefeed
-        end if
-    end repeat
-    return output
-end tell
-```
+**Check waiting for list** - Agent task:
+- Use `get_tagged_items(tag="Waiting for")`
+- Report any items needing follow-up
+- Mark complete after reporting
 
-Check each task:
-- Is it clear and actionable? (verb-first)
-- Does it have a time estimate tag?
-- Any obvious blockers?
+**Clear Things Inbox** - Agent task:
+- Use `get_inbox` to check count
+- If items exist, run `/gtd:process-inbox`
+- Mark complete when inbox is zero
 
-If issues found, offer: "Some tasks need clarification. Run `/gtd:clarify`?"
+**Now Visit Anytime List** - Mixed:
+- Use `get_anytime` to surface relevant tasks
+- Human decides what to move to Today
+- Wait for confirmation
 
-#### Step 4: Set Intentions
+**Review Today List** - Agent task:
+- Use `get_today` to get all tasks
+- Check for: verb-first title, time estimate tag
+- Report any quality issues
+- Mark complete after reporting
 
-Ask the user:
-- "What are your top 3 Must Dos for today?"
-- "Any tasks to delegate to agents?" (will tag Agent/Queued)
+**Journal** - Human only:
+- Skip, report "Human task - journaling time"
+- Move to next task
 
-#### Step 5: First Action
+### 4. Complete the Review
 
-Based on calendar and priorities, suggest the first task to start with:
-- Consider meeting prep needs
-- Quick wins build momentum
-- High-priority items when energy is fresh
+After all tasks processed:
+1. Mark the Daily Review project complete if all child tasks done
+2. Report: "Daily review complete!"
+3. Suggest first action based on calendar and priorities
 
-### 3. Complete the Daily Review
+## MCP Tools Reference
 
-When all steps are done:
-
-```applescript
-tell application "Things3"
-    set t to to do id "task-id"
-    set status of t to completed
-end tell
-```
-
-Report: "Daily review complete! Your focus for this morning: [suggested first task]"
-
----
+| Operation | MCP Tool |
+|-----------|----------|
+| Get today's tasks | `mcp__things__get_today` |
+| Get project tasks | `mcp__things__get_todos(project_uuid=...)` |
+| Get inbox | `mcp__things__get_inbox` |
+| Get tagged items | `mcp__things__get_tagged_items(tag=...)` |
+| Get anytime list | `mcp__things__get_anytime` |
+| Update task | `mcp__things__update_todo(id, notes, completed, tags)` |
+| Complete task | `mcp__things__update_todo(id, completed=true)` |
 
 ## Guidelines
 
-- **Use the existing task** - Don't create a new Daily Review, find and use the recurring one
-- **Track progress in notes** - Check off steps as you go through them
-- **Be concise** - Morning briefings should be scannable, not verbose
-- **Offer sub-commands** - Let `/gtd:process-inbox` and `/gtd:clarify` handle details
-- **Suggest, don't dictate** - User decides priorities, you provide information
-- **End with action** - Always conclude with a clear first task to start
-
-## AppleScript Reference
-
-```applescript
--- Find Daily Review task
-tell application "Things3"
-    repeat with t in (to dos of list "Today")
-        if name of t contains "Daily Review" then
-            return t
-        end if
-    end repeat
-end tell
-
--- Update notes (check off a step)
-tell application "Things3"
-    set t to to do id "task-id"
-    -- Replace "- [ ]" with "- [x]" for completed steps
-    set notes of t to "[updated notes with checked items]"
-end tell
-
--- Complete the review
-tell application "Things3"
-    set t to to do id "task-id"
-    set status of t to completed
-end tell
-```
+- **Work through project tasks** - Daily Review is a project, not a single task
+- **Track progress** - Report completion to user, update notes with findings
+- **Things 3 is the tracker** - Do NOT use TodoWrite for this workflow
+- **Be autonomous** - Complete agent tasks without asking, pause only for human tasks
+- **Be concise** - Morning briefings should be scannable
+- **End with action** - Always conclude with a clear first task

@@ -5,6 +5,8 @@ description: Identify and execute/assist with the highest priority next action
 
 # GTD Next Action
 
+> **Reference:** See `things3` skill for task requirements, tag taxonomy, and MCP operations.
+
 Identify and execute/assist with the highest priority next action from Today.
 
 **Auto-Execute Scope:** Research tasks, email drafts, and code changes.
@@ -13,237 +15,140 @@ Identify and execute/assist with the highest priority next action from Today.
 
 ### 1. Get Today's Tasks
 
-```applescript
-tell application "Things3"
-    set output to ""
-    set todayTodos to to dos of list "Today"
-    repeat with t in todayTodos
-        set taskTags to tag names of t
-        set taskNotes to notes of t
-        set output to output & id of t & "|" & name of t & "|" & taskTags & "|" & taskNotes & linefeed
-    end repeat
-    return output
-end tell
+```
+mcp__things__get_today
 ```
 
-### 2. Prioritize Tasks
+### 2. Check for Daily Review
 
-Sort by these heuristics (highest priority first):
+If any task belongs to `Project: ☕️ Daily Review`:
+- The Daily Review project is active
+- Work through it using the `gtd-daily-review` skill workflow
+- Process project tasks in order, not individual prioritization
+
+### 3. Prioritize Tasks
+
+For non-Daily Review tasks, sort by (highest priority first):
 
 1. **Agent/Queued** - Tasks explicitly queued for agent work
-2. **Calendar-related** - Tasks tied to today's meetings/events
-3. **Quick wins (2m, 5m)** - Build momentum with fast completions
-4. **Time-blocked** - Tasks scheduled for specific times
-5. **High-focus (25m, 1h+)** - Deep work tasks
+2. **Calendar-related** - Tasks tied to today's meetings
+3. **Quick wins (2m, 5m)** - Build momentum
+4. **Time-blocked** - Scheduled for specific times
+5. **Deep work (25m, 1h+)** - Focused tasks
 
-### 3. Select and Analyze Top Action
-
-For the highest priority task, determine:
+### 4. Select and Analyze Top Action
 
 ```
-Task Type Decision Tree:
-
 Is it tagged "Agent/Queued"?
 ├── YES → Claim it and execute
 └── NO → Continue analysis...
 
+Is it part of a project with other tasks?
+├── YES → Read project context, understand scope
+└── NO → Treat as standalone task
+
 Can Claude help directly?
-├── Research task → Execute: web search, summarize findings
-├── Email task → Execute: draft email, present for review
-├── Code task → Execute: implement, test, report results
-├── Writing task → Execute: draft content
-└── Physical/human task → Assist: provide context, next steps
+├── Research → Execute: web search, summarize
+├── Email → Execute: draft, present for review
+├── Code → Execute: implement, test, report
+├── Writing → Execute: draft content
+└── Physical/human → Assist: provide context
 
 Is it blocked?
-├── YES → Tag "Agent/Blocked", add note explaining why, pick next task
-└── NO → Proceed with execution/assistance
+├── YES → Tag "Agent/Blocked", pick next task
+└── NO → Proceed
 
-Does it need human verification when done?
-├── YES (code changes, important decisions) → Will use Agent/Needs Review
-└── NO (research, simple tasks) → Will complete directly
+Needs human verification when done?
+├── YES (code, important decisions) → Use Agent/Needs Review
+└── NO (research, simple tasks) → Complete directly
 ```
 
-### 4. Claim Agent Tasks
+### 5. Claim Agent Tasks
 
-For tasks tagged `Agent/Queued`:
+For tasks tagged `Agent/Queued`, claim before working:
 
-```applescript
--- Claim the task
-tell application "Things3"
-    set t to to do id "task-id"
-    if tag names of t contains "Queued" then
-        set tag names of t to "Agent, Working"
-        return "claimed"
-    else
-        return "already claimed"
-    end if
-end tell
+```
+mcp__things__update_todo(id, tags=["Agent", "Working"])
 ```
 
-### 5. Execute or Assist
+### 6. Execute or Assist
 
-#### For AI-Automatable Tasks:
+**For AI-automatable tasks:** Just do it - research, draft, implement.
 
-**Research:**
-- Perform web searches
-- Summarize findings
-- Add results to task notes
-- Mark complete when done
+**For human-required tasks:** Provide context, guidance, resources.
 
-**Email drafts:**
-- Draft email based on task
-- Present draft for approval
-- If approved, can create draft in Mail:
-```applescript
-tell application "Mail"
-    set newMessage to make new outgoing message with properties {subject:"Subject", content:"Body", visible:true}
-    tell newMessage
-        make new to recipient at end of to recipients with properties {address:"email@example.com"}
-    end tell
-end tell
+### 7. Track Progress
+
+As you complete checklist items, report progress to the user:
+
+```
+Working on "Research competitor pricing":
+- [x] Identify top 5 competitors (done)
+- [x] Document pricing tiers (done)
+- [ ] Create comparison spreadsheet (in progress)
+
+Please check off completed items in Things.
 ```
 
-**Code tasks:**
-- Read relevant files
-- Implement changes
-- Run tests
-- Report results
+Update task notes with findings and decisions (not checkboxes):
 
-#### For Human-Required Tasks:
+```
+mcp__things__update_todo(id, notes="Context: [original context]
 
-Provide assistance:
-- Context and background
-- Step-by-step guidance
-- Links and resources
-- Time estimates
-
-### 6. Track Progress
-
-Add checklist items for multi-step work:
-
-```applescript
-tell application "Things3"
-    set t to to do id "task-id"
-    set notes of t to notes of t & linefeed & "
-Progress:
-- [x] Step 1 complete
-- [x] Step 2 complete
-- [ ] Step 3 in progress"
-end tell
+---
+PROGRESS:
+- Found 5 competitors: A, B, C, D, E
+- Pricing ranges from $10-50/mo")
 ```
 
-### 7. Handle Completion
+### 8. Handle Completion
 
-#### If Blocked (can't proceed):
-
-```applescript
--- Mark as blocked with explanation
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to "Agent, Blocked"
-    set notes of t to notes of t & linefeed & "
-BLOCKED: [Reason agent cannot proceed]
-Need from human: [What's required to unblock]"
-end tell
+**Blocked:**
+```
+mcp__things__update_todo(id, tags=["Agent", "Blocked"], notes="Blocked: [reason]")
 ```
 
-Report: "Blocked on [task] - need [what's required]. Moving to next task."
-
-#### If Needs Review (want human verification):
-
-```applescript
--- Mark for human review
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to "Agent, Needs Review"
-    set notes of t to notes of t & linefeed & "
-READY FOR REVIEW:
-- [What was done]
-- [Files changed / outputs created]
-- [How to verify]"
-end tell
+**Needs Review:**
+```
+mcp__things__update_todo(id, tags=["Agent", "Needs Review"], notes="Done: [summary]")
 ```
 
-Report: "Completed [task] - marked for your review. Please verify and complete when satisfied."
-
-#### If Complete (no review needed):
-
-```applescript
--- Remove agent tags and complete
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to ""  -- Clear agent tags
-    set status of t to completed
-end tell
+**Complete:**
+```
+mcp__things__update_todo(id, completed=true, tags=[])
 ```
 
-### 8. Report and Continue
-
-After completing a task:
+### 9. Report and Continue
 
 ```
 Completed: "Research competitor pricing" [5m]
 
 Results:
 - [Summary of what was done]
-- [Key findings/outputs]
+- [Key findings]
 
 Next up: "Draft proposal outline" [25m]
 Continue? [Y/n]
 ```
 
-## AppleScript Reference
+## MCP Tools Reference
 
-```applescript
--- Get task by ID
-tell application "Things3"
-    set t to to do id "task-id"
-end tell
-
--- Claim task (Agent/Queued → Agent/Working)
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to "Agent, Working"
-end tell
-
--- Mark blocked (Agent/Working → Agent/Blocked)
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to "Agent, Blocked"
-end tell
-
--- Mark for review (Agent/Working → Agent/Needs Review)
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to "Agent, Needs Review"
-end tell
-
--- Update notes with progress
-tell application "Things3"
-    set t to to do id "task-id"
-    set notes of t to "Progress notes here"
-end tell
-
--- Complete task (clear tags first)
-tell application "Things3"
-    set t to to do id "task-id"
-    set tag names of t to ""
-    set status of t to completed
-end tell
-
--- Create email draft
-tell application "Mail"
-    set newMessage to make new outgoing message with properties {subject:"Subject", content:"Body", visible:true}
-end tell
-```
+| Operation | MCP Tool |
+|-----------|----------|
+| Get today's tasks | `mcp__things__get_today` |
+| Get project tasks | `mcp__things__get_todos(project_uuid=...)` |
+| Claim task | `mcp__things__update_todo(id, tags=["Agent", "Working"])` |
+| Update notes | `mcp__things__update_todo(id, notes=...)` |
+| Mark blocked | `mcp__things__update_todo(id, tags=["Agent", "Blocked"])` |
+| Mark for review | `mcp__things__update_todo(id, tags=["Agent", "Needs Review"])` |
+| Complete task | `mcp__things__update_todo(id, completed=true)` |
 
 ## Guidelines
 
+- **Check for Daily Review first** - If active, work through that project
 - **Claim before working** - Always claim Agent/Queued tasks first
-- **Execute directly** - For research, drafts, and code - just do it
-- **Use Blocked when stuck** - Don't spin; mark blocked and explain what's needed
-- **Use Needs Review for consequential work** - Code changes, important decisions
-- **Complete simple tasks directly** - Research, quick lookups don't need review
-- **Report results** - Always show what was accomplished
-- **Continue momentum** - After completing, offer the next task
-- **Track progress** - Update notes for visibility
+- **Execute directly** - For research, drafts, code - just do it
+- **Track progress** - Report checklist completion to user, update notes with findings
+- **Use Blocked when stuck** - Don't spin; mark blocked and explain
+- **Use Needs Review for consequential work** - Code, important decisions
+- **Continue momentum** - After completing, offer next task

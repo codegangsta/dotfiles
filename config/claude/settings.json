@@ -99,7 +99,28 @@
       "Bash(npx:*)",
       "Bash(claude mcp add:*)",
       "WebSearch",
-      "WebFetch(domain:linear.app)"
+      "WebFetch(domain:linear.app)",
+      "mcp__things__get_inbox",
+      "mcp__things__get_today",
+      "mcp__things__get_upcoming",
+      "mcp__things__get_anytime",
+      "mcp__things__get_someday",
+      "mcp__things__get_logbook",
+      "mcp__things__get_todos",
+      "mcp__things__get_projects",
+      "mcp__things__get_areas",
+      "mcp__things__get_tags",
+      "mcp__things__get_headings",
+      "mcp__things__get_tagged_items",
+      "mcp__things__get_recent",
+      "mcp__things__search_todos",
+      "mcp__things__search_advanced",
+      "mcp__things__search_items",
+      "mcp__things__add_todo",
+      "mcp__things__add_project",
+      "mcp__things__update_todo",
+      "mcp__things__update_project",
+      "mcp__things__show_item"
     ],
     "deny": [
       "Read(~/.ssh/*)",
@@ -120,6 +141,38 @@
     "ask": [],
     "defaultMode": "acceptEdits"
   },
-  "hooks": {},
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/things3-session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "TodoWrite",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/things3-todowrite-reminder.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before ending this response, check: If you were working on a Things 3 task (tagged Agent/Working), did you update its notes with progress? If you completed the task, did you mark it complete using mcp__things__update_todo? If not, remind yourself to do so now. Only block if there's clearly unfinished Things 3 task tracking."
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {}
 }
