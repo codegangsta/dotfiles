@@ -2,7 +2,7 @@
 description: Find and work on the next ready bead issue with proper lifecycle management
 ---
 
-**IMPORTANT: This is an autonomous workflow. Execute ALL steps continuously without stopping or asking for confirmation. Do NOT pause between steps. Keep working until the issue is CLOSED.**
+**IMPORTANT: This is an autonomous workflow. Execute ALL steps continuously without stopping or asking for confirmation. Do NOT pause between steps. Keep working until the issue is ready for human review.**
 
 ## Workflow
 
@@ -44,23 +44,33 @@ Verification checklist:
 
 If verification fails, fix the issues before proceeding.
 
-### 5. Close the Issue
+### 5. Mark for Human Review
 
-Once verified, close the issue with a descriptive reason:
+Once verified, add a summary comment and mark the issue as blocked for human review:
 
+```bash
+bd comments add <issue-id> "Implementation complete. Ready for review:
+
+- <summary of changes made>
+- <files modified>
+- <tests added/passing>"
+
+bd update <issue-id> --status=blocked
 ```
-/beads:close <issue-id> --reason "Implemented: <brief summary of what was done>"
-```
+
+**Do NOT close the issue.** The human owner will review and close it.
 
 ### 6. Report and Ask What's Next
 
-Only AFTER the issue is closed, stop and ask the user:
+Only AFTER the issue is marked as blocked, stop and report to the user:
 
-> "Completed and closed `<issue-id>`: <title>
+> "Implementation complete for `<issue-id>`: <title>
 >
 > Changes made:
 > - <change 1>
 > - <change 2>
+>
+> Issue is now **blocked** awaiting your review. After reviewing, close it with `bd close <issue-id>`.
 >
 > What next? (1) Next issue (2) Create PR (3) Something else"
 
@@ -68,5 +78,6 @@ Only AFTER the issue is closed, stop and ask the user:
 
 - **Work autonomously**: Do NOT pause or ask questions during steps 1-5. Just do the work.
 - **Claim before working**: Prevents conflicts with other agents
-- **Verify before closing**: Run tests, ensure acceptance criteria are met
-- **Only stop at the end**: The only time to pause is after closing the issue
+- **Verify before marking blocked**: Run tests, ensure acceptance criteria are met
+- **Never close issues**: Mark as blocked for human review instead
+- **Only stop at the end**: The only time to pause is after marking the issue as blocked
