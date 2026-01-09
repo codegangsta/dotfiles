@@ -168,7 +168,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "Before ending this response, check: If you were working on a Things 3 task (tagged Agent/Working), did you update its notes with progress? If you completed the task, did you mark it complete using mcp__things__update_todo? If not, remind yourself to do so now. Only block if there's clearly unfinished Things 3 task tracking."
+            "prompt": "Check ONLY for tasks you explicitly tagged with 'Agent/Working' this session. Tasks without Agent tags are human work - ignore them. For each Agent/Working task: (1) Did you update notes with progress? (2) Did you complete it or change to appropriate tag (Agent/Blocked, Agent/Needs Review)? Only block if an Agent-tagged task is left incomplete without proper state update. Human tasks (no Agent tag) require NO tracking."
           }
         ]
       }

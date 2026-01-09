@@ -47,9 +47,11 @@ Tasks:
 3. [x] Completed task
 ```
 
-### 3. Work Through Tasks Sequentially
+### 3. Work Through Tasks In Order
 
-For each incomplete task:
+**IMPORTANT:** Tasks are returned in the exact order the user arranged them in Things 3. Always work through tasks in this order - start with the first incomplete task, complete it, then move to the next. Never skip ahead or reorder based on your own judgment.
+
+For each incomplete task (in order):
 
 1. **Claim the task:**
    ```
@@ -72,12 +74,16 @@ For each incomplete task:
    - [ ] Step 2 (in progress)
    ```
 
-5. **Complete and move on:**
+5. **Complete the task:**
    ```
    mcp__things__update_todo(id, completed=true, tags=[], notes="[existing + completion summary]")
    ```
 
-6. **Repeat for next task**
+6. **Re-fetch tasks and continue:**
+   ```
+   mcp__things__get_todos(project_uuid="<project-uuid>", include_items=true)
+   ```
+   Always re-fetch the task list after completing a task. The user may have reordered or added tasks while you were working. Start again from the first incomplete task in the fresh list.
 
 ### 4. Handle Discovered Work
 
@@ -157,7 +163,8 @@ Please add follow-up tasks or close the project when satisfied.
 
 ## Guidelines
 
-- **Work sequentially** - Complete one task before starting the next
+- **Respect task order** - Work tasks in the exact order returned by the API (this matches the user's arrangement in Things 3). Never skip or reorder tasks.
+- **Re-fetch after each task** - Always get a fresh task list after completing a task. The user may reorder or add tasks while you work.
 - **Claim before working** - Always update tags to "Working" first
 - **Use project as bucket** - Add discovered work to the project, not elsewhere
 - **Update project notes** - Document progress, decisions, and findings

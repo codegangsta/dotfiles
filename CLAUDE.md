@@ -166,6 +166,16 @@ The repository uses a centralized symlink approach where:
 
 Agents track work in Things 3, the unified task system for both humans and AI.
 
+### Human by Default
+
+**Tasks without Agent tags are human work.** Agents only track tasks they explicitly claim.
+
+- If a task has no `Agent/*` tag → it's human work, ignore it
+- If a task has an `Agent/*` tag → agent is responsible for tracking
+- Only tasks you tag `Agent/Working` require progress updates and completion tracking
+
+This principle ensures agents don't interfere with human tasks and only track what they own.
+
 ### GTD Commands
 
 Available slash commands for GTD workflows:

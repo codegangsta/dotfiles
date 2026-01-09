@@ -145,13 +145,28 @@ When working through a project, complete each task before moving to the next. Up
 - `25m` - One pomodoro
 - `1h+` - Deep work
 
+### Human by Default Principle
+
+**Tasks without Agent tags are human work.** Agents should NOT track or update them.
+
+| Task Type | Has Agent Tag? | Agent Responsibility |
+|-----------|----------------|----------------------|
+| Human work | No | None - ignore completely |
+| Agent work | Yes (Agent/*) | Must track progress and update state |
+
+This means:
+- If you encounter a task without an Agent tag, it's not your responsibility
+- Don't add progress notes to human tasks
+- Don't mark human tasks complete (unless explicitly asked)
+- Only tasks you explicitly tag with `Agent/Working` require tracking
+
 ### Agent Tags
-Used for human-agent collaboration:
+Used ONLY for tasks that agents are responsible for:
 
 | Tag | Meaning | When to Use |
 |-----|---------|-------------|
 | `Agent/Queued` | Ready for agent to pick up | Human queues work for Claude |
-| `Agent/Working` | Agent currently working | Agent claims task |
+| `Agent/Working` | Agent currently working | Agent claims task and MUST track |
 | `Agent/Blocked` | Agent hit a blocker | Agent can't proceed, needs human |
 | `Agent/Needs Review` | Agent finished, wants verification | Before completing consequential work |
 
@@ -161,6 +176,29 @@ Queued → Working → Needs Review → (human completes)
                  → Blocked → (human unblocks) → Working
                  → (complete directly for simple tasks)
 ```
+
+**Critical:** Once you tag a task `Agent/Working`, you are responsible for:
+1. Updating notes with progress
+2. Completing the task OR changing to `Agent/Blocked` or `Agent/Needs Review`
+3. Never leaving a task tagged `Agent/Working` incomplete at session end
+
+### Task State Transitions
+
+**Rule: ALWAYS update notes BEFORE changing state.**
+
+| From | To | When | Required Actions |
+|------|-----|------|------------------|
+| `Agent/Queued` | `Agent/Working` | Claiming task | Update notes: "Claimed by agent" |
+| `Agent/Working` | Complete | Finished | Update notes with summary, then `completed=true, tags=[]` |
+| `Agent/Working` | `Agent/Needs Review` | Need human verification | Update notes with what to review |
+| `Agent/Working` | `Agent/Blocked` | Can't proceed | Update notes explaining blocker |
+| `Agent/Blocked` | `Agent/Working` | Human unblocks | Update notes with resolution |
+| `Agent/Needs Review` | Complete | Human approves | Human marks complete |
+
+**End of Session Rules:**
+- Check all tasks you tagged `Agent/Working` this session
+- Each must be: completed, tagged `Agent/Blocked`, or tagged `Agent/Needs Review`
+- Never leave `Agent/Working` tasks hanging
 
 ### Other Tags
 - `Waiting for` - Blocked on external person/thing
