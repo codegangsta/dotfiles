@@ -21,6 +21,7 @@ bootstrap-common::
 	ln -vsfn ${PWD}/config/tmux/tmux.conf ${HOME}/.tmux.conf
 	mkdir -p ${HOME}/.claude
 	ln -vsfn ${PWD}/config/claude/commands ${HOME}/.claude/commands
+	ln -vsfn ${PWD}/config/claude/skills ${HOME}/.claude/skills
 	ln -vsfn ${PWD}/config/claude/settings.json ${HOME}/.claude/settings.json
 
 bootstrap-macos:: bootstrap-common
