@@ -120,31 +120,6 @@
     "ask": [],
     "defaultMode": "acceptEdits"
   },
-  "hooks": {
-    "PreCompact": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bd prime"
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bd prime"
-          }
-        ]
-      }
-    ]
-  },
-  "enabledPlugins": {
-    "beads@beads-marketplace": true
-  }
+  "hooks": {},
+  "enabledPlugins": {}
 }

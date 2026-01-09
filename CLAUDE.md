@@ -162,6 +162,80 @@ The repository uses a centralized symlink approach where:
 - Specific permissions for bash commands
 - Referenced in Makefile for symlinking (config/claude/settings.json)
 
+## Agent Task Management
+
+Agents track work in Things 3, the unified task system for both humans and AI.
+
+### GTD Commands
+
+Available slash commands for GTD workflows:
+- `/gtd:daily-review` - Morning briefing with Things, Calendar, and Mail
+- `/gtd:process-inbox` - Process Things inbox using GTD methodology (autonomous)
+- `/gtd:clarify` - Review today's tasks and resolve ambiguity
+- `/gtd:next-action` - Identify and execute the next priority action
+- `/gtd:weekly-review` - Comprehensive weekly GTD review
+- `/gtd:reflect` - End-of-day reflection and automation improvements
+
+### Agent Tags
+
+Things 3 uses these tags for agent work:
+- **Agent/Queued** - Task is ready for an agent to pick up
+- **Agent/Working** - Agent is currently working on this task
+- **Agent/Blocked** - Agent hit a blocker, needs human input
+- **Agent/Needs Review** - Agent finished, wants human verification before completing
+
+**Tag Flow:**
+```
+Queued → Working → Needs Review → (human completes)
+                 → Blocked → (human unblocks) → Working
+                 → (complete directly for simple tasks)
+```
+
+### Agent Guidelines
+
+1. **Before starting work**: Check Things Today list for relevant tasks
+2. **Claiming work**: Switch tag from `Agent/Queued` to `Agent/Working`
+3. **Progress tracking**: Add checklist items in task notes, check off as completed
+4. **Discovered work**: Create new tasks in Things Inbox
+5. **If blocked**: Tag `Agent/Blocked`, add note explaining what's needed from human
+6. **If needs review**: Tag `Agent/Needs Review` for consequential work (code, important decisions)
+7. **Simple completion**: Remove Agent tags, mark complete, report to user
+
+### Decision Tree: What to Create
+
+```
+Is this work for the current session only?
+├── YES → Use TodoWrite (internal tracking)
+└── NO → Create in Things 3
+
+Is it a single, atomic action?
+├── YES → Create a Task (verb-first title, time estimate tag)
+└── NO → Create a Project with next action tasks
+```
+
+### AppleScript Interface
+
+All Things 3 operations use AppleScript:
+
+```applescript
+-- Claim a task
+tell application "Things3"
+    set t to to do id "task-id"
+    set tag names of t to "Agent, Working"
+end tell
+
+-- Complete a task
+tell application "Things3"
+    set t to to do id "task-id"
+    set status of t to completed
+end tell
+
+-- Add to inbox
+tell application "Things3"
+    make new to do with properties {name:"Task title", tag names:"25m"}
+end tell
+```
+
 ## Common Workflows
 
 ### Adding New Tool Configuration
