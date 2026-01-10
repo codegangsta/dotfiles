@@ -57,11 +57,24 @@ The title must start with an action verb and be specific enough to act on.
 | "Meeting prep" | "Review agenda for standup meeting" |
 
 ### 2. Time Estimate Tag
-Every task needs one of these tags:
+Every task needs one of these **native Things 3 tags** (NOT in the title):
 - `2m` - Quick action (< 2 minutes)
 - `5m` - Short task (2-5 minutes)
+- `15m` - Medium task (5-15 minutes)
 - `25m` - Focused work (one pomodoro)
 - `1h+` - Deep work (requires significant time)
+
+**Important:** Always use the `tags` parameter when creating/updating tasks. Never put time estimates in the title like "Buy groceries [25m]".
+
+```
+# Correct - use tags parameter
+mcp__things__add_todo(title="Buy groceries", tags=["25m", "Errand"])
+
+# Wrong - don't put estimate in title
+mcp__things__add_todo(title="Buy groceries [25m]")
+```
+
+**Break down 1h+ tasks:** If a task is estimated at 1h+, it's usually too big. Ask if it should be broken into smaller tasks or converted to a project. The exception is truly atomic deep work (e.g., "Write first draft of blog post").
 
 ### 3. Description/Notes
 Add context answering: *Why does this task exist? What's the background?*
@@ -140,10 +153,13 @@ When working through a project, complete each task before moving to the next. Up
 ## Tag Taxonomy
 
 ### Time Estimate Tags (Required)
+Always use native Things 3 tags, never in the title.
+
 - `2m` - Under 2 minutes
 - `5m` - 2-5 minutes
+- `15m` - 5-15 minutes
 - `25m` - One pomodoro
-- `1h+` - Deep work
+- `1h+` - Deep work (consider breaking down)
 
 ### Human by Default Principle
 
@@ -458,7 +474,13 @@ Converted to project: Implement feature X (scope expanded)"
 Claude's internal todo list is for ephemeral session-only tracking. GTD work must be in Things 3.
 
 ### DON'T create tasks without required fields
-Every task needs: verb-first title, time estimate, description, project/area.
+Every task needs: verb-first title, time estimate tag, description, project/area.
+
+### DON'T put time estimates in titles
+Time estimates go in native Things 3 tags, not the title. Use `tags=["25m"]`, not `title="Task [25m]"`.
+
+### DON'T leave 1h+ tasks without questioning
+Tasks estimated at 1h+ are usually too big. Ask if they should be broken into smaller tasks or converted to a project.
 
 ### DON'T skip progress updates
 Update task notes as you work - this is how humans see what you're doing.
