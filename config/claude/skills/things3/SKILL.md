@@ -476,7 +476,9 @@ If unsure which area a task belongs to, ask the user or list the areas first.
 
 ## External Tool Integration
 
-### Calendar (use icalBuddy for speed)
+### Calendar
+
+**Reading events (use icalBuddy for speed):**
 ```bash
 # Today's events
 icalBuddy -f -nc -nrd -df "" -tf "%H:%M" eventsToday
@@ -484,6 +486,31 @@ icalBuddy -f -nc -nrd -df "" -tf "%H:%M" eventsToday
 # This week's events
 icalBuddy -f -nc -nrd eventsToday+7
 ```
+
+**Creating events (use AppleScript):**
+
+**IMPORTANT:** Always list calendars first before creating events. Calendar names vary by user.
+
+```applescript
+-- Step 1: List available calendars
+tell application "Calendar" to get name of every calendar
+-- Returns: "Calendar, Personal, Work, Birthdays, ..."
+
+-- Step 2: Create event on the correct calendar
+tell application "Calendar"
+    tell calendar "Personal"  -- Use actual calendar name from step 1
+        make new event with properties {
+            summary:"Event Title",
+            start date:date "Saturday, January 17, 2026 at 9:15:00 AM",
+            end date:date "Saturday, January 17, 2026 at 10:15:00 AM",
+            location:"Address here",
+            description:"Notes here"
+        }
+    end tell
+end tell
+```
+
+**Common calendar names:** "Personal", "Home", "Work", "Calendar" (default)
 
 ### Mail (still uses AppleScript)
 ```applescript
