@@ -184,7 +184,9 @@ Available slash commands for GTD workflows:
 - `/gtd:clarify` - Review today's tasks and resolve ambiguity
 - `/gtd:next-action` - Identify and execute the next priority action
 - `/gtd:weekly-review` - Comprehensive weekly GTD review
+- `/gtd:project` - Work through a Things 3 project (claim tasks, execute, track)
 - `/gtd:reflect` - End-of-day reflection and automation improvements
+- `/plan-to-project` - Convert a plan or specification into a Things 3 project with agent-ready tasks
 
 ### Agent Tags
 

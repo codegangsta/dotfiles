@@ -273,6 +273,51 @@ mcp__things__add_project(
 )
 ```
 
+### Project Description Best Practices
+
+**For projects with 3+ tasks, use AskUserQuestion to gather context before creating.** Generic task-focused descriptions are less useful than motivation-focused ones.
+
+**Questions to ask:**
+1. What prompted this? (symptoms, triggers, situation)
+2. How long has this been going on?
+3. What outcome are you hoping for?
+4. What would "success" look like?
+
+**Description template:**
+
+```
+**Why:** [Motivation - what's been going on, why it matters now]
+
+**What I want:** [Desired outcome in human terms, not just tasks]
+
+**Current status:** [Where things stand right now]
+
+**Success looks like:** [Concrete definition of done - how will we know it's resolved?]
+
+**Contacts/Resources:**
+- [Key contact info, links, reference material]
+```
+
+**Example - Bad (task-focused):**
+```
+Notes: "GI doctor appointment and tests. Colonoscopy scheduled."
+```
+
+**Example - Good (motivation-focused):**
+```
+Notes: "**Why:** Chronic fatigue and IBS symptoms for years, still undiagnosed. It's time to finally get answers.
+
+**What I want:** A clear diagnosis, a treatment plan that works, and to feel like myself again.
+
+**Current status:** Working with Digestive Disease Consultants on testing. Colonoscopy scheduled Jan 16.
+
+**Success looks like:** Knowing what's causing this, having a plan to manage it, and peace of mind.
+
+**Contacts:**
+- GI: Digestive Disease Consultants, Tustin (dominic@ddcoc.com)
+- Procedure: Hoag Endoscopy Center, Irvine"
+```
+
 ### Getting Tasks by Tag
 
 ```
