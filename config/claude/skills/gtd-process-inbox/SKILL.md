@@ -1,13 +1,13 @@
 ---
 name: gtd-process-inbox
-description: Process Things 3 inbox using GTD methodology - fully autonomous
+description: Process Things 3 inbox using GTD methodology - interactive clarification
 ---
 
 # GTD Process Inbox
 
 > **Reference:** See `things3` skill for task requirements, tag taxonomy, and MCP operations.
 
-**AUTONOMOUS WORKFLOW** - Process inbox items directly without confirmation for fast GTD flow.
+Process inbox items one-by-one with user input for clarity.
 
 ## Workflow
 
@@ -19,54 +19,108 @@ mcp__things__get_inbox
 
 If inbox is empty, report "Inbox is clear!" and stop.
 
-### 2. Process Each Item
+### 2. Show Overview
 
-Apply the GTD decision tree:
+List all inbox items briefly so the user sees what's coming:
 
 ```
-Is it actionable?
-├── NO →
-│   ├── Trash (not useful) → Delete it
-│   ├── Reference (might need later) → Move to Someday
-│   └── Someday/Maybe (might do eventually) → Move to Someday
-└── YES →
-    ├── < 2 minutes? → Do it NOW or mark complete
-    ├── Delegatable to person? → Add "Waiting for" tag + person in notes
-    ├── Delegatable to agent? → Add "Agent/Queued" tag
-    ├── Multi-step project? → Convert to Project with first next action
-    └── Single action → Process as next action
+You have X items in your inbox:
+1. "Item A"
+2. "Item B"
+3. "Item C"
+
+Let's process these one at a time.
 ```
 
-### 3. For Each Actionable Item
+### 3. Process Each Item One-by-One
 
-**Apply all task requirements from `things3` skill:**
+For each item, use `AskUserQuestion` to clarify with the GTD decision tree as your guide:
 
-1. Rewrite title (verb-first, specific)
-2. Add time estimate tag (2m, 5m, 25m, 1h+)
-3. Add notes with context
-4. Assign to Project or Area
-5. Add native checklist items if multi-step (use `checklist_items` param)
-6. Add context tag if relevant (Errand, etc.)
-7. Move to Today or appropriate list
+**First, determine if actionable:**
+```
+AskUserQuestion: "What is 'Item X'?"
+Options:
+- Actionable task (I need to do something)
+- Reference/Someday (might need later, not now)
+- Delete (not useful)
+```
 
-### 4. Report Summary
+**If actionable, clarify the action:**
+```
+AskUserQuestion: "What's the actual next action for 'Item X'?"
+Options:
+- [Suggest a verb-first rewrite based on context]
+- [Another interpretation]
+- Let me type it (Other)
+```
 
-After processing all items:
+**Get time estimate:**
+```
+AskUserQuestion: "How long will this take?"
+Options: 2m, 5m, 15m, 25m, 1h+
+```
+
+**Determine where it belongs:**
+```
+AskUserQuestion: "Where does this belong?"
+Options:
+- Today (do it today)
+- Upcoming (schedule for later)
+- Someday (no commitment yet)
+- [Relevant project name if one exists]
+```
+
+**Check if it's multi-step:**
+```
+AskUserQuestion: "Is this a single action or multiple steps?"
+Options:
+- Single action
+- Multiple steps (convert to project)
+- Add checklist items
+```
+
+### 4. Apply Changes Immediately
+
+After each set of answers, update the task right away:
+- Rewrite title with `mcp__things__update_todo`
+- Add tags (time estimate, context)
+- Assign to project/area
+- Move to appropriate list (today, someday, etc.)
+- Convert to project if needed with `mcp__things__add_project`
+
+Then move to the next inbox item.
+
+### 5. Handle Special Cases
+
+**2-minute rule:**
+If estimated at 2m, ask: "This is quick - want to just do it now and mark complete?"
+
+**Waiting on someone:**
+If blocked on a person, add "Waiting for" tag and note who.
+
+**Agent-delegatable:**
+If it's something an agent could do, offer: "Should I tag this for an agent to pick up?"
+
+### 6. Report Summary
+
+After all items processed:
 
 ```
 Processed X inbox items:
-- Y moved to Today
-- Z moved to Someday
-- N deleted
-- M marked complete (2-min rule)
-- P converted to projects
+
+✓ "Raw item" → "Clarified task" [25m] → Today
+✓ "Vague note" → Converted to project with 3 tasks
+✓ "Old idea" → Moved to Someday
+✓ "Quick thing" → Marked complete (2-min rule)
 
 Inbox is now clear!
 ```
 
 ## Guidelines
 
-- **Be decisive** - Make quick judgments, don't overthink
-- **2-minute rule** - If < 2 minutes, suggest doing it now
-- **Don't create projects for single actions** - Only if truly multi-step
-- **Preserve user intent** - Don't change the meaning, just clarify it
+- **One at a time** - Process each item fully before moving to next
+- **Ask, don't assume** - User knows what they meant by cryptic notes
+- **Apply immediately** - Make changes right after each answer
+- **2-minute rule** - Offer to mark complete if truly quick
+- **Preserve intent** - Help clarify, don't change the meaning
+- **Keep it moving** - Don't over-discuss, just clarify and move on

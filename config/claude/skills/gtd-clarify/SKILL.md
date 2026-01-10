@@ -17,68 +17,85 @@ Review today's tasks and resolve any ambiguity or blockers.
 mcp__things__get_today
 ```
 
-### 2. Evaluate Each Task
+### 2. Quick Triage
 
-Check against `things3` skill requirements:
+Scan all tasks and categorize:
 
-1. **Title clear and actionable?** - Verb-first, specific enough to act on
-2. **Next physical action obvious?** - Can start without "but first..."
-3. **Hidden blockers?** - Dependencies, missing info, waiting on something
-4. **Time estimate present?** - Must have 2m, 5m, 25m, or 1h+
-5. **Project/Area assigned?** - No orphan tasks
+**Already Clear** - Tasks that meet all criteria:
+- Verb-first, actionable title
+- Time estimate present (2m, 5m, 15m, 25m, or 1h+)
+- Next action is obvious
+- No hidden blockers
 
-### 3. Propose Clarifications
+**Needs Clarification** - Tasks missing any of the above
 
-For unclear tasks, propose improvements:
+Present a brief overview to the user showing both categories before diving in.
 
+### 3. One-by-One Clarification
+
+Go through each unclear task individually using `AskUserQuestion`. This is the key workflow - don't batch questions, handle them one at a time.
+
+**For missing time estimates:**
 ```
-Task: "Project X"
-Issues:
-- Not verb-first
-- Too vague
-
-Suggested: "Draft project X proposal outline" [25m]
-
-Or break into project:
-1. "Review project X requirements doc" [5m]
-2. "Draft initial proposal outline" [25m]
-3. "Send outline to stakeholders" [5m]
-
-Apply this clarification? [Y/n]
+AskUserQuestion: "Task X is missing a time estimate. How long does this take?"
+Options: 5m, 15m, 25m, 1h+
 ```
 
-### 4. Handle Multi-Step Tasks
+**For vague tasks:**
+```
+AskUserQuestion: "Task X seems vague. What's the actual next action here?"
+Options: Rewrite title, Add details to notes, Convert to project, Delete task
+```
 
-If a task has 3+ steps, offer to convert to a Project using `mcp__things__add_project`.
+**For potential blockers:**
+```
+AskUserQuestion: "Task X - can you actually do this today, or is something blocking it?"
+Options: Ready to do, Blocked (waiting on someone), Needs more info, Move to later
+```
 
-For 2 steps, add checklist in notes instead.
+**For multi-step tasks:**
+```
+AskUserQuestion: "Task X sounds like multiple steps. Should this be a project?"
+Options: Convert to project, Keep as single task, Add checklist items
+```
 
-### 5. Surface Blockers
+### 4. Apply Changes Immediately
 
-For blocked tasks, add "Waiting for" tag and note who/what is blocking.
+After each answer, make the change right away:
+- Update tags with `mcp__things__update_todo`
+- Create projects with `mcp__things__add_project`
+- Cancel old tasks when converting to projects
+- Mark complete if user says it's done
+
+Then move to the next unclear task.
+
+### 5. Handle Projects on Today
+
+For projects scheduled today, check if they have clear next actions:
+- Get project tasks with `mcp__things__get_todos`
+- If tasks are unclear or missing, clarify those too
+- If project is stale (weeks old), ask about status
 
 ### 6. Report Summary
+
+After all tasks are clarified:
 
 ```
 Clarified X of Y tasks:
 
-Improved:
-- "Project X" → "Draft project X proposal outline" [25m]
-
-Added time estimates to:
-- "Review doc" [5m]
-
-Identified blockers:
-- "Deploy feature" - waiting on QA approval
-
-Skipped (already clear):
-- "Send invoice to client" [5m]
+✓ "Task A" → added [25m]
+✓ "Task B" → converted to project with 3 tasks
+✓ "Task C" → marked complete
+✓ "Task D" → confirmed ready
 
 Your Today list is now clearer!
 ```
 
 ## Guidelines
 
-- **Interactive process** - Ask before making changes (unlike process-inbox)
+- **One at a time** - Use AskUserQuestion for each unclear task, don't batch
+- **Apply immediately** - Make changes right after each answer
+- **Context matters** - The user might have info that changes everything (e.g., "I'm at the shop right now")
 - **Projects vs tasks** - If 3+ steps, probably a project
 - **Surface blockers early** - Better to know now than when you start
+- **Keep it conversational** - This is collaborative clarification, not interrogation
